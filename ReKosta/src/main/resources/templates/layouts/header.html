@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{main}">
+
+<head>
+<title>Education Time1</title>
+</head>
+<!--header start-->
+<div th:fragment="header">
+	<!-- header -->
+	<div class="wrapper row1">
+	  <div id="header" class="clear">
+	    <div class="fl_left">
+	      <h1><a href="index.html">Education Time</a></h1>
+	      <p>Free Website Template</p>
+	    </div>
+	    <form action="#" method="post" id="login">
+	      <fieldset>
+	        <legend>Student Login</legend>
+	        <input type="password" />
+	        <input type="text" />
+	        <div id="forgot">Need <a href="#">Help ?</a> or <a href="#">Forgot Your Details ?</a></div>
+	        <input type="image" src="layout/images/sign_in.gif" id="signin" alt="Sign In" />
+	      </fieldset>
+	    </form>
+	  </div>
+	</div>
+	<div class="wrapper row2">
+	  <div id="topnav">
+	    <ul>
+	      <li class="active"><a href="#" th:href="@{/index}">Homepage</a></li>
+	      <li><a href="#" th:href="@{/styleDemo}">Style Demo</a></li>
+	      <li><a href="#" th:href="@{/fullWidth}">Full Width</a></li>
+	      <li><a href="#">DropDown</a>
+	        <ul>
+	          <li><a href="#">Link 1</a></li>
+	          <li><a href="#">Link 2</a></li>
+	          <li><a href="#">Link 3</a></li>
+	        </ul>
+	      </li>
+	      <li><a href="#" th:href="@{/3columns}">3 Columns</a></li>
+	      <li class="last"><a href="#" th:href="@{/gallery}">Gallery</a></li>
+	    </ul>
+	    <div  class="clear"></div>
+	  </div>
+	</div>
+	<!-- header end -->
+</div>

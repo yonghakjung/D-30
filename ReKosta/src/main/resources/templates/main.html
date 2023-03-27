@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+	<head>
+		<title>Education Time</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+		<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+		<link rel="stylesheet" href="layout/scripts/liteaccordion-v2.2/css/liteaccordion.css" type="text/css" />
+	</head>
+	
+	<!-- body start -->
+	<body id="top">
+		
+		<!-- header start -->
+		<th:block th:replace="layouts/header :: header"></th:block>
+		<!-- header end -->
+		
+		<!-- content start -->
+		<th:block layout:fragment = "content"></th:block>
+		<!-- content end -->
+		
+		<!-- footer start -->
+    	<th:block th:replace="layouts/footer :: footer"></th:block>
+    	<!-- footer end -->
+    	
+		<!-- script start -->
+		<script type="text/javascript" src="layout/scripts/liteaccordion-v2.2/js/liteaccordion.jquery.min.js"></script> 
+		<script type="text/javascript">
+		$("#featured_slide").liteAccordion({
+		    theme: "os-tpl",
+		    containerWidth: 960, // fixed (px)
+		    containerHeight: 360, // fixed (px) - overall height of the slider
+		    headerWidth: 48, // fixed (px) - slide spine title
+		    firstSlide: 1, // displays slide (n) on page load
+			activateOn: "click", // click or mouseover
+		    autoPlay: false, // automatically cycle through slides
+		    pauseOnHover: true, // pause slides on hover
+		    rounded: false, // square or rounded corners
+		    enumerateSlides: true, // put numbers on slides
+		    slideSpeed: 800, // slide animation speed
+		    cycleSpeed: 6000, // time between slide cycles
+		});
+		</script>
+		<!-- script end -->
+	</body>
+	<!-- body end -->
+</html>
