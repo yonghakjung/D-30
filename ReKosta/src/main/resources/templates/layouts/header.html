@@ -33,18 +33,52 @@
 	<div class="wrapper row2">
 	  <div id="topnav">
 	    <ul>
-	      <li th:classappend="${activeHome} ? 'active' : '' "><a href="#" th:href="@{/index}">Homepage</a></li>
-	      <li><a href="#" th:href="@{/styleDemo}">Style Demo</a></li>
-	      <li th:classappend="${activeTest} ? 'active' : '' "><a href="#" th:href="@{/fullWidth}">Full Width</a></li>
-	      <li><a href="#">DropDown</a>
-	        <ul>
-	          <li><a href="#">Link 1</a></li>
-	          <li><a href="#">Link 2</a></li>
-	          <li><a href="#">Link 3</a></li>
+	    
+	      <li th:classappend="${activeIntroduceAndRegister} ? 'active' : '' "><a href="#" th:href="@{/moveIntroduceOrganization}">협회소개&회원가입</a>
+	      	<ul>
+	          <li><a href="#" th:href="@{/moveIntroduceOrganization}">협회소개</a></li>
+	          <li><a href="#" th:href="@{/moveIntroduceRegisterMembership}">회원사&협약사 가입 안내</a></li>
 	        </ul>
 	      </li>
-	      <li><a href="#" th:href="@{/3columns}">3 Columns</a></li>
-	      <li class="last"><a href="#" th:href="@{/gallery}">Gallery</a></li>
+	      
+	      <li th:classappend="${activeEmployed} ? 'active' : '' "><a href="#" th:href="@{/moveEmployed}">교육&훈련</a>
+	      	<ul>
+	          <li><a href="#" th:href="@{/moveEmployed}">취업자</a></li>
+	          <li><a href="#" th:href="@{/moveIncumbent}">제직자</a></li>
+	          <li><a href="#" th:href="@{/moveRecruits}">신입사원</a></li>
+	        </ul>
+	      </li>
+	      
+	      <li th:classappend="${activeJobOffer} ? 'active' : '' "><a href="#" th:href="@{/moveJobOffer}">구인&구직</a>
+	      	<ul>
+	          <li><a href="#" th:href="@{/moveJobOffer}">구인</a></li>
+	          <li><a href="#" th:href="@{/moveJobSearch}">구직</a></li>
+	        </ul>
+	      </li>
+	      
+	      <li th:classappend="${activeTest} ? 'active' : '' "><a href="#" th:href="@{/moveTest}">시험&인증</a>
+	      </li>
+	      
+	      <li th:classappend="${activeSWAbilityTest} ? 'active' : '' "><a href="#" th:href="@{/moveSWAbilityTest}">SW역량진단&개발 컨설팅</a>
+	      	<ul>
+	          <li><a href="#" th:href="@{/moveSWAbilityTest}">정보시스템 애플리케이션 SW개발 역량</a></li>
+	          <li><a href="#" th:href="@{/moveSSPL}">소프트웨어&시스템 플랫폼 개발(SSPL) 역량</a></li>
+	        </ul>
+	      </li>
+	      <li th:classappend="${activeDigitalBusiness} ? 'active' : '' "><a href="#" th:href="@{/moveDigitalBusiness}">디지털비즈니스지원센터</a>
+	      	<ul>
+	          <li><a href="#" th:href="@{/moveDigitalBusiness}">디지털비즈니스센터 소개</a></li>
+	          <li><a href="#" th:href="@{/moveVideoLecture}">동영상강의</a></li>
+	        </ul>
+	      </li>
+	      
+	      <li th:classappend="${activeNoticeBoard} ? 'active' : '' "><a href="#" th:href="@{/moveNoticeBoard}">고객센터</a>
+	      	<ul>
+	          <li><a href="#"  th:href="@{/moveNoticeBoard}">알림마당</a></li>
+	          <li><a href="#"  th:href="@{/moveKostaSympathy}">KOSTA동정</a></li>
+	          <li><a href="#"  th:href="@{/moveMembershipAdvertise}">회원사&협약사 홍보마당</a></li>
+	        </ul>
+	      </li>	      
 	    </ul>
 	    <div  class="clear"></div>
 	  </div>
