@@ -37,7 +37,13 @@ img{margin:0; padding:0; border:none;}
 .imgholder, .imgl, .imgr{padding:4px; border:1px solid #D7DBE0;}
 .imgl{margin:0 15px 15px 0; clear:left;}
 .imgr{margin:0 0 15px 15px; clear:right;}
+.img-set{text-align: center;}
+.img-size{width: 1900px; height: 280px; text-align: center;}
 
+.span-set{text-align: center; font-size: 23px; font-family: sans-serif;}
+.span-style{font-weight: bolder;}
+.span-style2{font-weight: bold;}
+.span-color{color: #942d33;}
 /* ----------------------------------------------Wrapper------------------------------------- */
 
 div.wrapper{display:block; width:100%; text-align:left;}
@@ -51,7 +57,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 
 /* ----------------------------------------------Generalise------------------------------------- */
 
-#header, #featured_slide, #container, #footer, #copyright{display:block; position:relative; width:960px; margin:0 auto;}
+#header, #featured_slide, #container, #footer, #copyright{display:block; position:relative; width:1300px; margin:0 auto;}
 
 /* ----------------------------------------------Header------------------------------------- */
 
