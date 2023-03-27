@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{main}">
+	  
+<head>
+<title>main page</title>
+</head>
+<!-- content start -->
+<div layout:fragment="content" style="background-color: white;">
+	<img th:src="@{images/index/index1.JPG}" style="width: 100%;">
+	<br><br>
+	<h1 style="text-align: center; color: black;">여러분의 소프트웨어 역량개발 파트너, KOSTA가 함께합니다.</h1>
+	<h3 style="text-align: center; color: black;">국내 유일의 SW역량 One-stop 서비스 제공 기관</h3>
+	<br><br>
+	<hr>
+	<br><br>
+	<div style="text-align: center;">
+		<a th:href="@{/moveIntroduceOrganization}"><img th:src="@{images/index/index2.JPG}" style="padding-right: 100px; padding-bottom: 100px;"></a>
+		<a th:href="@{/moveEducationAndTraining}"><img th:src="@{images/index/index3.JPG}" style="padding-left: 100px;padding-right: 100px; padding-bottom: 100px;"></a>
+		<a th:href="@{/moveJobOfferAndSearch}"><img th:src="@{images/index/index4.JPG}" style="padding-left: 100px; padding-bottom: 100px;"></a><br>
+		<a th:href="@{/moveTest}"><img th:src="@{images/index/index5.JPG}" style="padding-right: 100px;"></a>
+		<a th:href="@{/moveSWAbilityTestAndConsulting}"><img th:src="@{images/index/index6.JPG}" style="padding-left: 100px;padding-right: 100px;"></a>
+		<a th:href="@{/moveDigitalBusiness}"><img th:src="@{images/index/index7.JPG}" style="padding-left: 100px;"></a>
+	</div>
+</div>
+<!-- content end --> 

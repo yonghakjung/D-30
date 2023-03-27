@@ -41,15 +41,15 @@
 	        </ul>
 	      </li>
 	      
-	      <li th:classappend="${activeEmployed} ? 'active' : '' "><a href="#" th:href="@{/moveEmployed}">교육&훈련</a>
+	      <li th:classappend="${activeEducationAndTraining} ? 'active' : '' "><a href="#" th:href="@{/moveEducationAndTraining}">교육&훈련</a>
 	      	<ul>
-	          <li><a href="#" th:href="@{/moveEmployed}">취업자</a></li>
-	          <li><a href="#" th:href="@{/moveIncumbent}">제직자</a></li>
+	          <li><a href="#" th:href="@{https://kosta.oopy.io/edu/student}">취업자</a></li>
+	          <li><a href="#" th:href="@{https://kosta.oopy.io/edu/worker}">제직자</a></li>
 	          <li><a href="#" th:href="@{/moveRecruits}">신입사원</a></li>
 	        </ul>
 	      </li>
 	      
-	      <li th:classappend="${activeJobOffer} ? 'active' : '' "><a href="#" th:href="@{/moveJobOffer}">구인&구직</a>
+	      <li th:classappend="${activeJobOfferAndSearch} ? 'active' : '' "><a href="#" th:href="@{/moveJobOfferAndSearch}">구인&구직</a>
 	      	<ul>
 	          <li><a href="#" th:href="@{/moveJobOffer}">구인</a></li>
 	          <li><a href="#" th:href="@{/moveJobSearch}">구직</a></li>
@@ -59,7 +59,7 @@
 	      <li th:classappend="${activeTest} ? 'active' : '' "><a href="#" th:href="@{/moveTest}">시험&인증</a>
 	      </li>
 	      
-	      <li th:classappend="${activeSWAbilityTest} ? 'active' : '' "><a href="#" th:href="@{/moveSWAbilityTest}">SW역량진단&개발 컨설팅</a>
+	      <li th:classappend="${activeSWAbilityTestAndConsulting} ? 'active' : '' "><a href="#" th:href="@{/moveSWAbilityTestAndConsulting}">SW역량진단&개발 컨설팅</a>
 	      	<ul>
 	          <li><a href="#" th:href="@{/moveSWAbilityTest}">정보시스템 애플리케이션 SW개발 역량</a></li>
 	          <li><a href="#" th:href="@{/moveSSPL}">소프트웨어&시스템 플랫폼 개발(SSPL) 역량</a></li>
