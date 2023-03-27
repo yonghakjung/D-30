@@ -5,7 +5,7 @@
 	  layout:decorate="~{main}">
 
 <head>
-<title>한국소프트웨어기술진흥협회123</title>
+<title>header</title>
 </head>
 <!--header start-->
 <div th:fragment="header">
@@ -13,8 +13,11 @@
 	<div class="wrapper row1">
 	  <div id="header" class="clear">
 	    <div class="fl_left">
-	      <h1><a href="index.html">Education Time</a></h1>
+	    	<!-- 
+	      <h1><a href="index.html">한국소프트웨어기술진흥협회</a></h1>
 	      <p>Free Website Template</p>
+	       -->
+	       <a th:href="@{/home}"><img id="kostaLogo" th:src="@{images/kostalogo.png}" style="width: 200px; height: 50px;"/></a>
 	    </div>
 	    <form action="#" method="post" id="login">
 	      <fieldset>
@@ -30,9 +33,9 @@
 	<div class="wrapper row2">
 	  <div id="topnav">
 	    <ul>
-	      <li class="active"><a href="#" th:href="@{/index}">Homepage</a></li>
+	      <li th:classappend="${activeHome} ? 'active' : '' "><a href="#" th:href="@{/index}">Homepage</a></li>
 	      <li><a href="#" th:href="@{/styleDemo}">Style Demo</a></li>
-	      <li><a href="#" th:href="@{/fullWidth}">Full Width</a></li>
+	      <li th:classappend="${activeTest} ? 'active' : '' "><a href="#" th:href="@{/fullWidth}">Full Width</a></li>
 	      <li><a href="#">DropDown</a>
 	        <ul>
 	          <li><a href="#">Link 1</a></li>
