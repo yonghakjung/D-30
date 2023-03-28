@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class digitalbusinessController {
 	@GetMapping("/moveVideoLectureDetail")
 	public String moveVideoLectureDetail(Model model) {
-		//model.addAttribute("activeSWAbilityTestAndConsulting",flag);
+		model.addAttribute("activeVideoLecture",true);
 		return "content/digitalbusiness/videolecturedetail";
 	}
 }
