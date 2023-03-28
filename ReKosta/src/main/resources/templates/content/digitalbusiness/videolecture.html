@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{main}">
+
+<head>
+<title>Education Time1</title>
+</head>
+<!-- content start -->
+<div layout:fragment="content">
+	<div class="wrapper row4" style="text-align: center;">
+		<div id="container" class="clear">
+			<div id="homepage" class="clear">
+				<br>
+				<input type = "button" value = "디지털비즈니스센터소개" th:onClick="|location.href='@{/moveDigitalBusiness}'|"
+					th:style="${activeIntroduceDigitalBusiness}? 'width: 250px; height: 50px;background-color: #031252; color: white' : 'width: 250px; height: 50px;background-color: white; color: #031252;  border-color: #031252'">
+				<input type = "button" value = "동영상강의" th:onClick="|location.href='@{/moveVideoLecture}'|"
+					th:style="${activeVideoLecture}? 'width: 250px; height: 50px;background-color: #031252; color: white' : 'width: 250px; height: 50px;background-color: white; color: #031252; border-color: #031252;'">
+				<br>
+				<br>
+				<table
+					style="width: 100%; border: 1px solid black; margin-left: auto; margin-right: auto; text-align: center;">
+					<tr>
+						<td style="width: 33%;">전체</td>
+						<td style="width: 34%;">Serverless 컴퓨팅</td>
+						<td style="width: 33%;">MSA의 숨은위험</td>
+					</tr>
+				</table>
+				<br>
+				<br>
+				<div class="fl_left">
+					<span>동영상 강의(세미나, 웨비나, 워크숍) </span><span th:text="@{videoNumber}">수량</span>
+				</div>
+				<div class="fl_right">
+					<input type="text" style="width: 200px; height: 20px;"
+						placeholder="search">
+				</div>
+				<br>
+				<br>
+				<div id="hpage_specials">
+					<ul>
+						<li>
+							<div style="text-align: center;">
+								<div class="imgholder" style="width: 350px; height: 250px;">
+									<img src="images/demo/160x160.gif" alt="" />
+								</div>
+								<p class="readmore">
+									<a th:href="@{/moveVideoLectureDetail}">제목</a>
+								</p>
+								<p>내용</p>
+								<p>작성자</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- content end -->

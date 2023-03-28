@@ -45,15 +45,10 @@
 	      	<ul>
 	          <li><a href="#" th:href="@{https://kosta.oopy.io/edu/student}">취업자</a></li>
 	          <li><a href="#" th:href="@{https://kosta.oopy.io/edu/worker}">제직자</a></li>
-	          <li><a href="#" th:href="@{/moveRecruits}">신입사원</a></li>
 	        </ul>
 	      </li>
 	      
 	      <li th:classappend="${activeJobOfferAndSearch} ? 'active' : '' "><a href="#" th:href="@{/moveJobOfferAndSearch}">구인&구직</a>
-	      	<ul>
-	          <li><a href="#" th:href="@{/moveJobOffer}">구인</a></li>
-	          <li><a href="#" th:href="@{/moveJobSearch}">구직</a></li>
-	        </ul>
 	      </li>
 	      
 	      <li th:classappend="${activeTest} ? 'active' : '' "><a href="#" th:href="@{/moveTest}">시험&인증</a>
