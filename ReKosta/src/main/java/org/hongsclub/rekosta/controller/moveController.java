@@ -76,11 +76,13 @@ public class moveController {
 	@GetMapping("/moveDigitalBusiness")
 	public String moveDigitalBusiness(Model model) {
 		model.addAttribute("activeDigitalBusiness",flag);
-		return "content/digitalbusiness";
+		model.addAttribute("activeIntroduceDigitalBusiness",flag);
+		return "content/digitalbusiness/digitalbusiness";
 	}
 	@GetMapping("/moveVideoLecture")
 	public String moveVideoLecture(Model model) {
 		model.addAttribute("activeDigitalBusiness",flag);
+		model.addAttribute("activeVideoLecture",flag);
 		return "content/digitalbusiness/videolecture";
 	}
 	//고객센터
