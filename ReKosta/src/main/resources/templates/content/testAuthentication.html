@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{main}">
+
+<head>
+<title>TestAuthentication</title>
+</head>
+<!-- content start -->
+<div layout:fragment="content">
+
+	<div class="wrapper row4">
+		<div id="container" class="clear">
+			<div class="span-set"></div>
+			<div>
+				<div class="text-table ">
+					<div>
+						<p style="text-align: center; line-height: 2;">
+							<span style="color: rgb(34, 34, 34);">
+							<span
+								style="font-size: 30px; font-weight: 400;">귀사에서는 역량이 검증된 직원 만이 그 활동, 그 역할을 하고 있습니까?</span></span>
+								<span
+								style="color: rgb(148, 45, 51);"><span
+								style="font-size: 30px; font-weight: 400;"></span></span>
+						</p>
+						<p style="text-align: center;">
+							<br>
+						</p>
+						<p style="text-align: center; line-height: 2;">
+							<span style="font-size: 20px;">SW사업의 가장 기본적인 경영 원칙은 <br>역량을
+								인증 받은 직원만 SW프로젝트에 투입하는 것이다. 병원의 의사처럼&middot;&middot;&middot;&nbsp;
+							</span>
+						</p>
+						<p style="text-align: center; line-height: 1;">
+							<span style="font-size: 15px;">- SW역량 강화 5단계 추진방법, 박준성 -</span>
+						</p>
+						<hr>
+					</div>
+				</div>
+			</div>
+			<span style="font-size: 17px; font-weight:50;">KOSTA 역량 인증 로드맵</span> <br><br><br><br><br>
+			<span style="font-size: 17px; font-weight:50;">SW 개발자 인증</span> <br><br><br>
+			<span style="font-size: 15px; font-weight:50;">주니어개발자</span> <br><br>
+
+			<table border="1">
+				<thead>
+					<tr bgcolor="pink">
+						<th width="180" scope="col">주제</th>
+						<th width="1000" scope="col">과목</th>
+						<th scope="col">문제수</th>
+						<th colspan="3" scope="col">시간(분)</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+					<th scope="row"></th>
+						<td style="text-align:center">합계</td>
+						<th style="text-align:center">165</th>
+						<td style="text-align:center">210</td>
+					</tr>
+				</tfoot>
+				<tbody>
+					<tr>
+						<th align="center" scope="row">Front-end</th>
+						<td>HTML(초),CSS(초),JavaScript,Bootstrap(중), React / Matirial UI(선택 Vue.js / Vuetify)(중)</td>
+						<td align="center">30</td>
+						<td rowspan="3" style="vertical-align:middle; text-align:center">90</td>
+					</tr>
+					<tr>
+						<th align="center" scope="row">API</th>
+						<td>REST(중)</td>
+						<td align="center">10</td>
+					</tr>
+					<tr>
+						<th align="center" scope="row">Back-end</th>
+						<td>Java (중), Spring (중), Security(중), TDD(Junit, Mocha)(중)</td>
+						<td align="center">30</td>
+					</tr>
+					<tr>
+						<th align="center" scope="row">Database</th>
+						<td>SQL(중), JDBC(중), JPA/Hibernate(중), MongoDB(중)</td>
+						<td align="center">25</td>
+						<td rowspan="2" style="vertical-align:middle; text-align:center">70</td>
+
+					</tr>
+					<tr>
+						<th align="center" scope="row">Tools / Infra</th>
+						<td>Git/GitHub(초), IntelliJ(초), Build(Maven/Gradle)(초), Web server (apache, nginx, tomcat)(중), Docker(중), Kubernetes(중), AWS(중)</td>
+						<td align="center">30</td>
+
+					</tr>
+					<tr>
+						<th align="center" scope="row">SW Engineering</th>
+						<td>BPM(BPMN)(초), Data Modeling (UML Class Diagram)(중), Use
+							Case Analysis(중), Object Design Patterns(중), aRefactoring(중), DB
+							Design(중), Scrum(Jira)(중), SOA Design(중), EA(ArchiMate)(중)</td>
+						<td align="center">40</td>
+						<td style="vertical-align:middle; text-align:center">50</td>
+					</tr>
+				</tbody>
+			</table>
+<!-- ----------------------- 1 table end ------------------------------ -->
+		<span style="font-size: 15px; font-weight:50;">시니어개발자</span> <br><br>
+	<table border="1">
+				<thead>
+					<tr >
+						<th width="180" scope="col">주제</th>
+						<th width="1000" scope="col">과목</th>
+						<th scope="col">문제수</th>
+						<th colspan="3" scope="col">시간(분)</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+					<th scope="row"></th>
+						<td style="text-align:center">합계</td>
+						<th style="text-align:center">165</th>
+						<td style="text-align:center">240</td>
+					</tr>
+				</tfoot>
+				<tbody>
+					<tr>
+						<th align="center" scope="row">Front-end</th>
+						<td>HTML(중/고), CSS(중/고), JavaScript(고), Bootstrap(고), React / Matirial UI(선택 Vue.js / Vuetify)(고)</td>
+						<td align="center">30</td>
+						<td rowspan="3" style="vertical-align:middle; text-align: center;">100</td>
+					</tr>
+					<tr>
+						<th align="center" scope="row">API</th>
+						<td>REST(중)</td>
+						<td align="center">10</td>
+					</tr>
+					<tr>
+						<th align="center" scope="row">Back-end</th>
+						<td>Java(고), Spring(고), Security(고), TDD(Junit, Mocha)(중/고)</td>
+						<td align="center">30</td>
+					</tr>
+					<tr>
+						<th align="center" scope="row">Database</th>
+						<td>DB Design(고), SQL(고), JPA/Hibernate(중/고), Physical DB Tuning(고), DBA(고), MongoDB(중/고)</td>
+						<td align="center">25</td>
+						<td rowspan="2" style="vertical-align:middle; text-align:center">80</td>
+
+					</tr>
+					<tr>
+						<th align="center" scope="row">Tools / Infra</th>
+						<td>Git/GitHub, Jenkins/Gitlab활용한 CI/CD와 DevOps(중/고), Web server (apache, nginx, tomcat)(중/고), Docker(고), Kubernetes(고), AWS(고)</td>
+						<td align="center">30</td>
+
+					</tr>
+					<tr>
+						<th align="center" scope="row">SW Engineering</th>
+						<td>BPM(BPMN)(중/고), Data Modeling (UML Class Diagram)(중/고), Use Case Analysis(중/고), 
+						Object Design Patterns(고), Refactoring(고), Scrum(Jira)(고), SOA Design(고), EA(ArchiMate)(고)</td>
+						<td rowspan="2" style="vertical-align:middle; text-align:center">40</td>
+						<td rowspan="2" style="vertical-align:middle; text-align:center">60</td>
+					</tr>
+				</tbody>
+			</table>
+		
+		
+		<span style="font-size: 17px; font-weight:50;">비즈니스 분석자(Business Analyst)</span> <br><br><br>
+		<span style="font-size: 15px; font-weight:50;">Associate 비즈니스 개발자</span> <br><br>
+		
+		<span style="font-size: 15px; font-weight:50;">Professional 비즈니스 개발자</span> <br><br>
+		
+		<span style="font-size: 17px; font-weight:50;">소프트웨어 아키텍트 인증</span> <br><br><br>
+		<span style="font-size: 15px; font-weight:50;">Associate SW 아키텍트</span> <br><br>
+		
+		<span style="font-size: 15px; font-weight:50;">Professional SW 아키텍트</span> <br><br>
+		
+		<span style="font-size: 17px; font-weight:50;">시스템 아키텍트 인증</span> <br><br><br>
+		<span style="font-size: 15px; font-weight:50;">Associate 시스템 아키텍트</span> <br><br>
+		
+		<span style="font-size: 15px; font-weight:50;">Professional 시스템 아키텍트</span> <br><br>
+		
+		<span style="font-size: 17px; font-weight:50;">문의처</span> <br><br><br>
+		<span style="font-size: 15px; font-weight:50;">한국SW기술진흥협회 기술기획정책팀 정석진 팀장 / sjjung@kosta.or.kr / 031-606-9302</span> <br><br>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+<!-- content end -->

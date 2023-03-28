@@ -54,7 +54,7 @@ public class moveController {
 	@GetMapping("/moveTest")
 	public String moveTest(Model model) {
 		model.addAttribute("activeTest",flag);
-		return "content/test";
+		return "content/testauthentication";
 	}
 	//sw역량진단&개발컨설팅
 	@GetMapping("/moveSWAbilityTestAndConsulting")
