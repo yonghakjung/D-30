@@ -10,18 +10,18 @@ public class moveController {
 	//홈
 	@GetMapping(value={"/home","/","/index"})
 	public String moveHome() {
-		return "content/index2";
+		return "content/index";
 	}
 	//협회소개
 	@GetMapping("/moveIntroduceOrganization")
 	public String moveIntroduceOrganization(Model model) {
 		model.addAttribute("activeIntroduceAndRegister",flag);
-		return "content/introduceOrganization";
+		return "content/intro/introduceOrganization";
 	}
 	@GetMapping("/moveIntroduceRegisterMembership")
 	public String moveRegisterMembership(Model model) {
 		model.addAttribute("activeIntroduceAndRegister",flag);
-		return "content/introduceRegisterMembership";
+		return "content/intro/introduceRegisterMembership";
 	}
 	//교육훈련
 	@GetMapping("/moveEducationAndTraining")
@@ -81,7 +81,7 @@ public class moveController {
 	@GetMapping("/moveVideoLecture")
 	public String moveVideoLecture(Model model) {
 		model.addAttribute("activeDigitalBusiness",flag);
-		return "content/videolecture";
+		return "content/digitalbusiness/videolecture";
 	}
 	//고객센터
 	@GetMapping("/moveNoticeBoard")
@@ -93,7 +93,8 @@ public class moveController {
 	public String moveKostaSympathy(Model model) {
 		model.addAttribute("activeNoticeBoard",flag);
 		return "content/kostasympathy";
-	}@GetMapping("/moveMembershipAdvertise")
+	}
+	@GetMapping("/moveMembershipAdvertise")
 	public String moveMembershipAdvertise(Model model) {
 		model.addAttribute("activeNoticeBoard",flag);
 		return "content/membershipadvertise";
