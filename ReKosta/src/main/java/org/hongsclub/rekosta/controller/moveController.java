@@ -35,16 +35,6 @@ public class moveController {
 		model.addAttribute("activeJobOfferAndSearch",flag);
 		return "content/jobofferandsearch";
 	}
-	@GetMapping("/moveJobOffer")
-	public String moveJobOffer(Model model) {
-		model.addAttribute("activeJobOfferAndSearch",flag);
-		return "content/joboffer";
-	}
-	@GetMapping("/moveJobSearch")
-	public String moveJobSearch(Model model) {
-		model.addAttribute("activeJobOfferAndSearch",flag);
-		return "content/jobsearch";
-	}
 	//시험인증
 	@GetMapping("/moveTest")
 	public String moveTest(Model model) {
