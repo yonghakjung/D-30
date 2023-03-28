@@ -29,26 +29,11 @@ public class moveController {
 		model.addAttribute("activeEducationAndTraining",flag);
 		return "content/educationandtraining";
 	}
-	@GetMapping("/moveRecruits")
-	public String moveRecruits(Model model) {
-		model.addAttribute("activeEducationAndTraining",flag);
-		return "content/recruits";
-	}
 	//구인구직
 	@GetMapping("/moveJobOfferAndSearch")
 	public String moveJobOfferAndSearch(Model model) {
 		model.addAttribute("activeJobOfferAndSearch",flag);
 		return "content/jobofferandsearch";
-	}
-	@GetMapping("/moveJobOffer")
-	public String moveJobOffer(Model model) {
-		model.addAttribute("activeJobOfferAndSearch",flag);
-		return "content/joboffer";
-	}
-	@GetMapping("/moveJobSearch")
-	public String moveJobSearch(Model model) {
-		model.addAttribute("activeJobOfferAndSearch",flag);
-		return "content/jobsearch";
 	}
 	//시험인증
 	@GetMapping("/moveTest")
@@ -76,11 +61,13 @@ public class moveController {
 	@GetMapping("/moveDigitalBusiness")
 	public String moveDigitalBusiness(Model model) {
 		model.addAttribute("activeDigitalBusiness",flag);
-		return "content/digitalbusiness";
+		model.addAttribute("activeIntroduceDigitalBusiness",flag);
+		return "content/digitalbusiness/digitalbusiness";
 	}
 	@GetMapping("/moveVideoLecture")
 	public String moveVideoLecture(Model model) {
 		model.addAttribute("activeDigitalBusiness",flag);
+		model.addAttribute("activeVideoLecture",flag);
 		return "content/digitalbusiness/videolecture";
 	}
 	//고객센터
