@@ -45,6 +45,9 @@ h1.icon{display: inline; position: relative; bottom: 4px; }
 h2.icon{display: inline; position: relative; line-height: 200%;}
 h3.icon{display: inline; position: relative; bottom: 4px; line-height:200%; font-size: 17px;}
 
+.board{width:100%; border-collapse:collapse; table-layout:auto; vertical-align:top; margin-bottom:15px; border:1px solid #dedede; border-left:none; border-right:none; text-align:center; padding:5px; border-collapse:collapse;}
+.board-th{border:1px solid #dedede; table-layout:auto; vertical-align:middle; border-left:none; border-right:none; border-top:1px solid; font-size: 15px; height: 40px;}
+.board-td{vertical-align:top; border-left:none; border-right:none; font-size: 16px; font-weight: bolder; height: 40px;}
 
 
 /* ----------------------------------------------Wrapper------------------------------------- */
