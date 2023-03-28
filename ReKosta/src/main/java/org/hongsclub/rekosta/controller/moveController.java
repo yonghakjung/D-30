@@ -21,7 +21,7 @@ public class moveController {
 	@GetMapping("/moveIntroduceRegisterMembership")
 	public String moveRegisterMembership(Model model) {
 		model.addAttribute("activeIntroduceAndRegister",flag);
-		return "content/introduceRegisterMembership";
+		return "content/intro/introduceRegisterMembership";
 	}
 	//교육훈련
 	@GetMapping("/moveEducationAndTraining")
