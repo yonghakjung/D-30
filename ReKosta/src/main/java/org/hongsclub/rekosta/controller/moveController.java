@@ -10,7 +10,7 @@ public class moveController {
 	//홈
 	@GetMapping(value={"/home","/","/index"})
 	public String moveHome() {
-		return "content/index";
+		return "content/index2";
 	}
 	//협회소개
 	@GetMapping("/moveIntroduceOrganization")
@@ -24,30 +24,30 @@ public class moveController {
 		return "content/introduceRegisterMembership";
 	}
 	//교육훈련
-	@GetMapping("/moveEmployed")
+	@GetMapping("/moveEducationAndTraining")
 	public String moveEmployed(Model model) {
-		model.addAttribute("activeEmployed",flag);
-		return "content/employed";
-	}
-	@GetMapping("/moveIncumbent")
-	public String moveIncumbent(Model model) {
-		model.addAttribute("activeEmployed",flag);
-		return "content/incumbent";
+		model.addAttribute("activeEducationAndTraining",flag);
+		return "content/educationandtraining";
 	}
 	@GetMapping("/moveRecruits")
 	public String moveRecruits(Model model) {
-		model.addAttribute("activeEmployed",flag);
+		model.addAttribute("activeEducationAndTraining",flag);
 		return "content/recruits";
 	}
 	//구인구직
+	@GetMapping("/moveJobOfferAndSearch")
+	public String moveJobOfferAndSearch(Model model) {
+		model.addAttribute("activeJobOfferAndSearch",flag);
+		return "content/jobofferandsearch";
+	}
 	@GetMapping("/moveJobOffer")
 	public String moveJobOffer(Model model) {
-		model.addAttribute("activeJobOffer",flag);
+		model.addAttribute("activeJobOfferAndSearch",flag);
 		return "content/joboffer";
 	}
 	@GetMapping("/moveJobSearch")
 	public String moveJobSearch(Model model) {
-		model.addAttribute("activeJobOffer",flag);
+		model.addAttribute("activeJobOfferAndSearch",flag);
 		return "content/jobsearch";
 	}
 	//시험인증
@@ -57,14 +57,19 @@ public class moveController {
 		return "content/test";
 	}
 	//sw역량진단&개발컨설팅
+	@GetMapping("/moveSWAbilityTestAndConsulting")
+	public String moveSWAbilityTestAndConsulting(Model model) {
+		model.addAttribute("activeSWAbilityTestAndConsulting", flag);
+		return "content/swabilitytestandconsulting";
+	}
 	@GetMapping("/moveSWAbilityTest")
 	public String moveSWAbilityTest(Model model) {
-		model.addAttribute("activeSWAbilityTest", flag);
+		model.addAttribute("activeSWAbilityTestAndConsulting", flag);
 		return "content/swabilitytest";
 	}
 	@GetMapping("/moveSSPL")
 	public String moveSSPL(Model model) {
-		model.addAttribute("activeSWAbilityTest",flag);
+		model.addAttribute("activeSWAbilityTestAndConsulting",flag);
 		return "content/sspl";
 	}
 	//디지털비즈니스지원센터
