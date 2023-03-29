@@ -16,7 +16,7 @@ File: Homepage CSS
 
 /* ----------------------------------------------Left Column------------------------------------- */
 
-#homepage .fl_left{display:block; width:380px;}
+#homepage .fl_left{display:block; width:610px;}
 
 /* ----------------------------------------------Featured Slider------------------------------------- */
 
@@ -44,7 +44,7 @@ File: Homepage CSS
 
 /* ----------------------------------------------Right Column------------------------------------- */
 
-#homepage .fl_right{display:block; width:540px;}
+#homepage .fl_right{display:block; width:650px;}
 
 /* ----------------------------------------------Latest News------------------------------------- */
 
