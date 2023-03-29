@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-	  xmlns:th="http://www.thymeleaf.org"
-	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	  layout:decorate="~{main}">
-	  
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{main}">
+
 <head>
 <title>Education Time1</title>
 </head>
@@ -12,248 +12,1539 @@
 	<div class="wrapper row4">
 		<div id="container" class="clear">
 			<div id="homepage" class="clear">
-			<div style="text-align: center;">
-				<h5>디지털비즈니스센터</h5>
-				<hr>
-				<pre>
-급격한 기술 변화의 시대에서는 많은 노력들이 기업 성장을 보장해 주지 못합니다.
-경영자는 비즈니스 모델과 전략이 금방 쓸모 없어지는 시대에 대비하여 끊임없이
-기업을 혁신하는 방법을 생각해야 합니다.
+				<div style="text-align: center;">
+					<div class="text-table ">
+						<div>
+							<p style="text-align: center; line-height: 1;">
+								<span style="color: black;"><span
+									style="font-size: 48px;"><strong>디지털비즈니스지원센터</strong></span></span>
+							</p>
+						</div>
+					</div>
 
+					<hr>
+					<div class="text-table ">
+						<div>
+							<p style="text-align: center; line-height: 2;">
+								<span style="font-size: 20px;">급격한 기술 변화의 시대에서는 많은 노력들이
+									기업 성장을 보장해 주지 못합니다. <br>경영자는 비즈니스 모델과 전략이 금방 쓸모 없어지는 시대에
+									대비하여 끊임없이 <br>기업을 혁신하는 방법을 생각해야 합니다.
+								</span>
+							</p>
+							<p style="text-align: center;">
+								<br>
+							</p>
+							<p style="text-align: center; line-height: 2;">
+								<span style="font-size: 20px;">미래는 기술과 비즈니스의 통합을 통해 고객에게
+									더욱 가까이 다가가는 기술 역량을 구축하는 기업들의 차지가 될 것이다.<br>기업이 새로운 환경에서
+									살아남으려면 모든 사업 단위에서 기술을 전략적 사고의 핵심으로 받아들여야 한다. <br>이것이 기술을
+									전략적 문제의 관점에서 접근하는 디지털 비즈니스를 해야 할 이유이다.
+								</span>
+							</p>
+							<p style="text-align: center; line-height: 2;">
+								<span style="font-size: 20px;">- John Rossman : The
+									Amazon Way, Richard Dobbs: No Ordinary Disruption -</span><span
+									style="font-size: 26px;"><br></span>
+							</p>
+						</div>
+					</div>
 
-
-미래는 기술과 비즈니스의 통합을 통해 고객에게 더욱 가까이 다가가는 기술 역량을 구축하는 기업들의 차지가 될 것이다.
-기업이 새로운 환경에서 살아남으려면 모든 사업 단위에서 기술을 전략적 사고의 핵심으로 받아들여야 한다.
-이것이 기술을 전략적 문제의 관점에서 접근하는 디지털 비즈니스를 해야 할 이유이다.
-
-- John Rossman : The Amazon Way, Richard Dobbs: No Ordinary Disruption -
-				</pre>
-				<hr>
-				<input type = "button" value = "디지털비즈니스센터소개"  th:onClick="|location.href='@{/moveDigitalBusiness}'|"
-					th:style="${activeIntroduceDigitalBusiness}? 'width: 250px; height: 50px;background-color: #031252; color: white' : 'width: 250px; height: 50px;background-color: white; color: #031252;  border-color: #031252'">
-				<input type = "button" value = "동영상강의" th:onClick="|location.href='@{/moveVideoLecture}'|"
-					th:style="${activeVideoLecture}? 'width: 250px; height: 50px;background-color: #031252; color: white' : 'width: 250px; height: 50px;background-color: white; color: #031252; border-color: #031252;'">
-				<br>
-				<br>
+					<hr>
+					<input type="button" value="디지털비즈니스센터소개"
+						th:onClick="|location.href='@{/moveDigitalBusiness}'|"
+						th:style="${activeIntroduceDigitalBusiness}? 'width: 250px; height: 50px;background-color: #031252; color: white' : 'width: 250px; height: 50px;background-color: white; color: #031252;  border-color: #031252'">
+					<input type="button" value="동영상강의"
+						th:onClick="|location.href='@{/moveVideoLecture}'|"
+						th:style="${activeVideoLecture}? 'width: 250px; height: 50px;background-color: #031252; color: white' : 'width: 250px; height: 50px;background-color: white; color: #031252; border-color: #031252;'">
+					<br> <br>
 				</div>
-				<pre style="white-space: pre-wrap;">
-개요
-
- 「디지털비즈니스지원센터」는 제 4차 산업혁명에 대응하여 한국 기업의 디지털 비즈니스 이행 전략을 발굴 기획하고, 이의 실천 및 사업화에 필요한 시스템 개발을 지원하기 위해 한국소프트웨어기술진흥협회가 운영하는 디지털 비즈니스 연구 및 보급 전문기구입니다.
-
-  디지털 기업으로의 전환 (Digital Transformation)을 위한 디지털 비즈니스 구현전략과 이를 실천하는데 필요한 전사 차원의 소프트웨어 개발역량 및 시스템 구축 역량을 필요 기업에 맞춤형으로 서비스 및 지원해 드립니다
-
-   사업 내용
-
-●  Digital Transformation 핵심 개념의 이해와 실현 방법론 · 역량 구축에 관한 월례 세미나
-
-●  디지털 비즈니스 전환 성공전략 CxO 특강
-
-●  디지털 비즈니스 구현 방법론 및 분석/설계 교육
-
-●  디지털 비즈니스 Agile 구현 및 개발 교육
-
-●  디지털 비즈니스 개발 리더를 위한 아키텍트 분석/설계 교육
-
-디지털 혁신을 위한 비즈니스 모델링
-디지털 비즈니스의 데이터 설계
-객체지향 프로그램의 디자인 패턴
-디지털 비즈니스의 프로세스 설계
-디지털 비즈니스의 사용사례 분석 및 구현
-SOA와 마이크로서비스 설계 패턴과 방법론
-●  디지털 비즈니스 역량의 핵심, Full Cycle, Full_stack 개발자 양성 교육
-
-●  프로젝트 리더 · 상급 개발자를 위한 프리미엄 교육
-
-●  빠른 디지털비즈니스 실현을 위한 쉬운 Low Code 개발 실습
-
-●  SW엔지니어링 전문가와 함께 하는 10주 만에 디지털비즈니스 개발하기 실습
 
 
+				<div class="text-table ">
+					<div>
+						<p>
+							<span style="font-size: 24px; font-weight: 500;"><img
+								src="https://cdn.imweb.me/upload/S20211209e03c241e30b4c/034c8612b2e30.png"
+								class="fr-fin fr-dii" style="width: 26px;">&nbsp; &nbsp;개요</span>
+						</p>
+					</div>
+				</div>
+				<div class="text-table ">
+					<div>
+						<p style="line-height: 2;">
+							<img
+								src="https://cdn.imweb.me/upload/S20211209e03c241e30b4c/151706598c7ec.png"
+								class="fr-fin fr-dii" style="width: 14px;"> <span
+								style="font-size: 20px;">「디지털비즈니스지원센터」는 제 4차 산업혁명에 대응하여
+								한국 기업의 디지털 비즈니스 이행 전략을 발굴 기획하고, 이의 실천 및 사업화에 필요한 시스템 개발을 지원하기 위해
+								한국소프트웨어기술진흥협회가 운영하는 디지털 비즈니스 연구 및 보급 전문기구입니다.</span>
+						</p>
+					</div>
+				</div>
+				<div class="text-table ">
+					<div>
+						<p style="line-height: 2;">
+							<img
+								src="https://cdn.imweb.me/upload/S20211209e03c241e30b4c/151706598c7ec.png"
+								class="fr-fin fr-dii" style="width: 14px;">&nbsp;&nbsp;<span
+								style="font-size: 20px;">디지털 기업으로의 전환 (Digital
+								Transformation)을 위한 디지털 비즈니스 구현전략과 이를 실천하는데 필요한 전사 차원의 소프트웨어
+								개발역량 및 시스템 구축 역량을 필요 기업에 맞춤형으로 서비스 및 지원해 드립니다</span>
+						</p>
+					</div>
+				</div>
+				<br> <br>
+				<div class="text-table ">
+					<div>
+						<p>
+							<span style="font-size: 24px; font-weight: 500;"><img
+								src="https://cdn.imweb.me/upload/S20211209e03c241e30b4c/034c8612b2e30.png"
+								class="fr-fin fr-dii" style="width: 26px; padding-bottom: 4px;">&nbsp;
+								&nbsp;사업 내용</span>
+						</p>
+					</div>
+				</div>
+				<div class="text-table ">
+					<div>
+						<p style="line-height: 2.5;">
+							<span style="color: rgb(148, 45, 51);"><span
+								style="font-size: 14px;">●</span></span><span style="font-size: 20px;">&nbsp;
+								Digital Transformation 핵심 개념의 이해와 실현 방법론 &middot; 역량 구축에 관한 월례
+								세미나</span>
+						</p>
+						<p style="line-height: 2.5;">
+							<span style="color: rgb(148, 45, 51);"><span
+								style="font-size: 14px;">●</span></span><span style="font-size: 20px;">&nbsp;
+								디지털 비즈니스 전환 성공전략 CxO 특강</span>
+						</p>
+						<p style="line-height: 2.5;">
+							<span style="color: rgb(148, 45, 51);"><span
+								style="font-size: 14px;">●</span></span><span style="font-size: 20px;">&nbsp;
+								디지털 비즈니스 구현 방법론 및 분석/설계 교육</span>
+						</p>
+						<p style="line-height: 2.5;">
+							<span style="color: rgb(148, 45, 51);"><span
+								style="font-size: 14px;">●</span></span><span style="font-size: 20px;">&nbsp;
+								디지털 비즈니스 Agile 구현 및 개발 교육</span>
+						</p>
+						<p style="line-height: 2.5;">
+							<span style="color: rgb(148, 45, 51);"><span
+								style="font-size: 14px;">●</span></span><span style="font-size: 20px;">&nbsp;
+								디지털 비즈니스 개발 리더를 위한 아키텍트 분석/설계 교육</span>
+						</p>
+					</div>
+				</div>
+				<div class="text-table ">
+					<div>
+						<ul style="list-style-type: disc;">
+							<li style="line-height: 2;"><span style="font-size: 18px;">디지털
+									혁신을 위한 비즈니스 모델링</span></li>
+							<li style="line-height: 2;"><span style="font-size: 18px;">디지털
+									비즈니스의 데이터 설계</span></li>
+							<li style="line-height: 2;"><span style="font-size: 18px;">객체지향
+									프로그램의 디자인 패턴</span></li>
+							<li style="line-height: 2;"><span style="font-size: 18px;">디지털
+									비즈니스의 프로세스 설계</span></li>
+							<li style="line-height: 2;"><span style="font-size: 18px;">디지털
+									비즈니스의 사용사례 분석 및 구현</span></li>
+							<li style="line-height: 2;"><span style="font-size: 18px;">SOA와
+									마이크로서비스 설계 패턴과 방법론</span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="text-table ">
+					<div>
+						<p style="line-height: 2.5;">
+							<span style="color: rgb(148, 45, 51);"><span
+								style="font-size: 14px;">●</span></span><span style="font-size: 20px;">&nbsp;&nbsp;디지털
+								비즈니스 역량의 핵심, Full Cycle, Full_stack 개발자 양성 교육</span>
+						</p>
+						<p style="line-height: 2.5;">
+							<span style="color: rgb(148, 45, 51);"><span
+								style="font-size: 14px;">●</span></span><span style="font-size: 20px;">&nbsp;&nbsp;프로젝트
+								리더 &middot; 상급 개발자를 위한 프리미엄 교육</span>
+						</p>
+						<p style="line-height: 2.5;">
+							<span style="color: rgb(148, 45, 51);"><span
+								style="font-size: 14px;">●</span></span><span style="font-size: 20px;">&nbsp;&nbsp;빠른
+								디지털비즈니스 실현을 위한 쉬운 Low Code 개발 실습</span>
+						</p>
+						<p style="line-height: 2.5;">
+							<span style="color: rgb(148, 45, 51);"><span
+								style="font-size: 14px;">●</span></span><span style="font-size: 20px;">&nbsp;&nbsp;SW엔지니어링
+								전문가와 함께 하는 10주 만에 디지털비즈니스 개발하기 실습</span>
+						</p>
+					</div>
+				</div>
+				<div class="text-table ">
+					<div>
+						<p style="line-height: 2;">
+							<img
+								src="https://cdn.imweb.me/upload/S20211209e03c241e30b4c/151706598c7ec.png"
+								class="fr-fin fr-dii" style="width: 14px;">&nbsp;&nbsp;<span
+								style="font-size: 20px;">Digital Transformation 핵심 개념의
+								이해와 실현 방법론 &middot; 역량 구축에 관한 월례 세미나</span>
+						</p>
+					</div>
+				</div>
+				<input type="button" value="디지털비즈니스지원센터 세미나 다시보기"
+					th:onClick="|location.href='@{/moveVideoLecture}'|"
+					style="width: 500px; height: 50px; border-radius: 25px; color: white; background-color: #031252" />
+				<br> <br> <br>
 
-  Digital Transformation 핵심 개념의 이해와 실현 방법론 · 역량 구축에 관한 월례 세미나
-  				</pre>
-  				<input type = "button" value = "디지털비즈니스지원센터 세미나 다시보기" th:onClick="|location.href='@{/moveVideoLecture}'|"
-  					style="width: 500px; height: 50px; border-radius: 25px; color: white; background-color: #031252"/>
-  				<br><br><br>
-  				<table style="text-align: center; width: 100%;" border="1">
-  					<tr>
-<td style="width: 16%;"><pre style="white-space: pre-wrap;">
-디지털혁신의 실행을 위한 글로벌 일류 SW 역량 확보방안
-2021.1.20.
-글로벌 일류 SW개발자 양성,
-기술리더로 성장하는 경력로드맵
-</pre></td>
-<td style="width: 16%;"><pre style="white-space: pre-wrap;">
-신입사원 글로벌 SW역량개발 Off-JT/OJT 교육실행 전략
-2021.2.23.
-</pre></td>
-<td style="width: 16%;"><pre style="white-space: pre-wrap;">
-디지털비즈니스에서의 SW
-아키텍처 발전동향과 수립전략
-2021.4.27.
-디지털 비즈니스에서의 마이크로서비스 아키텍처 설계와 적용,
-3-Tier IoT 아키텍처 애플리케이션의 개발 프로세스와 기법들
-</pre></td>
-<td style="width: 16%;"><pre style="white-space: pre-wrap;">
-성공적 디지털비즈니스를 위한 비즈니스모델링 및 SW요구분석
-2021.6.15.
-비지니스 모델링(Business Architecture),
-소프트웨어 요구분석(Business Analysis)
-</pre></td>
-<td style="width: 16%;"><pre style="white-space: pre-wrap;">
-AI/IoT활용 Digital Transformation 추진전략
-2021.7.28.
-디지털 비즈니스 애플리케이션의 개발 프로세스와 기법들,
-AI와 IoT 기반의 디지털 비즈니스 애플리케이션의 개발 프로세스와 기법들
-</pre></td>
-<td style="width: 16%;"><pre style="white-space: pre-wrap;">
-SW설계 역량 선진화 세미나
-2021.9.8
-데이터 모델과 사용사례에서
-SW설계 도출,
-도메인모델과 소스코드의
- 설계 리팩토링
-</pre></td>
-  					</tr>
-  					<tr>
-<td style="width: 16%;"><pre style="white-space: pre-wrap;">
-글로벌 일류 SW개발자가 되는 길
-2021.9.29.
-소프트웨어 산업의 이해와 일류 SW개발자의 필수 역량,
-SW 분석설계 사례와 테스트 주도 개발(TDD), 리팩토링, SW설계원리
-</pre></td>
-<td style="width: 16%;"><pre style="white-space: pre-wrap;">
-선진기업의 클라우드 도입전략
-2021.10.19.
-Public 클라우드 도입과 Private 클라우드 구축의
- 전략과 방법,
-Cloud - Native 애플리케이션 개발 전략과 방법
-</pre></td>
-<td style="width: 16%;"><pre style="white-space: pre-wrap;">
-SaaS 사업의 선진 경영모델과 성공요건
-2021.11.23.
-Cloud-Native 애플리케이션의 개발 방법과 Multitenancy와 Self-Service의 구현방법,
-SaaS 사업의 성공을 위한 경영모델과 SaaS 제품의 개발 공법
-</pre></td>
-<td style="width: 16%;"><pre style="white-space: pre-wrap;">
-효과적인 5단계 SW인력 역량강화 추진방법
-2022.1.25.
-1. SW개발 활동 정의 및 직무/직급별 수행 활동 분배
-2. SW개발 활동별 수행기법
-3. SW개발 직무/직급별 수행할 기법의 훈련과정 확보
-4. SW인력별 할달할 직무/직급 훈련 실시 및 직무/직급 능력 자격인증 심사
-5. Sw인력별 SW개발 활동 실적 성과 측정
-</pre></td>
-<td style="width: 16%;"><pre style="white-space: pre-wrap;">
-디지털 변혁을 위한 비즈니스
-프로세스 설계 및 구현 방법
-2022.2.22.
-비즈니스 프로세스 모델 의 원리와 디지털 비즈니스에서의 사용사례,
-BPMN 2.0을 활용한 비즈니스 프로세스 설계 구현 방법 및 툴
-</pre></td>
-<td style="width: 16%;"><pre style="white-space: pre-wrap;">
-혁신적 디지털 비즈니스를 위한
-데이터 엔지니어링 역량 강화 방안
-2022.3.22.
-Operational DB 구축을 위한 Relational DB 설계,
-Relational DB 기반의 Data Warehouse 설계,
-Big Data Analytics를 위한 NoSQL DB 설계
-</pre></td>
-  					</tr>
-  					<tr>
-<td style="width: 16%;"><pre style="white-space: pre-wrap;">
-디지털 변혁 성공을 위한 사용
-사례 분석/구현 역량 강화 방안
-2022.4.26.
-Use Case 분석, Use Case구현
-</pre></td>
-<td style="width: 16%;"><pre style="white-space: pre-wrap;">
-클라우드 네이티브 컴퓨팅
- 1-2-3 단계와 역량확보 방안
-2022.5.24.
-클라우드 네이티브 컴퓨팅
-도입 로드맵 [1-2-3 단계],
-1-2-3 단계 역량
-</pre></td>
-<td style="width: 16%;"><pre style="white-space: pre-wrap;">
-뉴노멀시대 디지털 트랜스포메이션을 위한 기업 아키텍처(EA) 설계
-2022.7.26.
-비즈니스 전략과 비즈니스
-아키텍처, 애플리케이션, 데이터 및 IT 인프라 아키텍처
-</pre></td>
-<td style="width: 16%;"><pre style="white-space: pre-wrap;">
+				<!-- 1 -->
+				<div class="text-table ">
+					<div>
+						<table style="width: 100%;" border="1">
+							<tbody>
+								<tr>
+									<td
+										style="width: 17.7016%; text-align: center; vertical-align: top;"><p>디지털혁신의
+											실행을 위한 글로벌 일류 SW 역량 확보방안</p>
+										<p>2021.1.20.</p>
+										<p>글로벌 일류 SW개발자 양성,</p>기술리더로 성장하는 경력로드맵<br></td>
+									<td
+										style="width: 15.9677%; text-align: center; vertical-align: top;"><p>신입사원
+											글로벌 SW역량개발 Off-JT/OJT 교육실행 전략</p>
+										<p>2021.2.23.</p> <br></td>
+									<td
+										style="width: 16.0484%; text-align: center; vertical-align: top;"><p>
+											디지털비즈니스에서의 SW<br>아키텍처 발전동향과 수립전략
+										</p>
+										<p>2021.4.27.</p>
+										<p>디지털 비즈니스에서의 마이크로서비스 아키텍처 설계와 적용,</p>3-Tier IoT 아키텍처 애플리케이션의
+										개발 프로세스와 기법들<br></td>
+									<td
+										style="width: 16.3848%; text-align: center; vertical-align: top;"><p>성공적
+											디지털비즈니스를 위한 비즈니스모델링 및 SW요구분석</p>
+										<p>2021.6.15.</p>
+										<p>비지니스 모델링(Business Architecture),</p>소프트웨어 요구분석(Business
+										Analysis)<br></td>
+									<td
+										style="width: 16.3747%; text-align: center; vertical-align: top;"><p>AI/IoT활용
+											Digital Transformation 추진전략</p>
+										<p>2021.7.28.</p>
+										<p>디지털 비즈니스 애플리케이션의 개발 프로세스와 기법들,</p>AI와 IoT 기반의 디지털 비즈니스
+										애플리케이션의 개발 프로세스와 기법들<br></td>
+									<td
+										style="width: 17.4963%; text-align: center; vertical-align: top;"><p>SW설계
+											역량 선진화 세미나</p>
+										<p>2021.9.8</p>
+										<p>
+											데이터 모델과 사용사례에서<br>SW설계 도출,
+										</p>
+										<p>
+											도메인모델과 소스코드의<br>&nbsp;설계 리팩토링
+										</p> <br></td>
+								</tr>
+								<tr>
+									<td
+										style="width: 17.7016%; text-align: center; vertical-align: top;"><p>글로벌
+											일류 SW개발자가 되는 길</p>
+										<p>2021.9.29.</p>
+										<p>소프트웨어 산업의 이해와 일류 SW개발자의 필수 역량,</p>SW 분석설계 사례와 테스트 주도
+										개발(TDD), 리팩토링, SW설계원리<br></td>
+									<td
+										style="width: 15.9677%; text-align: center; vertical-align: top;"><p>선진기업의
+											클라우드 도입전략</p>
+										<p>2021.10.19.</p>
+										<p>
+											Public 클라우드 도입과 Private 클라우드 구축의<br>&nbsp;전략과 방법,
+										</p>Cloud - Native 애플리케이션 개발 전략과 방법<br></td>
+									<td
+										style="width: 16.0484%; text-align: center; vertical-align: top;"><p>SaaS
+											사업의 선진 경영모델과 성공요건</p>
+										<p>2021.11.23.</p>
+										<p>Cloud-Native 애플리케이션의 개발 방법과 Multitenancy와 Self-Service의
+											구현방법,</p>SaaS 사업의 성공을 위한 경영모델과 SaaS 제품의 개발 공법<br></td>
+									<td
+										style="width: 16.3848%; text-align: center; vertical-align: top;"><p>효과적인
+											5단계 SW인력 역량강화 추진방법</p>
+										<p>2022.1.25.</p>
+										<p>1. SW개발 활동 정의 및 직무/직급별 수행 활동 분배</p>
+										<p>2. SW개발 활동별 수행기법</p>
+										<p>3. SW개발 직무/직급별 수행할 기법의 훈련과정 확보</p>
+										<p>4. SW인력별 할달할 직무/직급 훈련 실시 및 직무/직급 능력 자격인증 심사</p>5. Sw인력별
+										SW개발 활동 실적 성과 측정<br></td>
+									<td
+										style="width: 16.3747%; text-align: center; vertical-align: top;"><p>
+											디지털 변혁을 위한 비즈니스<br>프로세스 설계 및 구현 방법
+										</p>
+										<p>2022.2.22.</p>
+										<p>비즈니스 프로세스 모델 의 원리와 디지털 비즈니스에서의 사용사례,</p>BPMN 2.0을 활용한 비즈니스
+										프로세스 설계 구현 방법 및 툴<br></td>
+									<td
+										style="width: 17.4963%; text-align: center; vertical-align: top;"><p>
+											혁신적 디지털 비즈니스를 위한<br>데이터 엔지니어링 역량 강화 방안
+										</p>
+										<p>2022.3.22.</p>
+										<p>Operational DB 구축을 위한 Relational DB 설계,</p>
+										<p>Relational DB 기반의 Data Warehouse 설계,</p>Big Data Analytics를
+										위한 NoSQL DB 설계<br></td>
+								</tr>
+								<tr>
+									<td
+										style="width: 17.7016%; text-align: center; vertical-align: top;"><p>
+											디지털 변혁 성공을 위한 사용<br>사례 분석/구현 역량 강화 방안<br>2022.4.26.
+										</p>
+										<p>Use Case 분석, Use Case구현</p></td>
+									<td
+										style="width: 15.9677%; text-align: center; vertical-align: top;"><p>
+											클라우드 네이티브 컴퓨팅<br>&nbsp;1-2-3 단계와 역량확보 방안
+										</p>
+										<p>2022.5.24.</p>
+										<p>
+											클라우드 네이티브 컴퓨팅<br>도입 로드맵 [1-2-3 단계],
+										</p>1-2-3 단계 역량</td>
+									<td
+										style="width: 16.0484%; text-align: center; vertical-align: top;"><p>뉴노멀시대
+											디지털 트랜스포메이션을 위한 기업 아키텍처(EA) 설계</p>
+										<p>2022.7.26.</p>
+										<p>
+											<span
+												style="background-color: transparent; color: inherit; font-family: inherit; font-size: inherit;">비즈니스
+												전략과 비즈니스</span>
+										</p>
+										<p>
+											<span
+												style="background-color: transparent; color: inherit; font-family: inherit; font-size: inherit;">아키텍처,
+												애플리케이션, 데이터 및 IT 인프라 아키텍처&nbsp;</span>
+										</p></td>
+									<td
+										style="width: 16.3848%; text-align: center; vertical-align: top;">&nbsp;</td>
+									<td
+										style="width: 16.3747%; text-align: center; vertical-align: top;">&nbsp;</td>
+									<td
+										style="width: 17.4963%; text-align: center; vertical-align: top;">&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<br>
+				<p style="line-height: 2.5;">
+					<span style="color: rgb(148, 45, 51);"><span
+						style="font-size: 14px;">●</span></span><span style="font-size: 20px;">&nbsp;&nbsp;
+						디지털 비즈니스 전환 성공전략 CxO 특강</span>
+				</p>
+				<!-- 2 -->
+				<div class="text-table ">
+					<div>
+						<table style="width: 100%;" border="1">
+							<tbody>
+								<tr>
+									<td
+										style="width: 30.0412%; height: 50px; text-align: center; background-color: rgb(148, 45, 51);"><span
+										style="font-size: 18px; color: rgb(255, 255, 255);">주제</span></td>
+									<td
+										style="width: 69.9588%; text-align: center; background-color: rgb(148, 45, 51);"><span
+										style="font-size: 18px; color: rgb(255, 255, 255);">내용</span></td>
+								</tr>
+								<tr>
+									<td style="width: 30.0412%; text-align: center;"><p>1.
+											4차 산업혁명 시대의</p>디지털 비즈니스 이해</td>
+									<td style="width: 69.9588%; text-align: left;"><ul
+											style="list-style-type: disc;">
+											<li>디지털 비즈니스의 본질</li>
+											<li>한국의 디지털 변환 준비현황</li>
+											<li>IoT서비스 아키텍처와 구축방법</li>
+											<li>클라우드 서비스 아키텍처</li>
+										</ul></td>
+								</tr>
+								<tr>
+									<td style="width: 30.0412%; text-align: center;"><p>2.
+											디지털 트랜스포메이션을 위한 기업 아키텍처 설계</p></td>
+									<td style="width: 69.9588%; text-align: left;"><ul
+											style="list-style-type: disc;">
+											<li>기업 아키텍처의 중요성</li>
+											<li>디지털 변환을 위한 기업 경영전략</li>
+											<li>디지털 변환 기업아키텍처 (비즈니스, 어플리케이션, IT인프라 아키텍처 설계 및 사례)</li>
+										</ul></td>
+								</tr>
+								<tr>
+									<td style="width: 30.0412%; text-align: center;"><p>3.
+											고객가치 창출을 위한 디지털 비즈니스 분석</p></td>
+									<td style="width: 69.9588%; text-align: left;"><ul
+											style="list-style-type: disc;">
+											<li>비즈니스 아키텍처 설계를 위한 Design Thinking</li>
+											<li>Lean Startup과 애자일 비즈니스 분석</li>
+											<li>서비스 지향 아키텍처 구현을 위한 비즈니스 요구분석 방법</li>
+										</ul></td>
+								</tr>
+								<tr>
+									<td style="width: 30.0412%; text-align: center;">4. 디지털
+										비즈니스 Full Cycle/ Full Stack 개발과 프로젝트 관리</td>
+									<td style="width: 69.9588%; text-align: left;"><ul
+											style="list-style-type: disc;">
+											<li>도메인모델 기반의 Full-Stack SW요구스펙 명세 방법</li>
+											<li>서비스 분석ㆍ설계ㆍ구현 방법</li>
+											<li>DevOps와 BizDevOps 방법</li>
+											<li>Enterprise Agile Framework 기반의 프로젝트관리</li>
+										</ul></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<br>
+				<p style="line-height: 2.5;">
+					<span style="color: rgb(148, 45, 51);"><span
+						style="font-size: 14px;">●</span></span><span style="font-size: 20px;">&nbsp;&nbsp;
+						디지털 비즈니스 구현 방법론 및 분석/설계 교육</span>
+				</p>
+				<!-- 3 -->
+				<table border="1">
+					<thead style="text-align: center; height: 50px;">
+						<tr>
+							<td style="color: white; background-color: rgb(148, 45, 51);"
+								colspan="2">주제</td>
+							<td style="color: white; background-color: rgb(148, 45, 51);">내용</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td style="text-align: center; vertical-align: middle;"
+								rowspan="6" colspan="2">1. 디지털 혁신을 위한 비즈니스 모델링</td>
+							<td style="vertical-align: middle;">Design Thinking을 통한 고객
+								중심의 Business Modeling</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">비즈니스 전략 수립과 Enterprise
+								Architecture 설계</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">비즈니스 요구 분석</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">SW 요구스펙 분석</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">SW아키텍처 설계</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">Lean Startup과 Agile 개발</td>
+						</tr>
 
-</pre></td>
-<td style="width: 16%;"><pre style="white-space: pre-wrap;">
+						<tr>
+							<td
+								style="vertical-align: middle; text-align: center; width: 25%;"
+								rowspan="13">2. 디지털 비즈니스의 프로세스 설계</td>
+							<td
+								style="vertical-align: middle; text-align: center; width: 5%;"
+								rowspan="5">1</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle; width: 70%;">비즈니스 프로세스의
+								원리 이해</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">비즈니스 프로세스 모델링의 현장 적용</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">BPMN 기반 개념적 프로세스 모델링 문법과
+								패턴</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">개념적 프로세스 모델링 절차 및 실습</td>
+						</tr>
+						<tr>
+							<td
+								style="vertical-align: middle; text-align: center; width: 5%;"
+								rowspan="8">2</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">개념적 프로세스 모델링 프로젝트 데모</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">비즈니스 프로세스 이벤트의 이해</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">물리적 비즈니스 프로세스 모델링의 패턴</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">4차산업 혁명 디지털 비즈니스의 프로세스
+								모델링 사례</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">BPM플랫폼의 발전추세와 Low-Code
+								개발 플랫폼</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">물리적 프로세스 모델링 프로젝트 데모</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">물리적 프로세스 모델링 실습</td>
+						</tr>
 
-</pre></td>
-<td style="width: 16%;"><pre style="white-space: pre-wrap;">
+						<tr>
+							<td
+								style="vertical-align: middle; text-align: center; width: 25%;"
+								rowspan="13">3. 디지털 비즈니스의 데이터 설계</td>
+							<td
+								style="vertical-align: middle; text-align: center; width: 5%;"
+								rowspan="6">1</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle; width: 70%;">비즈니스 애플리케이션
+								개발 프로세스와 데이터 설계</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">UML Class Diagram 기반의
+								개념적 데이터 모델링</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">Class Diagram과 ER
+								Diagram 간 변환규칙</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">개념적 데이터 모델링 사례</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">Visual Paradigm을 이용한 개념적
+								데이터 모델링 실습</td>
+						</tr>
+						<tr>
+							<td
+								style="vertical-align: middle; text-align: center; width: 5%;"
+								rowspan="7">2</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">Relational 데이터 모델</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">Dependency Theory와
+								Normal Forms</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">개념적 데이터 모델의 논리적 RDB 스키마
+								변환 알고리즘</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">Visual Paradigm을 이용한
+								데이터베이스 설계 실습</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">Data Warehouse 구축을 위한
+								다차원 데이터 모델링과 Snowflake 스키마 설계</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">EAV 데이터모델과 NoSQL 데이터베이스
+								설계</td>
+						</tr>
 
-</pre></td>
-  					</tr>
-  				</table>
-  				<br><br>
-  				<h3>디지털 비즈니스 전환 성공전략 CxO 특강</h3>
-  				<table border="1" style="text-align: center;">
-  					<thead style="text-align: center;">
-  						<tr>
-<td style="width: 30%;background-color: #031252; color: white;"><pre style="white-space: pre-wrap;">
-주제
-</pre></td>
-<td style="width: 70%;background-color: #031252; color: white;"><pre style="white-space: pre-wrap;">
-내용
-</pre></td>
-  						</tr>
-  					</thead>
-  					<tbody>
-  						<tr>
-<td style="width: 16%; vertical-align: middle;"><pre style="white-space: pre-wrap;">
-1. 4차 산업혁명 시대의
-디지털 비즈니스 이해
-</pre></td>
-<td style="width: 16%; vertical-align: middle;"><pre style="white-space: pre-wrap;">
-디지털 비즈니스의 본질
-한국의 디지털 변환 준비현황
-IoT서비스 아키텍처와 구축방법
-클라우드 서비스 아키텍처
-</pre></td>
-  						</tr>
-  						<tr>
-<td style="width: 16%; vertical-align: middle;"><pre style="white-space: pre-wrap;">
-2. 디지털 트랜스포메이션을 위한 기업 아키텍처 설계
-</pre></td>
-<td style="width: 16%; vertical-align: middle;"><pre style="white-space: pre-wrap;">
-기업 아키텍처의 중요성
-디지털 변환을 위한 기업 경영전략
-디지털 변환 기업아키텍처 (비즈니스, 어플리케이션, IT인프라 아키텍처 설계 및 사례)
-</pre></td>
-  						</tr><tr>
-<td style="width: 16%; vertical-align: middle;"><pre style="white-space: pre-wrap;">
-3. 고객가치 창출을 위한 디지털 비즈니스 분석
-</pre></td>
-<td style="width: 16%; vertical-align: middle;"><pre style="white-space: pre-wrap;">
-비즈니스 아키텍처 설계를 위한 Design Thinking
-Lean Startup과 애자일 비즈니스 분석
-서비스 지향 아키텍처 구현을 위한 비즈니스 요구분석 방법
-</pre></td>
-  						</tr><tr>
-<td style="width: 16%; vertical-align: middle;"><pre style="white-space: pre-wrap;">
-4. 디지털 비즈니스 Full Cycle/ Full Stack 개발과 프로젝트 관리
-</pre></td>
-<td style="width: 16%; vertical-align: middle;"><pre style="white-space: pre-wrap;">
-도메인모델 기반의 Full-Stack SW요구스펙 명세 방법
-서비스 분석ㆍ설계ㆍ구현 방법
-DevOps와 BizDevOps 방법
-Enterprise Agile Framework 기반의 프로젝트관리
-</pre></td>
-  						</tr>
-  						
-  					</tbody>
-  				</table>
+						<tr>
+							<td style="text-align: center; vertical-align: middle;"
+								rowspan="5" colspan="2">4. 디지털 비즈니스의 사용사례 분석 및 구현</td>
+							<td style="vertical-align: middle;">사용사례 도출 (Use Case
+								Identification)</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">사용사례 시나리오 작성 (Use Case
+								Scenario Analysis)</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">사용사례 구현 (Use Case
+								Realization)</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">애자일 SW요구분석 프로세스 (Agile
+								Business Analysis Process)</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">Business Analysis
+								Capstone Project (Sprint 4차 시행)</td>
+						</tr>
 
+						<tr>
+							<td style="text-align: center; vertical-align: middle;"
+								rowspan="6" colspan="2">5. 객체지향 프로그램의 디자인 패턴</td>
+							<td style="vertical-align: middle;">객체 설계 (Object Design)
+								방법과 원칙</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">객체 설계 패턴: Creational
+								Patterns</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">객체 설계 패턴: Structural
+								Patterns</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">객체 설계 패턴: Behavioral
+								Patterns</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">객체 설계 패턴: Advanced
+								Patterns</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">객체 설계 Capstone 프로젝트 (3
+								단계 프로젝트 수행)</td>
+						</tr>
+
+						<tr>
+							<td style="text-align: center; vertical-align: middle;"
+								rowspan="6" colspan="2">6. SOA와 마이크로 서비스 설계 패턴과 방법론</td>
+							<td style="vertical-align: middle;">SW아키텍처의 이해</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">SOA 설계원칙과 패턴</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">SOA 기술의 진화</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">SOA 분석 설계 방법론</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">API 설계와 레거시 재사용</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle;">마이크로서비스와 Cloud-Native
+								DevOps</td>
+						</tr>
+					</tbody>
+				</table>
+				<br>
+				<p style="line-height: 2.5;">
+					<span style="color: rgb(148, 45, 51);"><span
+						style="font-size: 14px;">●</span></span><span style="font-size: 20px;">&nbsp;&nbsp;
+						디지털 비즈니스 Agile 구현 및 개발 교육</span>
+				</p>
+				<!-- 4 -->
+				<table style="width: 100%;" border=1>
+					<tbody>
+						<tr>
+							<td
+								style="width: 30.0412%; height: 50px; text-align: center; vertical-align: middle; background-color: rgb(148, 45, 51);"><span
+								style="font-size: 18px; color: rgb(255, 255, 255);">주제</span></td>
+							<td
+								style="width: 69.9588%; text-align: center; vertical-align: middle; background-color: rgb(148, 45, 51);"><span
+								style="font-size: 18px; color: rgb(255, 255, 255);">내용</span></td>
+						</tr>
+						<tr>
+							<td
+								style="width: 30.0412%; text-align: center; vertical-align: middle;">Server-Side
+								Programming</td>
+							<td
+								style="width: 69.9588%; text-align: left; vertical-align: middle;"><ul
+									style="list-style-type: disc;">
+									<li>Spring Boot for Cloud Native Java Programming</li>
+									<li>Spring Data JPA for Repository and ORM</li>
+									<li>JAX-RS for REST API and API Testing</li>
+									<li>Capstone Project: Server-Side Java Programming and
+										Testing</li>
+								</ul></td>
+						</tr>
+						<tr>
+							<td
+								style="width: 30.0412%; text-align: center; vertical-align: middle;"><p>Responsive
+									Web UI Design &amp; Programming</p></td>
+							<td style="width: 69.9588%; text-align: left;"><ul
+									style="list-style-type: disc;">
+									<li>UI Architectural Patterns</li>
+									<li>UI Wireframe</li>
+									<li>UI Prototyping</li>
+									<li>Responsive Web UI Programming with Vue.js Web
+										Framework</li>
+									<li>Capstone Project: Mobile Web UI</li>
+								</ul></td>
+						</tr>
+						<tr>
+							<td
+								style="width: 30.0412%; text-align: center; vertical-align: middle;"><p>Database
+									Design</p></td>
+							<td style="width: 69.9588%; text-align: left;"><ul
+									style="list-style-type: disc;">
+									<li>Relational Data Model and Normal Forms</li>
+									<li>Semantic Model to Logical Schema Mapping Algorithm</li>
+									<li>Multidimensional Data Modeling and Snowflake Schema
+										Design for Data Warehouse</li>
+									<li>Adaptive Object Modeling and NoSQL Data Modeling</li>
+									<li>Capstone Project: Database Design</li>
+								</ul></td>
+						</tr>
+						<tr>
+							<td
+								style="width: 30.0412%; text-align: center; vertical-align: middle;">SQL
+								&amp; NoSQL Programming</td>
+							<td style="width: 69.9588%; text-align: left;"><ul
+									style="list-style-type: disc;">
+									<li>Database Transaction</li>
+									<li>Relational Algebra</li>
+									<li>SQL DDL &amp; DML</li>
+									<li>Capstone Project: SQL &amp; NoSQL Programming</li>
+									<li>NoSQL Query: Document Data Store</li>
+								</ul></td>
+						</tr>
+					</tbody>
+				</table>
+				<br>
+				<p style="line-height: 2.5;">
+					<span style="color: rgb(148, 45, 51);"><span
+						style="font-size: 14px;">●</span></span><span style="font-size: 20px;">&nbsp;&nbsp;
+						디지털 비즈니스 개발 리더를 위한 아키텍처 분석/설계 교육</span>
+				</p>
+				<!-- 5 -->
+				<table style="width: 100%;" border="1">
+					<tbody>
+						<tr>
+							<td
+								style="width: 30.0412%; height: 50px; text-align: center; background-color: rgb(148, 45, 51);"><span
+								style="font-size: 18px; color: rgb(255, 255, 255);">주제</span></td>
+							<td
+								style="width: 69.9588%; text-align: center; background-color: rgb(148, 45, 51);"><span
+								style="font-size: 18px; color: rgb(255, 255, 255);">과목</span></td>
+						</tr>
+						<tr>
+							<td style="width: 30.0412%; text-align: center;">Requirements
+								Engineering<br>
+							</td>
+							<td style="width: 69.9588%; text-align: left;">Process
+								Modeling using BPMN 2.0, Data Modeling using UML
+								Conceptual-Level Class Diagram, Use Case Analysis and Scenario
+								Writing using Visual Paradigm, Use Case Realization, Domain
+								Modeling and Sequence Diagram<br>
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 30.0412%; text-align: center;">Object-Oriented
+								Analysis &amp; Design<br>
+							</td>
+							<td style="width: 69.9588%; text-align: left;">Object-Oriented
+								Analysis &amp; Design Principles, Design Patterns<br>
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 30.0412%; text-align: center;"><p>Agile
+									Software Engineering Process, &nbsp;Methodologies &amp; DDD
+									Etc.</p></td>
+							<td style="width: 69.9588%; text-align: left;">Design
+								Thinking, Persona and Customer Journey Map, Business
+								Architecture and ArchiMate, SPEM 2.0, RUP / OpenUP, Lean
+								Startup, Scrum and SAFe, Extreme Programming: TDD, Refactoring
+								and CI, Cloud-Native Application, CD and DevOps, Domain-Driven
+								Design(DDD): Bounded Context &amp; DDD Process, Refactoring
+								&amp; Clean Code<br>
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 30.0412%; text-align: center;">Software
+								Architecture Process<br>
+							</td>
+							<td style="width: 69.9588%; text-align: left;">Quality
+								Attribute Utility Tree, Attribute-Driven Design (ADD 3.0), RUP
+								4+1 View Model, Design Concepts Catalog, Architecture Analysis
+								&amp; Evaluation, Evolutionary Architecture<br>
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 30.0412%; text-align: center;">Software
+								Architecture Documentation<br>
+							</td>
+							<td style="width: 69.9588%; text-align: left;">IEEE 1471,
+								SEI Views and Beyond Model, Confluence Software Architecture
+								Documentation (SAD)<br>
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 30.0412%; text-align: center;">Software
+								Architecture Styles<br>
+							</td>
+							<td style="width: 69.9588%; text-align: left;">Layered
+								Style, Pipe &amp; Filter Style, Batch Sequential Style,
+								Repository Style, Publish &amp; Subscribe Style, Peer-to-Peer
+								Style<br>
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 30.0412%; text-align: center;">SOA Design
+								Principles and Patterns<br>
+							</td>
+							<td style="width: 69.9588%; text-align: left;">Client-Server
+								Architecture, Web Application Architecture, Service-Oriented
+								Architecture (SOA), Cloud Service Architecture, Microservice
+								Architecture, AI/IoT Application Architecture<br>
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 30.0412%; text-align: center;">SOA
+								Analysis and Design Process and Methodologies<br>
+							</td>
+							<td style="width: 69.9588%; text-align: left;">Business
+								Architecture Analysis, Process Decomposition, Use Case-Class
+								Affinity Clustering, Bounded Contexts in Domain Model, Service
+								Architecture Design using SoaML, API Design<br>
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 30.0412%; text-align: center;"><p>Microservices
+									Architecture Design Principles and Patterns</p></td>
+							<td style="width: 69.9588%; text-align: left;">Macro, Mini,
+								Micro, and Nano Service, Microservice Prerequisites,
+								Microservices Architecture Patterns<br>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<br>
+				<p style="line-height: 2.5;">
+					<span style="color: rgb(148, 45, 51);"><span
+						style="font-size: 14px;">●</span></span><span style="font-size: 20px;">&nbsp;&nbsp;
+						디지털 비즈니스 역량의 핵심, Full Cycle, Full_stack 개발자 양성 교육</span>
+				</p>
+				<!-- 6 -->
+				<div class="text-table ">
+					<div>
+						<table style="width: 100%;" border="1">
+							<tbody>
+								<tr>
+									<td
+										style="width: 16%; height: 50px; text-align: center; background-color: rgb(148, 45, 51);"><span
+										style="font-size: 18px; color: rgb(255, 255, 255);">주제</span></td>
+									<td
+										style="width: 28%; text-align: center; background-color: rgb(148, 45, 51);"><span
+										style="font-size: 18px; color: rgb(255, 255, 255);">초급</span></td>
+									<td
+										style="width: 28%; background-color: rgb(148, 45, 51); text-align: center;"><span
+										style="font-size: 18px; color: rgb(255, 255, 255);">중급</span><br></td>
+									<td
+										style="width: 28%; background-color: rgb(148, 45, 51); text-align: center;"><span
+										style="font-size: 18px; color: rgb(255, 255, 255);">고급</span><br></td>
+								</tr>
+								<tr>
+									<td style="width: 16%; text-align: center;">Front-end<br></td>
+									<td style="width: 28%; text-align: left;">HTML, CSS, DOM,
+										JavaScript I<br>
+									</td>
+									<td style="width: 28%;">JavaScript II, jQuery, Bootstrap,
+										React/Redux<br>
+									</td>
+									<td style="width: 28%;">Vue.js<br></td>
+								</tr>
+								<tr>
+									<td style="width: 16%; text-align: center;">API<br></td>
+									<td style="width: 28%; text-align: left;"><br></td>
+									<td style="width: 28%;">REST, RAML/Swagger<br></td>
+									<td style="width: 28%;">Eureka, Zuul, GraphQL<br></td>
+								</tr>
+								<tr>
+									<td style="width: 16%; text-align: center;">Back-end<br></td>
+									<td style="width: 28%; text-align: left;">Java I, JDBC,
+										Spring I<br>
+									</td>
+									<td style="width: 28%;">Java II, JSP, JPA/Hibernate,
+										Spring II<br>
+									</td>
+									<td style="width: 28%;">Java III, Spring III, Security<br></td>
+								</tr>
+								<tr>
+									<td style="width: 16%; text-align: center;">Database<br></td>
+									<td style="width: 28%; text-align: left;">MySQL<br></td>
+									<td style="width: 28%;">MongoDB<br></td>
+									<td style="width: 28%;">Transaction, Management<br></td>
+								</tr>
+								<tr>
+									<td style="width: 16%; text-align: center;">Tools / Infra<br></td>
+									<td style="width: 28%; text-align: left;">Linux CLI,
+										Git/GitHub, IntelliJ, Build(Maven/Gradle)<br>
+									</td>
+									<td style="width: 28%;">TDD(Junit, Mocha), Jackson, JAXB,
+										Tomcat, jsoup, &nbsp;Slf4j<br>
+									</td>
+									<td style="width: 28%;">BDD(Cucumber), CI(Jenkins),
+										Docker, Kubernetes, AWS<br>
+									</td>
+								</tr>
+								<tr>
+									<td style="width: 16%; text-align: center;">Software
+										Engineering<br>
+									</td>
+									<td style="width: 28%; text-align: left;">Req&rsquo;t
+										Analysis (Use Case, UML Class)<br>
+									</td>
+									<td style="width: 28%;">Object Design, DB Design, XP,
+										Scrum(Jira)<br>
+									</td>
+									<td style="width: 28%;">UX Design, DDD, SOA Design,
+										EA(ArchiMate), BPM(BPMN), SAFe(Jira Align), DevOps<br>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- 7 -->
+				<div class="text-table ">
+					<div>
+						<table style="width: 100%;" border="1">
+							<tbody>
+								<tr>
+									<td
+										style="width: 15%; height: 50px; text-align: center; background-color: rgb(148, 45, 51);"><span
+										style="font-size: 18px; color: rgb(255, 255, 255);">주제</span></td>
+									<td colspan="2"
+										style="width: 75.8065%; text-align: center; background-color: rgb(148, 45, 51);"><span
+										style="font-size: 18px; color: rgb(255, 255, 255);">내용</span><br></td>
+									<td
+										style="width: 5%; background-color: rgb(148, 45, 51); text-align: center;"><span
+										style="font-size: 18px; color: rgb(255, 255, 255);">Level</span><br></td>
+								</tr>
+								<tr>
+									<td rowspan="3" style="width: 15.3226%; text-align: center;">Language<br></td>
+									<td colspan="2" style="width: 76.5323%; text-align: center;">HTML5<br></td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.5323%; text-align: center;">CSS<br></td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.5323%; text-align: center;">JavaScript<br></td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td rowspan="3" style="width: 15.4839%; text-align: center;">Libarary<br></td>
+									<td colspan="2" style="width: 76.2903%; text-align: center;">Bootstrap<br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.2903%; text-align: center;">jQuery<br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.2903%; text-align: center;">React/Redux.js<br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td style="width: 15%; text-align: center;">Framework<br></td>
+									<td colspan="2" style="width: 76.2903%; text-align: center;">Vue.js<br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td rowspan="2" style="width: 15.5645%; text-align: center;">Linux<br></td>
+									<td colspan="2" style="width: 76.2097%; text-align: center;">Basic
+										OS(Linux)<br>
+									</td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.2097%; text-align: center;">Basic
+										Terminal Usage<br>
+									</td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td rowspan="11" style="width: 15.6452%; text-align: center;">Language<br></td>
+									<td rowspan="10" style="width: 28.4677%; text-align: center;">Java<br></td>
+									<td style="width: 47.4705%; text-align: center;">Java
+										Syntax<br>
+									</td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td style="width: 47.4705%; text-align: center;">Java
+										Object-Orineted Programming<br>
+									</td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td style="width: 47.4705%; text-align: center;">Java IO<br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td style="width: 47.4705%; text-align: center;">Java
+										Collections<br>
+									</td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td style="width: 47.4705%; text-align: center;">Java
+										Concurrency<br>
+									</td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td style="width: 47.4705%; text-align: center;">Java Data
+										Structure/Algorithms<br>
+									</td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td style="width: 47.4705%; text-align: center;">Object
+										Design Patterns<br>
+									</td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td style="width: 47.4705%; text-align: center;">Java Web
+										Application<br>
+									</td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td style="width: 47.4705%; text-align: center;">Java
+										RESTful Application<br>
+									</td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td style="width: 47.4705%; text-align: center;">Java
+										Lambda<br>
+									</td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.2097%; text-align: center;">Node.js<br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td rowspan="4" style="width: 15.7258%; text-align: center;">Library<br></td>
+									<td colspan="2" style="width: 76.129%; text-align: center;">Apache
+										Commons<br>
+									</td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.129%; text-align: center;">Guava<br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.129%; text-align: center;">Jackson
+										JSON<br>
+									</td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.129%; text-align: center;">Log4j
+										2<br>
+									</td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td rowspan="9" style="width: 15.8065%; text-align: center;">Framework<br></td>
+									<td rowspan="8" style="width: 28.5484%; text-align: center;">Spring<br></td>
+									<td style="width: 47.4705%; text-align: center;">Spring
+										Core<br>
+									</td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td style="width: 47.4705%; text-align: center;">Spring
+										MVC<br>
+									</td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td style="width: 47.4705%; text-align: center;">Spring
+										REST<br>
+									</td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td style="width: 47.4705%; text-align: center;">Spring
+										Security<br>
+									</td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td style="width: 47.4705%; text-align: center;">Spring
+										Boot<br>
+									</td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td style="width: 47.4705%; text-align: center;">Spring
+										Data<br>
+									</td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td style="width: 47.4705%; text-align: center;">Spring
+										Cloud<br>
+									</td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td style="width: 47.4705%; text-align: center;">Template
+										Engine(Mustache)<br>
+									</td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Express.js<br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td rowspan="2" style="width: 15.8065%; text-align: center;">Relational
+										Databases<br>
+									</td>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">SQL<br></td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">MySQL<br></td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td style="width: 15%; text-align: center;">NoSQL<br></td>
+									<td style="width: 28.336%; text-align: center;">NoSQL
+										&amp; MongoDB<br>
+									</td>
+									<td style="width: 47.4705%; text-align: center;"><br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td rowspan="2" style="width: 15.8065%; text-align: center;">More
+										about Databases<br>
+									</td>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">JDBC<br></td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">JPA
+										/ Hibernate<br>
+									</td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td rowspan="5" style="width: 15.8065%; text-align: center;">API<br></td>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">REST<br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">JSON
+										APIs<br>
+									</td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Open
+										API Spec and Swagger<br>
+									</td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">HATEOAS<br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Authentication(Oauth,
+										Basic Auth, JWT)<br>
+									</td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td rowspan="2" style="width: 15.8065%; text-align: center;">Caching<br></td>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">CDN<br></td>
+									<td style="width: 8%; text-align: center;">3<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Redis(Memcached)<br></td>
+									<td style="width: 8%; text-align: center;">3<br></td>
+								</tr>
+								<tr>
+									<td rowspan="3" style="width: 15.8065%; text-align: center;">Security<br></td>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Hashing
+										Algorithms(MD5, SHA, scrypt, bcrypt)<br>
+									</td>
+									<td style="width: 8%; text-align: center;">3<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">HTTPS(SSL/TLS)<br></td>
+									<td style="width: 8%; text-align: center;">3<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">CORS<br></td>
+									<td style="width: 8%; text-align: center;">3<br></td>
+								</tr>
+								<tr>
+									<td rowspan="6" style="width: 15.8065%; text-align: center;">Testing<br></td>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Junit<br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Jest<br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Mockito<br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Jasmine<br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Cucumber<br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Jmeter<br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td rowspan="3" style="width: 15.8065%; text-align: center;">CI/CD<br></td>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Jenkins<br></td>
+									<td style="width: 8%; text-align: center;">3<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Github
+										Action<br>
+									</td>
+									<td style="width: 8%; text-align: center;">3<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Travis
+										CI(or Circle CI)<br>
+									</td>
+									<td style="width: 8%; text-align: center;">3<br></td>
+								</tr>
+								<tr>
+									<td rowspan="6" style="width: 15.8065%; text-align: center;">Testing<br></td>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Junit<br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Jest<br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Mockito<br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Jasmine<br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Cucumber<br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Jmeter<br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td rowspan="2" style="width: 15.8065%; text-align: center;">Version
+										Control<br>
+									</td>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Git<br></td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Github<br></td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td rowspan="8" style="width: 15.8065%; text-align: center;">Others<br></td>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">IntelliJ<br></td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">CodePen<br></td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Maven
+										| Gradle<br>
+									</td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Jenkins<br></td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Cloud
+										Foundry<br>
+									</td>
+									<td style="width: 8%; text-align: center;">3<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Docker<br></td>
+									<td style="width: 8%; text-align: center;">3<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Kubernetes<br></td>
+									<td style="width: 8%; text-align: center;">3<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">AWS
+										| GCP<br>
+									</td>
+									<td style="width: 8%; text-align: center;">3<br></td>
+								</tr>
+								<tr>
+									<td rowspan="7" style="width: 15.8065%; text-align: center;">Requirement
+										Analysis<br>
+									</td>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">BPMN
+										Process Model<br>
+									</td>
+									<td style="width: 8%; text-align: center;">3<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">User
+										Story<br>
+									</td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">UML
+										Use Case Diagram<br>
+									</td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Conceptual-Level
+										UML Class Diagram &amp; ER Diagram<br>
+									</td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">Use
+										Case Scenario<br>
+									</td>
+									<td style="width: 8%; text-align: center;">1<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">UML
+										&nbsp;Activity Diagram &amp; Test Case Generation<br>
+									</td>
+									<td style="width: 8%; text-align: center;">2<br></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width: 76.0484%; text-align: center;">BABOK
+										&amp; Agile Extension<br>
+									</td>
+									<td style="width: 8%; text-align: center;">3<br></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<br>
+				<p style="line-height: 2.5;">
+					<span style="color: rgb(148, 45, 51);"><span
+						style="font-size: 14px;">●</span></span><span style="font-size: 20px;">&nbsp;&nbsp;
+						프로젝트 리더 &middot; 상급 개발자를 위한 프리미엄 교육</span>
+				</p>
+				<!-- 8 -->
+				<div class="text-table ">
+					<div>
+						<table style="width: 100%;" border="1">
+							<tbody>
+								<tr>
+									<td
+										style="width: 30.0412%; height: 50px; text-align: center; background-color: rgb(148, 45, 51);"><span
+										style="font-size: 18px; color: rgb(255, 255, 255);">과정</span></td>
+									<td
+										style="width: 69.9588%; text-align: center; background-color: rgb(148, 45, 51);"><span
+										style="font-size: 18px; color: rgb(255, 255, 255);">내용</span></td>
+								</tr>
+								<tr>
+									<td rowspan="4" style="width: 30%; text-align: center;">Object
+										Design</td>
+									<td style="width: 69.9588%; text-align: left;">Specification-Level
+										UML Class Diagram</td>
+								</tr>
+								<tr>
+									<td style="width: 69.9588%; text-align: left;">CRC Cards
+										&amp; UML Sequence Diagram<br>
+									</td>
+								</tr>
+								<tr>
+									<td style="width: 69.9588%; text-align: left;">Oject
+										Design Patterns<br>
+									</td>
+								</tr>
+								<tr>
+									<td style="width: 69.9588%; text-align: left;">Domain-Driven
+										Design<br>
+									</td>
+								</tr>
+								<tr>
+									<td rowspan="4" style="width: 30%; text-align: center;">Database
+										Design<br>
+									</td>
+									<td style="width: 69.9588%; text-align: left;">Relational
+										Data Model &amp; Normal Forms<br>
+									</td>
+								</tr>
+								<tr>
+									<td style="width: 69.9588%; text-align: left;">Conceptiual
+										to Logical Data Model Mapping<br>
+									</td>
+								</tr>
+								<tr>
+									<td style="width: 69.9588%; text-align: left;">Multidimensional
+										Data Model &amp; Data Warehouse Design<br>
+									</td>
+								</tr>
+								<tr>
+									<td style="width: 69.9588%; text-align: left;">NoSQL Data
+										Store Design<br>
+									</td>
+								</tr>
+								<tr>
+									<td rowspan="3" style="width: 30%; text-align: center;">UX
+										Design<br>
+									</td>
+									<td style="width: 69.9588%; text-align: left;">Iterative
+										UX Design Lifecycle (Design Thinking)<br>
+									</td>
+								</tr>
+								<tr>
+									<td style="width: 69.9588%; text-align: left;">UI
+										Wireframe Design<br>
+									</td>
+								</tr>
+								<tr>
+									<td style="width: 69.9588%; text-align: left;">UI Design
+										Patterns<br>
+									</td>
+								</tr>
+								<tr>
+									<td rowspan="3" style="width: 30%; text-align: center;">Software
+										Architecture in General<br>
+									</td>
+									<td style="width: 69.9588%; text-align: left;">Software
+										Architecture Documentation<br>
+									</td>
+								</tr>
+								<tr>
+									<td style="width: 69.9588%; text-align: left;">Attribute-Based
+										Design (ADD)<br>
+									</td>
+								</tr>
+								<tr>
+									<td style="width: 69.9588%; text-align: left;">Architecture
+										Tradeoff Anaysis Metod (ATAM)<br>
+									</td>
+								</tr>
+								<tr>
+									<td rowspan="2" style="width: 30%; text-align: center;">Service-Orineted
+										Architecture &amp; Microservices<br>
+									</td>
+									<td style="width: 69.9588%; text-align: left;">SOA
+										Priciples and Patterns<br>
+									</td>
+								</tr>
+								<tr>
+									<td style="width: 69.9588%; text-align: left;">SOAP / REST
+										Web Services<br>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<br>
+				<p style="line-height: 2.5;">
+					<span style="color: rgb(148, 45, 51);"><span
+						style="font-size: 14px;">●</span></span><span style="font-size: 20px;">&nbsp;&nbsp;
+						빠른 디지털비즈니스 실현을 위한 쉬운 Low Code 개발 실습</span>
+				</p>
+				<!-- 9 -->
+				<div class="text-table ">
+					<div>
+						<table style="width: 100%;" border="1">
+							<tbody>
+								<tr>
+									<td
+										style="width: 30.0412%; height: 50px; text-align: center; background-color: rgb(148, 45, 51);"><span
+										style="font-size: 18px; color: rgb(255, 255, 255);">주제</span></td>
+									<td
+										style="width: 69.9588%; text-align: center; background-color: rgb(148, 45, 51);"><span
+										style="font-size: 18px; color: rgb(255, 255, 255);">내용</span></td>
+								</tr>
+								<tr>
+									<td style="width: 30.0412%; text-align: center;">HP aPaaS</td>
+									<td style="width: 69.9588%; text-align: left;"><ul
+											style="list-style-type: disc;">
+											<li style="text-align: left;">HP aPaaS Basic</li>
+											<li style="text-align: left;">Data Modeling with Class
+												Diagram</li>
+											<li style="text-align: left;">Function Modeling with
+												Class Diagram</li>
+											<li style="text-align: left;">UX&amp;UI Design with Use
+												Case Scenario</li>
+											<li style="text-align: left;">Business Process with BPMN</li>
+										</ul></td>
+								</tr>
+								<tr>
+									<td style="width: 30.0412%; text-align: center;">Developing
+										Reactive Web</td>
+									<td style="width: 69.9588%; text-align: left;"><ul
+											style="list-style-type: disc;">
+											<li style="text-align: left;">Data Modeling and
+												Relationships</li>
+											<li style="text-align: left;">Basic Screen Development</li>
+											<li style="text-align: left;">Logic and Validations</li>
+											<li style="text-align: left;">Developing Processes</li>
+											<li style="text-align: left;">REST Web Services
+												Integration</li>
+											<li style="text-align: left;">Capstone Project: Shopping
+												Web(Admin Side)</li>
+										</ul></td>
+								</tr>
+								<tr>
+									<td style="width: 30.0412%; text-align: center;">Developing
+										Mobile App</td>
+									<td style="width: 69.9588%; text-align: left;"><ul
+											style="list-style-type: disc;">
+											<li style="text-align: left;">Mobile Application
+												Architecture</li>
+											<li style="text-align: left;">Modeling Data in Mobile</li>
+											<li style="text-align: left;">Mobile UI Development</li>
+											<li style="text-align: left;">Logic and Debugging</li>
+											<li style="text-align: left;">Native App Generation</li>
+											<li style="text-align: left;">Local Storage and Data
+												Synchronization</li>
+											<li style="text-align: left;">Reusable Patterns and
+												Templates</li>
+											<li style="text-align: left;">Capstone Project: Shopping
+												Web(User Side)</li>
+										</ul></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<br>
+				<p style="line-height: 2.5;">
+					<span style="color: rgb(148, 45, 51);"><span
+						style="font-size: 14px;">●</span></span><span style="font-size: 20px;">&nbsp;&nbsp;
+						SW엔지니어링 전문가와 함께 하는 10주 만에 디지털비즈니스 개발하기 실습</span>
+				</p>
+				<div class="text-table ">
+					<div>
+						<ul style="list-style-type: disc;">
+							<li><span style="font-size: 20px;">사내 개발 디지털비즈니스개발에
+									필요한 기술 및 역량을 교육하고 교육내용에 기반한 프로젝트 진행 컨설팅을 실시하여 SW전문가와 공동개발을 수행함.<br>
+							</span></li>
+							<li><span style="font-size: 20px;">글로벌 선진기업이 사용하고 있는
+									디자인 싱킹, 린 스타트업, 애자일 개발의 방법론을 적용함.<br>
+							</span></li>
+							<li><span style="font-size: 20px;">참여사가 개발을 희망하는
+									프로젝트를 대상으로 개발 목표와 범위는 협의 조정하며, 기간은 주 2일 (1일 교육 + 1일 컨설팅) 단위로
+									10주 20일을 기본으로 함.</span></li>
+						</ul>
+					</div>
+				</div>
+				<br>
+				<div class="text-table ">
+					<div>
+						<p style="text-align: center;">
+							&lt;<span style="font-size: 18px;">&nbsp;적용 방법론 개요 : 디자인싱킹
+								+ 린스타트업 + 애자일개발 &gt;<br>
+							</span>
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>	
+	</div>
 </div>
 <!-- content end -->
