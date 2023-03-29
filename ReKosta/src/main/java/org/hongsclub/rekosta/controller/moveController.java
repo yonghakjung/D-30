@@ -33,7 +33,7 @@ public class moveController {
 	@GetMapping("/moveJobOfferAndSearch")
 	public String moveJobOfferAndSearch(Model model) {
 		model.addAttribute("activeJobOfferAndSearch",flag);
-		return "content/jobofferandsearch";
+		return "content/jobofferandsearch/jobofferandsearch";
 	}
 	//시험인증
 	@GetMapping("/moveTest")
