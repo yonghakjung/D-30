@@ -36,7 +36,7 @@ public class moveController {
 		return "content/jobofferandsearch";
 	}
 	//시험인증
-	@GetMapping("/moveTest")
+	@GetMapping("/moveTestAuthentication")
 	public String moveTest(Model model) {
 		model.addAttribute("activeTest",flag);
 		return "content/testauthentication";
@@ -71,10 +71,10 @@ public class moveController {
 		return "content/digitalbusiness/videolecture";
 	}
 	//고객센터
-	@GetMapping("/moveNoticeBoard")
-	public String moveNoticeBoard(Model model) {
-		model.addAttribute("activeNoticeBoard",flag);
-		return "content/digitalbusiness";
+	@GetMapping("/moveServiceCenter")
+	public String moveServiceCenter(Model model) {
+		model.addAttribute("activeServiceCenter",flag);
+		return "content/servicecenter/servicecenter";
 	}
 	@GetMapping("/moveKostaSympathy")
 	public String moveKostaSympathy(Model model) {
