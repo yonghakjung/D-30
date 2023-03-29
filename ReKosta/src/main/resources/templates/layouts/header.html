@@ -51,7 +51,7 @@
 	      <li th:classappend="${activeJobOfferAndSearch} ? 'active' : '' "><a href="#" th:href="@{/moveJobOfferAndSearch}">구인&구직</a>
 	      </li>
 	      
-	      <li th:classappend="${activeTest} ? 'active' : '' "><a href="#" th:href="@{/moveTest}">시험&인증</a>
+	      <li th:classappend="${activeTestAuthentication} ? 'active' : '' "><a href="#" th:href="@{/moveTestAuthentication}">시험&인증</a>
 	      </li>
 	      
 	      <li th:classappend="${activeSWAbilityTestAndConsulting} ? 'active' : '' "><a href="#" th:href="@{/moveSWAbilityTestAndConsulting}">SW역량진단&개발 컨설팅</a>
@@ -67,11 +67,11 @@
 	        </ul>
 	      </li>
 	      
-	      <li th:classappend="${activeNoticeBoard} ? 'active' : '' "><a href="#" th:href="@{/moveNoticeBoard}">고객센터</a>
+	      <li th:classappend="${activeServiceCenter} ? 'active' : '' "><a href="#" th:href="@{/moveServiceCenter}">고객센터</a>
 	      	<ul>
 	          <li><a href="#"  th:href="@{/moveNoticeBoard}">알림마당</a></li>
 	          <li><a href="#"  th:href="@{/moveKostaSympathy}">KOSTA동정</a></li>
-	          <li><a href="#"  th:href="@{/moveMembershipAdvertise}">회원사&협약사 홍보마당</a></li>
+	          <li><a href="#"  th:href="@{/moveMembershipAdvertise}">회원사&#38;협약사 홍보마당</a></li>
 	        </ul>
 	      </li>	      
 	    </ul>

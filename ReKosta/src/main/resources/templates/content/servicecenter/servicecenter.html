@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{main}">
+
+<head>
+<title>Education Time1</title>
+</head>
+<!-- content start -->
+<div layout:fragment="content">
+	<div class="wrapper row4">
+		<br>
+		<br>
+		<div align="center">
+
+			<input type="button" value="알림마당"
+				th:onClick="|location.href='@{/moveNoticeBoard}'|"
+				style="cursor: pointer; width: 170px; height: 45px; border-radius: 25px; color: white; background-color: #031252" />
+			<input type="button" value="KOSTA동정"
+				th:onClick="|location.href='@{/moveKostaSympathy}'|"
+				style="cursor: pointer; width: 170px; height: 45px; border-radius: 25px; color: white; background-color: #031252" />
+			<input type="button" value="회원사&middot;협약사 홍보마당"
+				th:onClick="|location.href='@{/moveMembershipAdvertise}'|"
+				style="cursor: pointer; width: 170px; height: 45px; border-radius: 25px; color: white; background-color: #031252" /><br>
+			<br>
+			<br>
+
+			<table class="table" style="width: 1300px; text-align: center;">
+				<thead>
+					<tr class="board-th">
+						<th>No</th>
+						<th>제목</th>
+						<th>작성시간</th>
+						<th>조회수</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="board-td">
+						<td>01</td>
+						<td> <a href=""> KOSTA 2023년도 SW재직자 교육과정 목록</a></td>
+						<td>2023-03-29</td>
+						<td>3</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<br>
+		<br>
+	</div>
+</div>
+<!-- content end -->
