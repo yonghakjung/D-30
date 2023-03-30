@@ -24,7 +24,8 @@ public class SpringSecurityConfigure  {
 	 * @Bean SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 	 * http.authorizeHttpRequests(requests -> requests.antMatchers(
 	 * "/images/**","/layout/**","/home","/index","/","/content/**","/**"
-	 * ).permitAll() .anyRequest().authenticated()); http.formLogin(login ->
+	 * ).permitAll() .anyRequest().authenticated());
+	 * http.formLogin(login ->
 	 * login.loginPage("/login/loginform") .loginProcessingUrl("/login")
 	 * .failureUrl("/login_fail") .defaultSuccessUrl("/home", true)
 	 * .usernameParameter("id") .passwordParameter("password")) .formLogin(login ->
@@ -39,20 +40,18 @@ public class SpringSecurityConfigure  {
 	 * return http.build(); }
 	 */
    @Bean
-   public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+   SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
        http
-           .authorizeRequests()
-               .antMatchers("/loginForm", "/login","/images/**","/layout/**").permitAll()
-               .anyRequest().authenticated()
-               .and()
-           .formLogin()
-               .loginPage("/loginForm")
-               .loginProcessingUrl("/login")
-               .defaultSuccessUrl("/home")
-               .and()
-           .logout()
-               .logoutUrl("/logout")
-               .logoutSuccessUrl("/loginForm");
+               .authorizeHttpRequests(requests -> requests
+                       .antMatchers("/loginForm", "/login", "/images/**", "/layout/**","/home","/index","/","/content/**","/**").permitAll()
+                       .anyRequest().authenticated())
+               .formLogin(login -> login
+                       .loginPage("/loginForm")
+                       .loginProcessingUrl("/login")
+                       .defaultSuccessUrl("/home"))
+               .logout(logout -> logout
+                       .logoutUrl("/logout")
+                       .logoutSuccessUrl("/loginForm"));
 
        return http.build();
    }
