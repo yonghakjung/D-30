@@ -27,7 +27,7 @@ public class moveController {
 	@GetMapping("/moveEducationAndTraining")
 	public String moveEmployed(Model model) {
 		model.addAttribute("activeEducationAndTraining",flag);
-		return "content/educationandtraining";
+		return "content/edu/educationandtraining";
 	}
 	//구인구직
 	@GetMapping("/moveJobOfferAndSearch")
