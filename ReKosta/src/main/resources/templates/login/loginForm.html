@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-	  xmlns:th="http://www.thymeleaf.org"
-	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	  layout:decorate="~{main}">
-	  
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{main}">
+
 <head>
 <title>Education Time1</title>
 </head>
 <!-- content start -->
 <div layout:fragment="content">
 	<div class="wrapper row4">
+		<div class="container-fluid">
 		<div align="center">		
-			<div style="width: 25%; height: 300px; border-style: solid; border-width: 1px; border-radius:10px; background-color: white;"><br>
+			<div style="width: 30%; height: 300px; border-style: solid; border-width: 1px; border-radius:10px; background-color: white;"><br>
 				<h5>
-					<span style="text-align: center; background-color: white; font-weight: bolder; font-size: 20px"> 로그인 </span>
+					<span style="text-align: center; background-color: white;"> 로그인 </span>
 				</h5>
 				<div>
 					<div style="text-align: center;">
-						<form action="" th:action="#" method="post">
+						<form action="" th:action="@{/login}" method="post">
  							<input type="text" style="width: 65%; height: 40px" name="id" placeholder="아이디" required="required"><br>
  							<input type="password" style="width: 65%; height: 40px" name="password" placeholder="패스워드" required="required"><br><br>
  							<button type="submit" style="width: 65%; border: none; background-color: #03274B; height: 40px; color: white;">로그인</button>
  						</form>
  						<br>
- 						<a href="" th:href="#"><font color="gray">회원가입</font></a> 
+ 						<a href="" th:href="@{/registerForm}"><font color="gray">회원가입</font></a> 
  						|
- 						<a href="" th:href="#" ><font color="gray">아이디 찾기</font></a> 
+ 						<a href="" th:href="@{/findIdForm}" ><font color="gray">아이디 찾기</font></a> 
  						|
- 						<a href="" th:href="#"><font color="gray">비밀번호 찾기</font></a>
+ 						<a href="" th:href="@{/findPasswordForm}"><font color="gray">비밀번호 찾기</font></a>
 					</div>
 				</div>
 
 			</div>
 		</div>
+	</div>
 	</div>
 </div>
 <!-- content end -->
