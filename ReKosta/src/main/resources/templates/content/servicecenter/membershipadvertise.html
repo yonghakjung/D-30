@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{main}">
+	  
+<head>
+<title>promotion</title>
+</head>
+
+<div layout:fragment="content">
+  <div class="wrapper row4">
+    <div id="container" class="clear"> 
+      <div style="font-size: 20px; font-family: sans-serif; color: black; text-align: center; padding-bottom: 15px;">
+	   <div style="margin-bottom: 30px;">
+		  <input type="button" value="알림마당"
+		    th:onClick="|location.href='@{/moveServiceCenter}'|"
+		    th:style="${activeServiceCenter}? 'width: 250px; height: 50px;background-color: #031252; color: white' : 'width: 250px; height: 50px;background-color: white; color: #031252;  border-color: #031252'">
+	   	  <input type="button" value="KOSTA 동정"
+		    th:onClick="|location.href='@{/moveKostaSympathy}'|"
+		    th:style="${activeNoticeBoard1}? 'width: 250px; height: 50px;background-color: #031252; color: white' : 'width: 250px; height: 50px;background-color: white; color: #031252;  border-color: #031252'">
+	      <input type="button" value="회원사 · 협약사 홍보마당 "
+		    th:onClick="|location.href='@{/moveMembershipAdvertise}'|"
+		    th:style="${activeNoticeBoard2}? 'width: 250px; height: 50px;background-color: #031252; color: white' : 'width: 250px; height: 50px;background-color: white; color: #031252;  border-color: #031252'">
+	    </div>
+      </div><br>
+      <div style="font-size: 20px; font-family: sans-serif; color: black;">
+		<table class="board">
+		 <tr class="board-th">
+		   <th style="width: 8%;">No</th>
+           <th style="width: 56%;">제목</th>
+           <th style="width: 13%;">작성시간</th>
+           <th style="width: 10%;">조회수</th>
+		 </tr>
+		 <tr class="board-td">
+       	    <td style="width: 8%;">17</td>
+       	    <td style="width: 56%; text-align: left;"><a href="#" th:href="@{/membershipadvertiseDetail}">[한화테크윈] ‘한화비전’으로 사명 변경... 비전 솔루션 분야로 사업 확장(23.3.1.)</a></td>
+       	    <td style="width: 13%;">2023-03-24</td>
+       	    <td style="width: 10%;">3</td>
+		 </tr>
+		 <tr class="board-td">
+       	    <td style="width: 8%;">16</td>
+       	    <td style="width: 56%; text-align: left;"><a href="#" th:href="@{/membershipadvertiseDetail}">	[메타넷티플랫폼] MS ‘2023 코리아 파트너 어워드’ 보안 부문 수상(데이터넷 2023.2.15)</a></td>
+       	    <td style="width: 13%;">2023-03-21</td>
+       	    <td style="width: 10%;">4</td>
+		 </tr>
+		</table>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  
+</div>
+</html>

@@ -78,12 +78,12 @@ public class moveController {
 	}
 	@GetMapping("/moveKostaSympathy")
 	public String moveKostaSympathy(Model model) {
-		model.addAttribute("activeNoticeBoard",flag);
-		return "content/kostasympathy";
+		model.addAttribute("activeNoticeBoard1",flag);
+		return "content/servicecenter/kostasympathy";
 	}
 	@GetMapping("/moveMembershipAdvertise")
 	public String moveMembershipAdvertise(Model model) {
-		model.addAttribute("activeNoticeBoard",flag);
-		return "content/membershipadvertise";
+		model.addAttribute("activeNoticeBoard2",flag);
+		return "content/servicecenter/membershipadvertise";
 	}
 }
