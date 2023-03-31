@@ -16,12 +16,12 @@ public class moveController {
 	@GetMapping("/moveIntroduceOrganization")
 	public String moveIntroduceOrganization(Model model) {
 		model.addAttribute("activeIntroduceAndRegister",flag);
-		return "content/intro/introduceOrganization";
+		return "content/intro/introduceorganization";
 	}
 	@GetMapping("/moveIntroduceRegisterMembership")
 	public String moveRegisterMembership(Model model) {
 		model.addAttribute("activeIntroduceAndRegister",flag);
-		return "content/intro/introduceRegisterMembership";
+		return "content/intro/introduceregistermembership";
 	}
 	//교육훈련
 	@GetMapping("/moveEducationAndTraining")
@@ -90,6 +90,6 @@ public class moveController {
 	@GetMapping("/moveWritePostCompany")
 	public String moveWritePostCompany(Model model) {
 		model.addAttribute("activeIntroduceAndRegister",flag);
-		return "content/intro/writePostCompany";
+		return "content/intro/writepostcompany";
 	}
 }
