@@ -69,8 +69,8 @@ td.history{color: #942d33; font-size: 36px; font-weight: bold; padding-right: 30
 
 .table-set{width: 100%; border-collapse: collapse; table-layout: auto; vertical-align: middle; margin-bottom: 15px; text-align: center;}
 .table-th{height: 50px; background-color: #942d33; color: #ffffff; font-size: 18px; font-weight: normal; border-left:1px solid #ffffff; border-right:1px solid #ffffff;}
-.tabel-td{color: black; font-size: 16px; vertical-align: middle; padding: 10px;border: 1px solid #ececec; }
-.tabel-td2{color: black; font-size: 15px; vertical-align: middle; padding: 10px;border: 1px solid #942d33; line-height: 150%}
+.table-td{color: black; font-size: 16px; vertical-align: middle; padding: 10px;border: 1px solid #ececec; }
+.table-td2{color: black; font-size: 15px; vertical-align: middle; padding: 10px;border: 1px solid #942d33; line-height: 150%}
 
 .radius a{cursor: pointer !important; border-radius: 30px !important; color: #ffffff !important; background-color: #942d33 !important; padding-top: 10px !important; padding-bottom: 10px !important; padding-left: 30px !important; padding-right: 30px !important; border: none !important; font-size: 16px !important; font-weight: bolder !important; font-family: sans-serif !important;}
 
