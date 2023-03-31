@@ -16,12 +16,12 @@ public class moveController {
 	@GetMapping("/moveIntroduceOrganization")
 	public String moveIntroduceOrganization(Model model) {
 		model.addAttribute("activeIntroduceAndRegister",flag);
-		return "content/intro/introduceOrganization";
+		return "content/intro/introduceorganization";
 	}
 	@GetMapping("/moveIntroduceRegisterMembership")
 	public String moveRegisterMembership(Model model) {
 		model.addAttribute("activeIntroduceAndRegister",flag);
-		return "content/intro/introduceRegisterMembership";
+		return "content/intro/introduceregistermembership";
 	}
 	//교육훈련
 	@GetMapping("/moveEducationAndTraining")
@@ -45,17 +45,17 @@ public class moveController {
 	@GetMapping("/moveSWAbilityTestAndConsulting")
 	public String moveSWAbilityTestAndConsulting(Model model) {
 		model.addAttribute("activeSWAbilityTestAndConsulting", flag);
-		return "content/swabilitytestandconsulting";
+		return "content/swabilitytestandconsulting/swabilitytestandconsulting";
 	}
 	@GetMapping("/moveSWAbilityTest")
 	public String moveSWAbilityTest(Model model) {
 		model.addAttribute("activeSWAbilityTestAndConsulting", flag);
-		return "content/swabilitytest";
+		return "content/swabilitytestandconsulting/swabilitytest";
 	}
 	@GetMapping("/moveSSPL")
 	public String moveSSPL(Model model) {
 		model.addAttribute("activeSWAbilityTestAndConsulting",flag);
-		return "content/sspl";
+		return "content/swabilitytestandconsulting/sspl";
 	}
 	//디지털비즈니스지원센터
 	@GetMapping("/moveDigitalBusiness")
@@ -85,5 +85,11 @@ public class moveController {
 	public String moveMembershipAdvertise(Model model) {
 		model.addAttribute("activeNoticeBoard2",flag);
 		return "content/servicecenter/membershipadvertise";
+	}
+	//intro 회원사&협약사 글쓰기 폼
+	@GetMapping("/moveWritePostCompany")
+	public String moveWritePostCompany(Model model) {
+		model.addAttribute("activeIntroduceAndRegister",flag);
+		return "content/intro/writepostcompany";
 	}
 }

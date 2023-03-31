@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{main}">
+
+<head>
+<title>Education Time1</title>
+</head>
+<!-- content start -->
+<div layout:fragment="content">
+	<div class="wrapper row4" style="text-align: center;">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+		<form th:action="@{/registerCompany}" method="post"  id="companyRegisterForm">
+			<input required="required" name="email" type="text" placeholder="이메일" id="email" style="width: 30%; height: 30px;"><br>
+			<input required="required" name="password" id="password" type="text" placeholder="비밀번호" ><br>
+			<input required="required" name="checkPassword" id="checkPassword" type="text" placeholder="비밀번호확인" >
+			<br>
+			<br>
+			<label>상호</label><br>
+			<input required="required" name="businessname" id="businessname" type="text" placeholder="상호를 입력해주세요" >
+			<br>
+			<br>
+			<label>사업자번호</label><br>
+			<input required="required" name="businessname" id="businessname" type="text" placeholder="사업자번호를 입력해주세요" >
+			<br>
+			<br>
+			<label>대표자명</label><br>
+			<input required="required" name="businessname" id="businessname" type="text" placeholder="대표자명을 입력해주세요" >
+			<br>
+			<br>
+			<label>연락처</label><br>
+			<input required="required" name="businessname" id="businessname" type="text" placeholder="연락처를 입력해주세요" >
+			<br>
+			<br>
+			<label>담당자명</label><br>
+			<input required="required" name="businessname" id="businessname" type="text" placeholder="담당자명을 입력해주세요" >
+			<br>
+			<br>
+			<label class="mini-tit">관심분야</label>
+			<div class="check">
+				<div class="checkbox checkbox-styled">
+					<label class="form-label">
+						<input type="checkbox" name="interestField" value="cooperatecompany" >
+						<span>회원사/협약사</span>
+					</label>
+				</div>
+			</div><div class="check">
+				<div class="checkbox checkbox-styled">
+					<label class="form-label">
+						<input type="checkbox" name="interestField" value="seekerTrain" >
+						<span>교육·훈련(구직자)</span>
+					</label>
+				</div>
+			</div><div class="check">
+				<div class="checkbox checkbox-styled">
+					<label class="form-label">
+						<input type="checkbox" name="interestField" value="workerTrain" >
+						<span>교육·훈련(재직자)</span>
+					</label>
+				</div>
+			</div><div class="check">
+				<div class="checkbox checkbox-styled">
+					<label class="form-label">
+						<input type="checkbox" name="interestField" value="chainIndustry" >
+						<span>구인·구직(채용연계사업)</span>
+					</label>
+				</div>
+			</div><div class="check">
+				<div class="checkbox checkbox-styled">
+					<label class="form-label">
+						<input type="checkbox" name="interestField" value="testVerification" >
+						<span>시험·인증</span>
+					</label>
+				</div>
+			</div><div class="check">
+				<div class="checkbox checkbox-styled">
+					<label class="form-label">
+						<input type="checkbox" name="interestField" value="digitalIndustry" >
+						<span>디지털비즈니스지원센터 사업</span>
+					</label>
+				</div>
+			</div><div class="check">
+				<div class="checkbox checkbox-styled">
+					<label class="form-label">
+						<input type="checkbox" name="interestField" value="etc" >
+						<span>기타</span>
+					</label>
+				</div>
+			</div>
+			<button type = "submit">회원가입하기</button>
+		</form>
+		<br>
+		<br>
+		<br>
+	</div>
+</div>
+<!-- content end -->

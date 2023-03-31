@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>기업등록완료</title>
+</head>
+<body>
+<script th:inline = "javascript">
+	var result = [[${result}]];
+	if(result) {
+		alert("기업등록이 완료되었습니다");
+		location.href="/ReKosta/home";
+	} else {
+		alert("기업등록에 실패하였습니다");
+		location.href="/ReKosta/home";
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{main}">
+
+<head>
+<title>회원가입 선택</title>
+</head>
+<!-- content start -->
+<div layout:fragment="content">
+	<div class="wrapper row4">
+		<div id="container" class="clear">
+			<div style="text-align: center;">
+				<img alt="" src="images/코스타로고1.png">
+				<br><br>
+				<button type="button" th:onClick="|location.href='@{/moveIndividualRegisterForm}'|">일반회원</button>
+				<br>
+				<button type="button" th:onClick="|location.href='@{/moveCompanyRegisterForm}'|">사업자회원</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- content end -->
