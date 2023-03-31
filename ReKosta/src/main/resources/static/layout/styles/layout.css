@@ -74,7 +74,10 @@ td.history{color: #942d33; font-size: 36px; font-weight: bold; padding-right: 30
 
 .radius a{cursor: pointer !important; border-radius: 30px !important; color: #ffffff !important; background-color: #942d33 !important; padding-top: 10px !important; padding-bottom: 10px !important; padding-left: 30px !important; padding-right: 30px !important; border: none !important; font-size: 16px !important; font-weight: bolder !important; font-family: sans-serif !important;}
 
-
+a.a-active{cursor: pointer !important; color: #ffffff !important; background-color: #942d33 !important; width:200px; height:25px; border: 1px solid #942d33 !important; font-size: 16px !important; font-weight: bolder !important; font-family: sans-serif !important; display: inline-block !important; white-space: nowrap !important; vertical-align: middle !important; padding-top: 13px !important; padding-bottom: 10px !important;}
+a:hover.a-hover{cursor: pointer !important; color: #ffffff !important; background-color: #942d33 !important; width:200px !important; height:25px !important; border: 1px solid #942d33 !important; font-size: 16px !important; font-weight: bolder !important; font-family: sans-serif !important; display: inline-block !important; white-space: nowrap !important; vertical-align: middle !important; padding-top: 13px !important; padding-bottom: 10px !important;}
+a.a-set{cursor: pointer !important; color: black !important; background-color: #ffffff !important; width:200px !important; height:25px !important; border: 1px solid #942d33 !important; font-size: 16px !important; font-weight: bolder !important; font-family: sans-serif !important; display: inline-block !important; white-space: nowrap !important; vertical-align: middle !important; padding-top: 13px !important; padding-bottom: 10px !important;}
+a.a-side{margin-left: -10px !important; margin-right: -10px !important;}
 /* ----------------------------------------------Wrapper------------------------------------- */
 
 div.wrapper{display:block; width:100%; text-align:left;}

@@ -11,25 +11,18 @@
 <div layout:fragment="content">
   <div class="wrapper row4">
     <div id="container" class="clear"> 
-      <div style="font-size: 20px; font-family: sans-serif; color: black; text-align: center; padding-bottom: 15px;">
-	   <div style="margin-bottom: 30px;">
-		  <input type="button" value="알림마당"
-		    th:onClick="|location.href='@{/moveServiceCenter}'|"
-		    th:style="${activeServiceCenter}? 'width: 250px; height: 50px;background-color: #031252; color: white' : 'width: 250px; height: 50px;background-color: white; color: #031252;  border-color: #031252'">
-	   	  <input type="button" value="KOSTA 동정"
-		    th:onClick="|location.href='@{/moveKostaSympathy}'|"
-		    th:style="${activeNoticeBoard1}? 'width: 250px; height: 50px;background-color: #031252; color: white' : 'width: 250px; height: 50px;background-color: white; color: #031252;  border-color: #031252'">
-	      <input type="button" value="회원사 · 협약사 홍보마당 "
-		    th:onClick="|location.href='@{/moveMembershipAdvertise}'|"
-		    th:style="${activeNoticeBoard2}? 'width: 250px; height: 50px;background-color: #031252; color: white' : 'width: 250px; height: 50px;background-color: white; color: #031252;  border-color: #031252'">
-	    </div>
-      </div><br>
-      <hr><br>
+      <div style="text-align: center;">
+       <a class="a-set a-hover" th:href="@{/moveServiceCenter}">알림마당</a>
+	   <a class="a-active a-side" th:href="@{/moveKostaSympathy}">KOSTA동정</a>
+	   <a class="a-set a-hover" th:href="@{/moveMembershipAdvertise}">회원사&middot;협약사 홍보마당</a>
+      </div>
+      <br>
+      <hr class="hr-set">
+      <br>
       <div style="font-size: 20px; font-family: sans-serif; color: black;">
 		KOSTA 동정
       </div>
       <div class="clear"></div>
     </div>
   </div>
-  
 </div>

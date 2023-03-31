@@ -10,23 +10,21 @@
 <!-- content start -->
 <div layout:fragment="content">
 	<div class="wrapper row4">
-		<br>
-		<br>
+	  <div id="container" class="clear">
 		<div align="center">
-
-			<input type="button" value="알림마당"
-				th:onClick="|location.href='@{/moveNoticeBoard}'|"
-				style="cursor: pointer; width: 170px; height: 45px; border-radius: 25px; color: white; background-color: #031252" />
-			<input type="button" value="KOSTA동정"
-				th:onClick="|location.href='@{/moveKostaSympathy}'|"
-				style="cursor: pointer; width: 170px; height: 45px; border-radius: 25px; color: white; background-color: #031252" />
-			<input type="button" value="회원사&middot;협약사 홍보마당"
-				th:onClick="|location.href='@{/moveMembershipAdvertise}'|"
-				style="cursor: pointer; width: 170px; height: 45px; border-radius: 25px; color: white; background-color: #031252" /><br>
-			<br>
-			<br>
-
-			<table class="table" style="width: 1300px; text-align: center;">
+			<a class="a-active" th:href="@{/moveServiceCenter}">알림마당</a>
+			<a class="a-set a-hover a-side" th:href="@{/moveKostaSympathy}">KOSTA동정</a>
+			<a class="a-set a-hover" th:href="@{/moveMembershipAdvertise}">회원사&middot;협약사 홍보마당</a>
+			
+			<br><br><br>
+			
+			<table class="board">
+			   <colgroup>
+	              <col width="8%;"/>
+	              <col width="66%;"/>
+	              <col width="13%;"/>
+	              <col width="13%;"/>
+	            </colgroup>
 				<thead>
 					<tr class="board-th">
 						<th>No</th>
@@ -38,7 +36,7 @@
 				<tbody>
 					<tr class="board-td">
 						<td>01</td>
-						<td> <a href=""> KOSTA 2023년도 SW재직자 교육과정 목록</a></td>
+						<td style="text-align: left;"> <a href=""> KOSTA 2023년도 SW재직자 교육과정 목록</a></td>
 						<td>2023-03-29</td>
 						<td>3</td>
 					</tr>
@@ -47,6 +45,7 @@
 		</div>
 		<br>
 		<br>
+	</div>
 	</div>
 </div>
 <!-- content end -->
