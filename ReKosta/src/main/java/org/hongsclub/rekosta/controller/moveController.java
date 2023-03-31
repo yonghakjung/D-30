@@ -86,4 +86,10 @@ public class moveController {
 		model.addAttribute("activeNoticeBoard2",flag);
 		return "content/servicecenter/membershipadvertise";
 	}
+	//intro 회원사&협약사 글쓰기 폼
+	@GetMapping("/moveWritePostCompany")
+	public String moveWritePostCompany(Model model) {
+		model.addAttribute("activeIntroduceAndRegister",flag);
+		return "content/intro/writePostCompany";
+	}
 }
