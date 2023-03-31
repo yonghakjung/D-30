@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{main}">
+
+<head>
+<title>Education Time1</title>
+</head>
+<!-- content start -->
+<div layout:fragment="content">
+	<div class="wrapper row4">
+		<img alt="컨설팅배너" src="images/컨설팅배너.png" style="width: 1900px;">
+
+
+		<div id="container" class="clear">
+			<div
+				style="font-size: 20px; font-family: sans-serif; color: black; text-align: center; padding-bottom: 20px; padding-top: 10px;">
+				<span style="font-weight: bold;">자사 직원의 역량을 개발하지 않고 프로젝트를 외주
+					인력을 중심으로 개발하는 기업은 SW사업에서 성공할 수 없다.<br> <br>
+				</span>
+
+			</div>
+			<br>
+			<hr>
+			<br>
+
+			<div class="clear">
+				<div class="span-set">
+					<div>
+						<img class="img-set" src="images/육각형.png">
+						<h1 class="icon" style="font-weight: bold;">개요</h1>
+						<br> <br>
+					</div>
+					<div>
+						<img class="img-set" src="images/화살표.png">
+						<h3 class="icon">표준 역량 프레임워크 기반으로 전사 SW 인재관리가 가능하도록 SW개발 표준 프로세스 정립, SW개발 활동 현황 및 수준 분석, SW 직무/직급별 표준역량 정의, 직무/직급별 훈련 및 능력인증 방안을 진단&middot;제시함
+						</h3>
+						<br> <img class="img-set" src="images/화살표.png">
+						<h3 class="icon">주니어 개발자SW개발 프로세스 (분석, 아키텍처, 상세설계, 코딩/빌드/테스트, 디플로이먼트)와 개발 직무 (SW개발자, 비즈니스분석자, SW/시스템 아키텍트)를 대상으로 조직 또는 개인 단위의 SW개발 역량을 진단&middot;분석하여 SW경력 개발경로, 훈련로드맵, 훈련과정을 설계&middot;제시함</h3>
+					</div>
+
+					<br> <br> <br>
+
+					<div>
+						<img class="img-set" src="images/육각형.png">
+						<h1 class="icon" style="font-weight: bold;">컨설팅 프로세스 및 활동 내용</h1>
+						<br>
+						<img class="img-set" src="images/sample.png">
+						<br><br>
+					</div>
+
+					<br> <br> <br>
+
+					<div>
+						<img class="img-set" src="images/육각형.png">
+						<h1 class="icon" style="font-weight: bold;">컨설팅 프로세스/활동별
+							산출물(예시)</h1>
+						<br> <br>
+					</div>
+
+					<div>
+						<img class="img-set" src="images/화살표.png">
+						<h3 class="icon">1. 조직의 SW개발 프로세스 파악 및 분석</h3>
+						<br> <br> 
+						<img class="img-set" src="images/sample.png">
+						<br>
+						<h3 align="center">&lt;SW개발 표준프로세스 예시&gt;</h3>
+						<br><br>
+						<img class="img-set" src="images/sample.png">
+						<br>
+						<h3 align="center">&lt;표준 직무/직급 및 경력개발경로 예시&gt;</h3>
+						<br><br>
+						<img class="img-set" src="images/화살표.png">
+						<h3 class="icon">2. SW개발 활동 현황 조사 및 수준 분석</h3>
+						<br> <br>
+					</div>
+
+
+					<div class="container">
+
+
+						<table class="table-set">
+							<colgroup>
+								<col width="15%" />
+								<col width="15%" />
+								<col width="15%" />
+								<col width="10%" />
+								<col width="15%" />
+								<col width="15%" />
+								<col width="15%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="table-th">활동</th>
+									<th class="table-th">기법</th>
+									<th class="table-th">산출물</th>
+									<th class="table-th">툴</th>
+									<th class="table-th">산출물 검토</th>
+									<th class="table-th">인터뷰</th>
+									<th class="table-th">시험</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr> 
+									<td class="table-td">제품기획</td>
+									<td class="table-td"></td>
+									<td class="table-td">PRD</td>
+									<td class="table-td">PPT</td>
+									<td class="table-td">기획 미흡</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">기능분석</td>
+									<td class="table-td">모델링 적용</td>
+									<td class="table-td">요구사항 목록</td>
+									<td class="table-td">엑셀</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">아키텍처</td>
+									<td class="table-td"></td>
+									<td class="table-td">없음</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td">아키텍처 설계 미흡</td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">개발주기계획</td>
+									<td class="table-td">Waterfall 실시</td>
+									<td class="table-td">없음</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">SW상세설계 (Object Design)</td>
+									<td class="table-td">Domain Modeling</td>
+									<td class="table-td">UML 클래스</td>
+									<td class="table-td"></td>
+									<td class="table-td">도메인모델 상세수준 미흡</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">DB설계</td>
+									<td class="table-td">Data Modeling</td>
+									<td class="table-td">ERD</td>
+									<td class="table-td"></td>
+									<td class="table-td">DB 설계 자동화 미비</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">테스트 우선 프로그래밍 (TFP)</td>
+									<td class="table-td">V모델 적용</td>
+									<td class="table-td">테스트 케이스</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td">TDD 실시 안함</td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">리팩토링</td>
+									<td class="table-td">미적용</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td">TDD 실시 안함</td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">지속적 통합 (CI)</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td">Jenkins</td>
+									<td class="table-td"></td>
+									<td class="table-td">빌드 주기 1주</td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">지속적 통합 (CD)</td>
+									<td class="table-td">미적용</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+								</tr>
+							</tbody>
+						</table> 
+						<h3 align="center">&lt;SW개발 활동 현황 분석 예시&gt;</h3>
+					</div>
+
+
+
+
+
+					<br> <br>
+					<div>
+						<img class="img-set" src="images/화살표.png">
+						<h3 class="icon">3. SW직무/직급별 표준 역량 정의</h3><br><br>
+					</div>
+					<div class="container">
+
+
+						<table class="table-set">
+							<colgroup>
+								<col width="10%" />
+								<col width="10%" />
+								<col width="15%" />
+								<col width="15%" />
+								<col width="15%" />
+								<col width="10%" />
+								<col width="25%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="table-th">직무</th>
+									<th class="table-th">직급</th>
+									<th class="table-th">활동</th>
+									<th class="table-th">기법</th>
+									<th class="table-th">산출물</th>
+									<th class="table-th">툴</th>
+									<th class="table-th">필수역량</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr> 
+									<td class="table-td">제품기획</td>
+									<td class="table-td"></td>
+									<td class="table-td">PRD</td>
+									<td class="table-td">PPT</td>
+									<td class="table-td">기획 미흡</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">기능분석</td>
+									<td class="table-td">모델링 적용</td>
+									<td class="table-td">요구사항 목록</td>
+									<td class="table-td">엑셀</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">아키텍처</td>
+									<td class="table-td"></td>
+									<td class="table-td">없음</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td">아키텍처 설계 미흡</td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">개발주기계획</td>
+									<td class="table-td">Waterfall 실시</td>
+									<td class="table-td">없음</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">SW상세설계 (Object Design)</td>
+									<td class="table-td">Domain Modeling</td>
+									<td class="table-td">UML 클래스</td>
+									<td class="table-td"></td>
+									<td class="table-td">도메인모델 상세수준 미흡</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">DB설계</td>
+									<td class="table-td">Data Modeling</td>
+									<td class="table-td">ERD</td>
+									<td class="table-td"></td>
+									<td class="table-td">DB 설계 자동화 미비</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">테스트 우선 프로그래밍 (TFP)</td>
+									<td class="table-td">V모델 적용</td>
+									<td class="table-td">테스트 케이스</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td">TDD 실시 안함</td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">리팩토링</td>
+									<td class="table-td">미적용</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td">TDD 실시 안함</td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">지속적 통합 (CI)</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td">Jenkins</td>
+									<td class="table-td"></td>
+									<td class="table-td">빌드 주기 1주</td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">지속적 통합 (CD)</td>
+									<td class="table-td">미적용</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+								</tr>
+							</tbody>
+						</table> 
+						<h3 align="center">&lt;SW 직무/직급별 표준역량 예시&gt;</h3>
+					</div>
+					
+
+					<br> <br> <br>
+						
+						
+					<div>
+						<br> <br> <img class="img-set" src="images/화살표.png">
+						<h3 class="icon">4. 직무/직급별 훈련 및 능력인증 로드맵 수립</h3>
+					</div>	
+					
+					<br>
+					<div class="container">
+
+
+						<table class="table-set">
+							<colgroup>
+								<col width="10%" />
+								<col width="10%" />
+								<col width="10%" />
+								<col width="10%" />
+								<col width="10%" />
+								<col width="10%" />
+								<col width="25%" />
+								<col width="15%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="table-th">직무</th>
+									<th class="table-th">직급</th>
+									<th class="table-th">활동</th>
+									<th class="table-th">기법</th>
+									<th class="table-th">산출물</th>
+									<th class="table-th">툴</th>
+									<th class="table-th">필수역량</th>
+									<th class="table-th">필수역량</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr> 
+									<td class="table-td">제품기획</td>
+									<td class="table-td"></td>
+									<td class="table-td">PRD</td>
+									<td class="table-td">PPT</td>
+									<td class="table-td">기획 미흡</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">기능분석</td>
+									<td class="table-td">모델링 적용</td>
+									<td class="table-td">요구사항 목록</td>
+									<td class="table-td">엑셀</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">아키텍처</td>
+									<td class="table-td"></td>
+									<td class="table-td">없음</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td">아키텍처 설계 미흡</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">개발주기계획</td>
+									<td class="table-td">Waterfall 실시</td>
+									<td class="table-td">없음</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">SW상세설계 (Object Design)</td>
+									<td class="table-td">Domain Modeling</td>
+									<td class="table-td">UML 클래스</td>
+									<td class="table-td"></td>
+									<td class="table-td">도메인모델 상세수준 미흡</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">DB설계</td>
+									<td class="table-td">Data Modeling</td>
+									<td class="table-td">ERD</td>
+									<td class="table-td"></td>
+									<td class="table-td">DB 설계 자동화 미비</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">테스트 우선 프로그래밍 (TFP)</td>
+									<td class="table-td">V모델 적용</td>
+									<td class="table-td">테스트 케이스</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td">TDD 실시 안함</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">리팩토링</td>
+									<td class="table-td">미적용</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td">TDD 실시 안함</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">지속적 통합 (CI)</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td">Jenkins</td>
+									<td class="table-td"></td>
+									<td class="table-td">빌드 주기 1주</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+								</tr>
+								<tr>
+									<td class="table-td">지속적 통합 (CD)</td>
+									<td class="table-td">미적용</td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+									<td class="table-td"></td>
+								</tr>
+							</tbody>
+						</table> 
+						<h3 align="center">&lt;표준 직무/직급 및 경력개발경로 예시&gt;</h3>
+					</div>	
+						
+						<br><br>
+						
+						<img class="img-set" src="images/sample.png">
+						<br>
+						<h3 align="center">&lt;훈련과정 및 인증 로드맵 사례 (프랑스 IT서비스 업체인 Capgemini사의 사례)&gt;</h3>
+						<br>
+						
+						
+						
+						
+					<div>	
+						<br> <br> <img class="img-set" src="images/화살표.png">
+						<h3 class="icon">5. SW인재관리 모델에 기반한 인력관리 방안 자문 및 제안</h3>
+						<br> <br>
+						
+						<img class="img-set" src="images/sample.png">
+						<br>
+						<h3 align="center">&lt;SW Talent Management Framework&gt;</h3>
+						<br>
+					</div>
+
+					<br> <br> <br>
+
+					<div>
+						<img class="img-set" src="images/육각형.png">
+						<h1 class="icon" style="font-weight: bold;">SW개발 프로세스의 구성요소와
+							참조모델</h1>
+						<br> <br>
+					</div>
+
+					<div>
+						<img class="img-set" src="images/화살표.png">
+						<h3 class="icon">
+							표준 직무/직급 정의 <br>
+							 · Unified Process 및 SAFe 참조 <br>
+							 · 분석자 (Analyst, BA, Product Manager, Product Owner), 아키텍트 (Architect, Enterprise Architect, System Architect), 개발자 (Developer) 3개 직무는 필수 <br>
+							 · 각 직무를 2~3개 직급으로 구분, 예컨대 Junior/Senior, Associate/Professional/ Master<br>
+						</h3>
+
+
+						<br> <br> <img class="img-set" src="images/화살표.png">
+						<h3 class="icon">
+							SW개발 표준프로세스 정의<br> · SPEM 2.0 표준 참조&middot;프로세스는 BPMN 2.0으로 모델 프로세스에는 역할(직무/ 직급) 별로 수행해야 할 활동을 표현 <br>
+						</h3>
+						<br> <br>
+					</div>
+					
+					<img class="img-set" src="images/sample.png">
+						<br>
+						<h3 align="center">&lt;SPEM 2.0 국제표준 기반의 SW개발 표준프로세스 메타모델 (프로세스 정의 요소)&gt;</h3>
+						<br>
+						<br>
+					<img class="img-set" src="images/sample.png">
+						<br>
+						<h3 align="center">&lt;BPMN 2.0 국제표준 기반의 SW개발 표준프로세스 참조모델&gt;</h3>
+						<br>
+
+
+					<br> <br> <br>
+
+					<div>
+						<img class="img-set" src="images/육각형.png">
+						<h1 class="icon" style="font-weight: bold;">SW개발 활동별 글로벌 표준
+							기법 및 Tool선정</h1>
+						<br> <br>
+					</div>
+
+					<div>
+						<h3 class="icon">
+							· SW요구분석의 강조와 테스트 자동화에 기반한 테스트 주도 개발(Test-Driven Development)로 결함 없는 빌드<br>
+							· 객체 설계 원칙과 패턴을 적용하여 변경 용이성을 극대화한 객체지향 프로그래밍과 서비스 지향 아키텍처 적용<br>
+						    · 반복점증적 개발 프로세스 (Unified 또는 Agile 프로세스)와 빌드 자동화, CI, CD 추구	<br> 
+						    · 각 활동의 실행 가이드를 제공하고, 완료기준을 체크리스트로 제공<br> 
+						    · 각 활동의 표준 산출물을 정의하고 템플릿을 제공<br>
+							· 선정된 기법의 수행을 최대한 자동화할 수 있는 글로벌 베스트 툴 선정<br>
+						</h3>
+					</div>
+					
+					<br><br>
+					
+					<img class="img-set" src="images/sample.png">
+						<br>
+						<h3 align="center">&lt;SW개발 활동별 글로벌 베스트 기법 선정 가이드&gt;</h3>
+						<br>
+
+
+					<br> <br> <br>
+
+					<div>
+						<img class="img-set" src="images/육각형.png">
+						<h1 class="icon" style="font-weight: bold;">SW 역량모델 기반으로
+							직무/직급별 활동의 필요역량 정의</h1>
+						<br> <br>
+					</div>
+					
+					
+
+					<div>
+						<h3 class="icon">
+							· 역량은 특정 활동을 수행하는데 필요한 지식,스킬 및 표준수행능력을 포함함 <br>
+							· 스킬은 특정 기법/툴을 활용하여 특정 산출물을 만드는데 필요한 실무능력이며, 지식은 그에 필요한 기본지식이고, 표준수형능력은 소속조직에서 정의한 표준 SW개발 프로세스에 정의된대로 특정 활동을 수행할 수 있는 능력임<br> 
+							· 역량정의 템플릿 활용<br>
+						</h3>
+					</div>
+					
+					<br><br>
+					
+					<img class="img-set" src="images/sample.png">
+						<br>
+						<h3 align="center">&lt;SW역량의 정의 요소&gt;</h3>
+						<br>
+
+					<br> <br> <br>
+
+					<div>
+						<img class="img-set" src="images/육각형.png">
+						<h1 class="icon" style="font-weight: bold;">문의처</h1>
+						<br> <br>
+					</div>
+
+					<div>
+						<img class="img-set" src="images/화살표.png">
+						<h3 class="icon">한국SW기술진흥협회 기술기획정책팀 정석진 팀장 /
+							sjjung@kosta.or.kr / 031-606-9302</h3>
+						<br>
+					</div>
+
+
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- content end -->
