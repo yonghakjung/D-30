@@ -45,17 +45,17 @@ public class moveController {
 	@GetMapping("/moveSWAbilityTestAndConsulting")
 	public String moveSWAbilityTestAndConsulting(Model model) {
 		model.addAttribute("activeSWAbilityTestAndConsulting", flag);
-		return "content/swabilitytestandconsulting";
+		return "content/swabilitytestandconsulting/swabilitytestandconsulting";
 	}
 	@GetMapping("/moveSWAbilityTest")
 	public String moveSWAbilityTest(Model model) {
 		model.addAttribute("activeSWAbilityTestAndConsulting", flag);
-		return "content/swabilitytest";
+		return "content/swabilitytestandconsulting/swabilitytest";
 	}
 	@GetMapping("/moveSSPL")
 	public String moveSSPL(Model model) {
 		model.addAttribute("activeSWAbilityTestAndConsulting",flag);
-		return "content/sspl";
+		return "content/swabilitytestandconsulting/sspl";
 	}
 	//디지털비즈니스지원센터
 	@GetMapping("/moveDigitalBusiness")
