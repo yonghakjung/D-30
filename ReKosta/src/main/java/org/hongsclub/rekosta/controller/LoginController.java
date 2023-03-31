@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class LoginController {
 	@GetMapping("/moveLoginForm")
     public String moveLoginForm() {
-        return "login/loginForm";
+        return "login/loginform";
     }
 	@GetMapping("/moveCompanyRegisterForm")
     public String moveCompanyRegisterForm() {
