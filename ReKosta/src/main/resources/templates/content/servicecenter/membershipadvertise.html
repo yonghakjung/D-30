@@ -32,23 +32,35 @@
            <th style="width: 13%;">작성시간</th>
            <th style="width: 10%;">조회수</th>
 		 </tr>
+		<!--th:each문 작성-->
 		 <tr class="board-td">
        	    <td style="width: 8%;">17</td>
        	    <td style="width: 56%; text-align: left;"><a href="#" th:href="@{/membershipadvertiseDetail}">[한화테크윈] ‘한화비전’으로 사명 변경... 비전 솔루션 분야로 사업 확장(23.3.1.)</a></td>
        	    <td style="width: 13%;">2023-03-24</td>
        	    <td style="width: 10%;">3</td>
 		 </tr>
+		 
+		 <!--삭제부분 -->
 		 <tr class="board-td">
        	    <td style="width: 8%;">16</td>
        	    <td style="width: 56%; text-align: left;"><a href="#" th:href="@{/membershipadvertiseDetail}">	[메타넷티플랫폼] MS ‘2023 코리아 파트너 어워드’ 보안 부문 수상(데이터넷 2023.2.15)</a></td>
        	    <td style="width: 13%;">2023-03-21</td>
        	    <td style="width: 10%;">4</td>
 		 </tr>
+		 <!--삭제부분 -->
 		</table>
+		
+		<!--검색창-->
+		<div style="text-align: center;">
+			<form action="#" th:action="@{/membershipadvertiseSearch}" method="get">
+				<input type="text" id="keyword" name="검색어" placeholder="Search" style="text-align:left; width:170px; height: 20px;">
+				<button type="submit" style="height: 26px;">검색</button>
+				<span style="float: right;"><a th:href="@{/membershipadvertiseWrite}">글쓰기</a></span>
+			</form>
+		</div>
       </div>
       <div class="clear"></div>
     </div>
   </div>
   
 </div>
-</html>

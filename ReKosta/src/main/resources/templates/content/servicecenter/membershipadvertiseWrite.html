@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{main}">
+	  
+<head>
+<title>promotion</title>
+</head>
+
+<div layout:fragment="content">
+  <div class="wrapper row4">
+    <div id="container" class="clear"> 
+		<div style="font-size: 23px; ">회원사·협약사 홍보마당
+		  <form action="#" th:action="@{/resultMembershipAdvertise}" method="post" id="okWrite" style="float: right;">
+		    <button type="submit" id="okWriteBtn">작성</button>
+		  </form>
+		  <form action="#" th:action="@{/moveMembershipAdvertise}" method="get" id="cancleWrite" style="float: right; margin-right: 10px;">
+		    <button type="button" id="cancelWriteBtn">취소</button>
+		  </form>
+		</div>
+		<hr>
+		<div style="text-align: center; font-size: 23px; margin-top: 15px;">
+			글쓰기 만들기 폼
+		</div>
+      <div class="clear"></div>
+    </div>
+  </div>
+<script type="text/javascript">
+  $(document).ready(function() {
+  	$("#cancelWriteBtn").click(function() {
+      let message = confirm("취소하시겠습니까?");
+      if(message){
+    	  $("#cancleWrite").submit();
+      }//if
+  	});//click
+  });//ready
+</script>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
