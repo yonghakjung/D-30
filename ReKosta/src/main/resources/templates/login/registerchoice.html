@@ -14,9 +14,9 @@
 			<div style="text-align: center;">
 				<img alt="" src="images/코스타로고1.png">
 				<br><br>
-				<button type="button" th:onClick="location.href='individualregisterform.html'">일반회원</button>
+				<button type="button" th:onClick="|location.href='@{/moveIndividualRegisterForm}'|">일반회원</button>
 				<br>
-				<button type="button" th:onClick="location.href='companyregisterform.html'">사업자회원</button>
+				<button type="button" th:onClick="|location.href='@{/moveCompanyRegisterForm}'|">사업자회원</button>
 			</div>
 		</div>
 	</div>
