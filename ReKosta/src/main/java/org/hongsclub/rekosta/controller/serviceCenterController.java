@@ -17,6 +17,7 @@ public class serviceCenterController {
 	public String membershipadvertiseWrite() {
 		return "content/servicecenter/membershipadvertiseWrite";
 	}
+
 	@PostMapping("writeMembershipAdvertise")
 	public String writeMembershipAdvertise() {
 		return "redirect:resultMembershipAdvertise";
@@ -24,5 +25,10 @@ public class serviceCenterController {
 	@GetMapping("resultMembershipAdvertise")
 	public String resultMembershipAdvertise() {
 		return "content/servicecenter/resultMembershipAdvertise";
+	}
+	@GetMapping("servicecenterDetail")
+	public String servicecenterDetail() {
+		return "content/servicecenter/servicecenterDetail";
+
 	}
 }
