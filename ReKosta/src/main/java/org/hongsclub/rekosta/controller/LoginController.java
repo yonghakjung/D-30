@@ -33,4 +33,12 @@ public class LoginController {
 		model.addAttribute("result",true);
         return "login/registerindividualresult";
     }
+	@GetMapping("/moveFindIdForm")
+    public String moveFindIdForm() {
+        return "login/findidform";
+    }
+	@GetMapping("/moveFindPasswordForm")
+    public String moveFindPasswordForm() {
+        return "login/findpasswordform";
+    }
 }
