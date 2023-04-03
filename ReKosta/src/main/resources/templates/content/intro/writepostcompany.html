@@ -6,84 +6,102 @@
 
 <head>
 <title>회원사*협약사 글쓰기폼</title>
-<script src="https://cdn.tiny.cloud/1/in3wj4fn70vlu69j8jn5n71ldnhe4vsazh0f8vs5ocjpvpjn/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-<script>
-$(function(){
-    var plugins = [
-        "advlist", "autolink", "lists", "link", "image", "charmap", "print", "preview", "anchor",
-        "searchreplace", "visualblocks", "code", "fullscreen", "insertdatetime", "media", "table",
-        "paste", "code", "help", "wordcount", "save"
-    ];
-    var edit_toolbar = 'formatselect fontselect fontsizeselect |'
-               + ' forecolor backcolor |'
-               + ' bold italic underline strikethrough |'
-               + ' alignjustify alignleft aligncenter alignright |'
-               + ' bullist numlist |'
-               + ' table tabledelete |'
-               + ' link image';
 
-    tinymce.init({
-    	language: "ko_KR", //한글판으로 변경
-        selector: '#editor',
-        height: 500,
-        menubar: false,
-        plugins: plugins,
-        toolbar: edit_toolbar,
-        
-        /*** image upload ***/
-        image_title: true,
-        automatic_uploads: true,
-        file_picker_types: 'image',
+<script
+	src="https://cdn.tiny.cloud/1/in3wj4fn70vlu69j8jn5n71ldnhe4vsazh0f8vs5ocjpvpjn/tinymce/5/tinymce.min.js"
+	referrerpolicy="origin"></script>
 
-        file_picker_callback: function (cb, value, meta) {
-            var input = document.createElement('input');
-            input.setAttribute('type', 'file');
-            input.setAttribute('accept', 'image/*');
-
-            input.onchange = function () {
-                var file = this.files[0];
-
-                var reader = new FileReader();
-                reader.onload = function () {
-                    
-                    var id = 'blobid' + (new Date()).getTime();
-                    var blobCache =  tinymce.activeEditor.editorUpload.blobCache;
-                    var base64 = reader.result.split(',')[1];
-                    var blobInfo = blobCache.create(id, file, base64);
-                    blobCache.add(blobInfo);
-
-                    
-                    cb(blobInfo.blobUri(), { title: file.name });
-                };
-                reader.readAsDataURL(file);
-            };
-            input.click();
-        },
-
-        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
-    });
-
-
-    $("#save").on("click", function(){
-        var content = tinymce.activeEditor.getContent();
-        console.log(content);
-    });
-    
-});
-</script>
 </head>
-<body>
+
 <!-- content start -->
 <div layout:fragment="content">
 	<div class="wrapper row4">
-		<h1>TinyMCE Quick Start Guide</h1>
-   		<form method="post">
-        	<textarea id="editor">Hello, World!</textarea>
-        	<button type="button" id="save">게시글 저장</button>
-    	</form>		
+		<div id="container" class="clear">
+			<h1>회원사·협약사 현황</h1>
+			<form method="post">
+
+				<span>글쓴이 : 관리자</span> <span>
+					<button onclick="reset()">취소</button>
+					<button id="save">작성</button>
+				</span>
+				<li><a href="#">DropDown</a>
+					<ul>
+						<li><a href="#">Link 1</a></li>
+						<li><a href="#">Link 2</a></li>
+						<li><a href="#">Link 3</a></li>
+					</ul></li> <input placeholder="제목을 입력하세요" required="required">
+				<textarea id="editor" placeholder="내용을 입력하세요" required="required"></textarea>
+
+			</form>
+		</div>
 	</div>
+	<script>
+		$(function() {
+			let plugins = [ "advlist", "autolink", "lists", "link", "image",
+					"charmap", "print", "preview", "anchor", "searchreplace",
+					"visualblocks", "code", "fullscreen", "insertdatetime",
+					"media", "table", "paste", "code", "help", "wordcount",
+					"save" ];
+			let edit_toolbar = 'formatselect fontselect fontsizeselect |'
+					+ ' forecolor backcolor |'
+					+ ' bold italic underline strikethrough |'
+					+ ' alignjustify alignleft aligncenter alignright |'
+					+ ' bullist numlist |' + ' table tabledelete |'
+					+ ' link image';
+
+			tinymce
+					.init({
+						language : "ko_KR", //한글판으로 변경
+						selector : '#editor',
+						height : 500,
+						menubar : false,
+						plugins : plugins,
+						toolbar : edit_toolbar,
+
+						/*** image upload ***/
+						image_title : true,
+						automatic_uploads : true,
+						file_picker_types : 'image',
+
+						file_picker_callback : function(cb, value, meta) {
+							let input = document.createElement('input');
+							input.setAttribute('type', 'file');
+							input.setAttribute('accept', 'image/*');
+
+							input.onchange = function() {
+								let file = this.files[0];
+
+								let reader = new FileReader();
+								reader.onload = function() {
+
+									let id = 'blobid' + (new Date()).getTime();
+									let blobCache = tinymce.activeEditor.editorUpload.blobCache;
+									let base64 = reader.result.split(',')[1];
+									let blobInfo = blobCache.create(id, file,
+											base64);
+									blobCache.add(blobInfo);
+
+									cb(blobInfo.blobUri(), {
+										title : file.name
+									});
+								};
+								reader.readAsDataURL(file);
+							};
+							input.click();
+						},
+
+						content_style : 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px;}'
+					});
+		});
+	</script>
+	<script>
+		// 자바스크립트 코드
+		function reset() {
+			document.getElementById("editor").value = "";
+		}
+	</script>
 </div>
-</body>
+
 
 
 <!-- content end -->

@@ -44,12 +44,13 @@ img{margin:0; padding:0; border:none;}
 /* ----------------------------------------------MAKE------------------------------------- */
 .img-set{margin-right: 10px;}
 .img-set2{margin-right: 3px;}
+.circle{font-size: 15px; color: #942d33; margin-right: 7px;}
 .img-size{width: 1900px; height: 280px; text-align: center;}
 
 h1.icon{display: inline; position: relative; bottom: 4px;}
 h1.icon-2{display: inline; position: relative; bottom: 6px; font-size: 22px;}
 h2.icon{display: inline; position: relative; line-height: 200%;}
-h3.icon{display: inline; position: relative; bottom: 4px; line-height:200%; font-size: 17px;}
+h3.icon{display: inline; position: relative; bottom: 4px; line-height:200%; font-size: 18px;}
 h3.icon-2{display: inline; position: relative; bottom: 4px; line-height:200%; font-size: 19px; top: -1px;}
 
 .board{width:100%; border-collapse:collapse; table-layout:auto; vertical-align:middle; margin-bottom:15px; border:1px solid #dedede; border-left:none; border-right:none; text-align:center; padding:5px; border-collapse:collapse;}
@@ -78,6 +79,9 @@ a.a-active{cursor: pointer !important; color: #ffffff !important; background-col
 a:hover.a-hover{cursor: pointer !important; color: #ffffff !important; background-color: #942d33 !important; width:200px !important; height:25px !important; border: 1px solid #942d33 !important; font-size: 16px !important; font-weight: bolder !important; font-family: sans-serif !important; display: inline-block !important; white-space: nowrap !important; vertical-align: middle !important; padding-top: 13px !important; padding-bottom: 10px !important;}
 a.a-set{cursor: pointer !important; color: black !important; background-color: #ffffff !important; width:200px !important; height:25px !important; border: 1px solid #942d33 !important; font-size: 16px !important; font-weight: bolder !important; font-family: sans-serif !important; display: inline-block !important; white-space: nowrap !important; vertical-align: middle !important; padding-top: 13px !important; padding-bottom: 10px !important;}
 a.a-side{margin-left: -10px !important; margin-right: -10px !important;}
+
+.ul-set{font-size: 16px; display: inline; float: left; margin-left: 10px; color: black;}
+.ul-set2{font-size: 18px; color: black; line-height: 150%;}
 /* ----------------------------------------------Wrapper------------------------------------- */
 
 div.wrapper{display:block; width:100%; text-align:left;}
