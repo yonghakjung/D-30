@@ -16,4 +16,9 @@ public class serviceCenterController {
 	public String membershipadvertiseWrite() {
 		return "content/servicecenter/membershipadvertiseWrite";
 	}
+	@GetMapping("servicecenterDetail")
+	public String servicecenterDetail() {
+		return "content/servicecenter/servicecenterDetail";
+		
+	}
 }
