@@ -3,6 +3,7 @@ package org.hongsclub.rekosta.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class serviceCenterController {
@@ -15,5 +16,13 @@ public class serviceCenterController {
 	@GetMapping("membershipadvertiseWrite")
 	public String membershipadvertiseWrite() {
 		return "content/servicecenter/membershipadvertiseWrite";
+	}
+	@PostMapping("writeMembershipAdvertise")
+	public String writeMembershipAdvertise() {
+		return "redirect:resultMembershipAdvertise";
+	}
+	@GetMapping("resultMembershipAdvertise")
+	public String resultMembershipAdvertise() {
+		return "content/servicecenter/resultMembershipAdvertise";
 	}
 }
