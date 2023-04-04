@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{main}">
+
+<head>
+<title>Education Time1</title>
+</head>
+<!-- content start -->
+<div layout:fragment="content">
+	<div class="wrapper row4">
+	  <div id="container" class="clear">
+		<div align="center">
+			<a class="a-active" th:href="@{/moveServiceCenter}">알림마당</a>
+			<a class="a-set a-hover a-side" th:href="@{/moveKostaSympathy}">KOSTA동정</a>
+			<a class="a-set a-hover" th:href="@{/moveMembershipAdvertise}">회원사&middot;협약사 홍보마당</a>
+			
+			<br><br><br>
+		 <div style="font-size: 20px; font-family: sans-serif; color: black;">
+			어쩌구저쩌구! 기사가 !! 있다!
+			<br>
+			<span class="thumb"> 
+						<img src="images/servicecenter/클라우드개발사진.jpg"
+								style="width: 950px; height: 740px; border: 1px solid" alt="">
+						</span>
+			</div>
+		</div>
+	</div>
+  </div>
+  
+</div>

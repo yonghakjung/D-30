@@ -79,13 +79,13 @@ public class moveController {
 	//KOSTA 동정
 	@GetMapping("/moveKostaSympathy")
 	public String moveKostaSympathy(Model model) {
-		model.addAttribute("activeNoticeBoard1",flag);
+		model.addAttribute("activeKostaSympathy",flag);
 		return "content/servicecenter/kostasympathy";
 	}
 	// 회원사/협약사 홍보마당
 	@GetMapping("/moveMembershipAdvertise")
 	public String moveMembershipAdvertise(Model model) {
-		model.addAttribute("activeNoticeBoard2",flag);
+		model.addAttribute("activeMembershipAdvertise",flag);
 		return "content/servicecenter/membershipadvertise";
 	}
 	//intro 회원사&협약사 글쓰기 폼
