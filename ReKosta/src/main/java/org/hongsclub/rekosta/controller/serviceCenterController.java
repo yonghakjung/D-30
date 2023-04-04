@@ -17,8 +17,12 @@ public class serviceCenterController {
 		return "content/servicecenter/membershipadvertiseWrite";
 	}
 	@GetMapping("servicecenterDetail")
-	public String servicecenterDetail() {
+	public String servicecenterDetail() {  
 		return "content/servicecenter/servicecenterDetail";
-		
 	}
+	@GetMapping("kostasympathyDetail")
+	public String kostasympathyDetail() {
+		return "content/servicecenter/kostasympathyDetail";
+	}
+	
 }
