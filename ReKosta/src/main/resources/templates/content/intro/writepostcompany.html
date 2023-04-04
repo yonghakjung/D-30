@@ -3,11 +3,12 @@
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 	layout:decorate="~{main}">
+
 <head>
-<title>네이버 카페 글쓰기</title>
-<meta charset="utf-8">
+<title>promotion</title>
 <script
-	src="https://cdn.tiny.cloud/1/in3wj4fn70vlu69j8jn5n71ldnhe4vsazh0f8vs5ocjpvpjn/tinymce/5/tinymce.min.js"></script>
+	src="https://cdn.tiny.cloud/1/in3wj4fn70vlu69j8jn5n71ldnhe4vsazh0f8vs5ocjpvpjn/tinymce/5/tinymce.min.js"
+	referrerpolicy="origin"></script>
 <script>
 	$(function() {
 		let plugins = [ "advlist", "autolink", "lists", "link", "image",
@@ -31,37 +32,20 @@
 
 					/*** image upload ***/
 					image_title : true,
-					/* enable automatic uploads of images represented by blob or data URIs*/
 					automatic_uploads : true,
-					/*
-					    URL of our upload handler (for more details check: https://www.tiny.cloud/docs/configure/file-image-upload/#images_upload_url)
-					    images_upload_url: 'postAcceptor.php',
-					    here we add custom filepicker only to Image dialog
-					 */
 					file_picker_types : 'image',
-					/* and here's our custom image picker*/
+
 					file_picker_callback : function(cb, value, meta) {
 						let input = document.createElement('input');
 						input.setAttribute('type', 'file');
 						input.setAttribute('accept', 'image/*');
 
-						/*
-						Note: In modern browsers input[type="file"] is functional without
-						even adding it to the DOM, but that might not be the case in some older
-						or quirky browsers like IE, so you might want to add it to the DOM
-						just in case, and visually hide it. And do not forget do remove it
-						once you do not need it anymore.
-						 */
 						input.onchange = function() {
 							let file = this.files[0];
 
 							let reader = new FileReader();
 							reader.onload = function() {
-								/*
-								Note: Now we need to register the blob in TinyMCEs image blob
-								registry. In the next release this part hopefully won't be
-								necessary, as we are looking to handle it internally.
-								 */
+
 								let id = 'blobid' + (new Date()).getTime();
 								let blobCache = tinymce.activeEditor.editorUpload.blobCache;
 								let base64 = reader.result.split(',')[1];
@@ -69,7 +53,6 @@
 										base64);
 								blobCache.add(blobInfo);
 
-								/* call the callback and populate the Title field with the file name */
 								cb(blobInfo.blobUri(), {
 									title : file.name
 								});
@@ -78,54 +61,78 @@
 						};
 						input.click();
 					},
-					/*** image upload ***/
 
 					content_style : 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
 				});
+
 	});
 </script>
 </head>
+
 <div layout:fragment="content">
 	<div class="wrapper row4">
 		<div id="container" class="clear">
-			<form method="post" th:action="@{/moveIntroduceRegisterMembership}">
+			<div style="font-size: 23px; color: black;">회원사·협약사 소개&회원가입</div>
 
-				<input type="text" id="title" required placeholder="제목을 입력하세요">
-				<br>
-				<br>
-				<textarea id="editor"  placeholder="내용을 입력하세요" required="required"></textarea>
-				<br>
-				<br>
-				
-				<!-- <button type="submit">글 작성</button> -->
-				<button>글작성</button>
-				<button type="reset">글 취소</button>
-				
-			</form>
-			<script>
-				function insertBold() {
-					tinymce.activeEditor.execCommand('Bold');
-				}
-
-				function insertParagraph() {
-					tinymce.activeEditor.execCommand('FormatBlock', false, 'p');
-				}
-
-				function insertImage() {
-					tinymce.activeEditor.windowManager.openUrl({
-						title : '이미지 등록',
-						url : 'https://placeimg.com/640/480/animals',
-						onMessage : function(instance, message) {
-							if (message.type === 'insert') {
-								let img = document.createElement('img');
-								img.src = message.content;
-								tinymce.activeEditor
-										.insertContent(img.outerHTML);
-							}
-						}
-					});
-				}
-			</script>
+			<hr>
+			<br>
+			<div>
+				<form action="#" th:action="@{/writePostIntro}" method="post"
+					id="okWrite">
+					<select style="margin-left: 10px; border: none; height: 30px;">
+						<option value="">category</option>
+						<option value="option2">회원사</option>
+						<option value="option3">협약사</option>
+					</select> 
+					<input type="text" id="title" name="제목" placeholder="제목을 입력해주세요"
+						required="required"
+						style="border: none; width: 1200px; height: 30px; font-size: 15px; font-family: fantasy;"><br>
+					<br>
+					<textarea id="editor" name="content" placeholder="내용을 입력해주세요"></textarea>
+					<br>
+					<button type="button" id="save" style="float: right;">작성</button>
+					<button type="button" id="cancelWriteBtn"
+						style="float: right; margin-right: 10px;">취소</button>
+				</form>
+			</div>
+			<div class="clear"></div>
 		</div>
 	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#cancelWriteBtn").click(function() {
+				let message = confirm("취소하시겠습니까?");
+				if (message) {
+					location.href = "moveIntroduceRegisterMembership";
+				}//if
+			});//click
+
+			$("#save").click(function() {
+				let title = $("#title").val().trim();
+				let content = tinymce.activeEditor.getContent();
+
+				if (title == "") {
+					alert("제목을 입력해주세요.");
+					$("#title").focus();
+					return;
+				}
+
+				if (content == "") {
+					alert("내용을 입력해주세요.");
+					tinymce.get('editor').focus();
+					return;
+				}
+
+				// 내용이 있을 때만 제출
+				if (content != "") {
+					let message = confirm("게시글을 등록하시겠습니까?");
+					if (message) {
+						$("#okWrite").submit();
+					}
+				}
+			});
+		});//ready
+	</script>
+
 </div>
