@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-	  xmlns:th="http://www.thymeleaf.org"
-	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	  layout:decorate="~{main}">
-	  
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{main}">
+
 <head>
 <title>Education Time1</title>
 </head>
@@ -11,36 +11,38 @@
 <div layout:fragment="content">
 	<div class="wrapper row4">
 		<img alt="컨설팅배너" src="images/컨설팅배너.png" style="width: 1900px;">
-		<div id="container" class="clear"> 
-      <div style="font-size: 20px; font-family: sans-serif; color: black; text-align: center; padding-bottom: 20px; padding-top: 10px;">
-         <span style="font-weight: bold;">SW사업은 직원역량이 핵심 경쟁력-<br>
-         세계적인 SW기업을 만들려면 세계적인 SW인력을 양성하는 수 밖에 없다.<br><br>
-         </span>
-         SW인력 양성 프로그램의 기획·운영은 大家급 SW전문가만이 주도할 수 있다.<br>
-         SW의 분석, 아키텍처 설계, 테스트, 코딩, 상세 설계 등 일련의 활동은 산출물을 통해 연결되기 때문에<br>
-         분석자, 아키텍트, 개발자 등 모든 역할자의 역량을 전체적으로 기획하여 균형 있게 훈련해야 한다.<br><br>
-         전사 차원의 장기적 전략적 훈련 프로그램 기획 없이는 효과를 보기 힘들다.<br>
-         -SW역량 강화 5단계 추진 방법, 박준성-<br>
-         
-         
-      </div><br>
-      <hr><br>
-      <div style="font-size: 20px; font-family: sans-serif; color: black; padding-left: 142px; font-weight: bold;">
-        * SW역량진단·개발 컨설팅 바로가기<br><br>
-        <div style="margin-top: -7px">
-        <a href="#" th:onClick="|location.href='@{/moveSWAbilityTest}'|"><img alt="asdasd" src="images/테스트.png" style="margin-right: 200px; width: 386px;" ></a>
-        <a href="#" th:onClick="|location.href='@{/moveSSPL}'|"><img alt="asdasd" src="images/SSPL.png" style="margin-right: 200px; width: 386px;"></a>
-        </div>
-      </div>
-      <div class="clear"></div>
-    </div>
-	
-	
-	
-	
-	
-	
-	
-	</div>	
+		<div id="container" class="clear">
+			<div
+				style="font-size: 20px; font-family: sans-serif; color: black; text-align: center; padding-bottom: 20px; padding-top: 10px;">
+				<span style="font-weight: bold;">SW사업은 직원역량이 핵심 경쟁력-<br>
+					세계적인 SW기업을 만들려면 세계적인 SW인력을 양성하는 수 밖에 없다.<br> <br>
+				</span> SW인력 양성 프로그램의 기획·운영은 大家급 SW전문가만이 주도할 수 있다.<br> SW의 분석, 아키텍처
+				설계, 테스트, 코딩, 상세 설계 등 일련의 활동은 산출물을 통해 연결되기 때문에<br> 분석자, 아키텍트,
+				개발자 등 모든 역할자의 역량을 전체적으로 기획하여 균형 있게 훈련해야 한다.<br> <br> 전사
+				차원의 장기적 전략적 훈련 프로그램 기획 없이는 효과를 보기 힘들다.<br>
+				<h5>-SW역량 강화 5단계 추진 방법, 박준성-</h5>
+				<br>
+
+
+			</div>
+			<br>
+			<hr>
+			<br>		
+			<div
+				style="font-size: 20px; font-family: sans-serif; color: black; padding-left: 142px; font-weight: bold;">
+				<img class="img-set" src="images/육각형.png">
+				<h3 class="icon" style="font-weight: bold;">SW역량진단·개발 컨설팅 바로가기</h3>
+				<br> <br>
+				<a href="#" th:onClick="|location.href='@{/moveSWAbilityTest}'|">
+						<img alt="asdasd" src="images/테스트.png"
+						style="margin-right: 200px; width: 386px;">
+					</a>				
+					<a href="#" th:onClick="|location.href='@{/moveSSPL}'|"> <img
+						alt="asdasd" src="images/SSPL.png"
+						style="margin-right: 200px; width: 386px;">
+					</a>				
+			</div>
+		</div>
+	</div>
 </div>
 <!-- content end -->
