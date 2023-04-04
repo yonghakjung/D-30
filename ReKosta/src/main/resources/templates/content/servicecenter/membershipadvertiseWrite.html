@@ -24,7 +24,7 @@ $(function(){
 
     tinymce.init({
     	language: "ko_KR", //한글판으로 변경
-        selector: '#editor',
+        selector: '#editor123',
         height: 500,
         menubar: false,
         plugins: plugins,
@@ -65,8 +65,8 @@ $(function(){
 
 
     $("#save").on("click", function(){
-        let content = tinymce.activeEditor.getContent();
-        console.log(content);
+        let content1 = tinymce.activeEditor.getContent();
+        console.log(content1);
     });
     
 });
@@ -80,9 +80,9 @@ $(function(){
 		
 		<hr><br>
 		<div>
-   		  <form action="#" th:action="@{/resultMembershipAdvertise}" method="post" id="okWrite" style="float: right;">
+   		  <form action="#" th:action="@{/writeMembershipAdvertise}" method="post" id="okWrite" style="float: right;">
    		    <input type="text" id="title" name="제목" placeholder="제목을 입력해주세요" required="required" style="border:none; width: 1296px; height: 30px; font-size: 15px; font-family: fantasy;"><br><br>
-            <textarea id="editor" name="내용" placeholder="내용을 입력해주세요" required="required"></textarea><br>
+            <textarea id="editor123" name="내용" placeholder="내용을 입력해주세요" required="required"></textarea><br>
             <button type="button" id="okWriteBtn" style="float: right;">작성</button>
             <button type="button" id="cancelWriteBtn" style="float: right; margin-right: 10px;">취소</button>
     	  </form>
@@ -100,17 +100,20 @@ $(function(){
       }//if
   	});//click
   	$("#okWriteBtn").click(function() {
-  		let title=$("#title").val().trim();
-  		let editor=$("#editor").val().trim();
-  		if(title==""){
+  		let title = $("#title").val().trim()
+  		let content = $("#editor123").val().trim();
+  		
+  		if(title == ""){
   			alert("제목을 입력해주세요.");
+  			$("#title").focus();
   			return;
   		}
-  		if(editor==""){
+  		if(content == ""){
   			alert("내용을 입력해주세요.");
+  			$("#editor123").focus();
   			return;
   		}
-  		let message=confirm("게시글을 등록하시겠습니까?");
+  		let message = confirm("게시글을 등록하시겠습니까?");
   		if(message){
   			$("#okWrite").submit();
   		}
