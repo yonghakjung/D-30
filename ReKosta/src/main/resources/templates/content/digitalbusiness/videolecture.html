@@ -12,13 +12,14 @@
 	<div class="wrapper row4" style="text-align: center;">
 		<div id="container" class="clear">
 			<div id="homepage" class="clear">
-				<br>
-				<input type = "button" value = "디지털비즈니스센터소개" th:onClick="|location.href='@{/moveDigitalBusiness}'|"
-					th:style="${activeIntroduceDigitalBusiness}? 'width: 250px; height: 50px;background-color: #031252; color: white' : 'width: 250px; height: 50px;background-color: white; color: #031252;  border-color: #031252'">
-				<input type = "button" value = "동영상강의" th:onClick="|location.href='@{/moveVideoLecture}'|"
-					th:style="${activeVideoLecture}? 'width: 250px; height: 50px;background-color: #031252; color: white' : 'width: 250px; height: 50px;background-color: white; color: #031252; border-color: #031252;'">
-				<br>
-				<br>
+			
+			  <div style="margin-top: -51px;">
+				<a class="a-set a-hover a-side" th:href="@{/moveDigitalBusiness}">디지털비즈니스센터소개</a>
+				<a class="a-active a-hover" th:href="@{/moveVideoLecture}">동영상강의</a>
+			  </div>
+			  
+				<br><br>
+				
 				<table
 					style="width: 100%; border: 1px solid black; margin-left: auto; margin-right: auto; text-align: center;">
 					<tr>
