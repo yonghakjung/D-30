@@ -10,31 +10,29 @@
 <!-- content start -->
 <div layout:fragment="content">
 	<div class="wrapper row4">
-		<div class="container-fluid">
-		<div align="center">		
-			<div style="width: 30%; height: 300px; border-style: solid; border-width: 1px; border-radius:10px; background-color: white;"><br>
-				<h5>
-					<span style="text-align: center; background-color: white;"> 로그인 </span>
-				</h5>
-				<div>
-					<div style="text-align: center;">
-						<form action="" th:action="@{/login}" method="post">
- 							<input type="text" style="width: 65%; height: 40px" name="id" placeholder="아이디" required="required"><br>
- 							<input type="password" style="width: 65%; height: 40px" name="password" placeholder="패스워드" required="required"><br><br>
- 							<button type="submit" style="width: 65%; border: none; background-color: #03274B; height: 40px; color: white;">로그인</button>
- 						</form>
- 						<br>
- 						<a href="" th:href="@{/moveRegisterChoice}"><font color="gray">회원가입</font></a> 
- 						|
- 						<a href="" th:href="@{/moveFindIdForm}" ><font color="gray">아이디 찾기</font></a> 
- 						|
- 						<a href="" th:href="@{/moveFindPasswordForm}"><font color="gray">비밀번호 찾기</font></a>
-					</div>
-				</div>
-
+		 <div id="container" class="clear">
+		   <div align="center">
+			  <div style="text-align: center !important;">
+				<img src="images/코스타로고1.png" style="width: 413px; height: 92px;">
+			  </div>
+			  <br><br><br>
+			  <div class="login-form">
+				<form action="" th:action="@{/login}" method="post">
+ 					<input class="login-set" type="text" name="id" placeholder="아이디" required="required"><br>
+ 					<input class="login-set" type="password" style="margin-top: 0px;" name="password" placeholder="패스워드" required="required"><br><br>
+ 					<button class="login-set radius btn-hover" type="submit">로그인</button>
+ 				</form>
+ 				<br>
+ 				<div style="color: gray; font-size: 14px; font-weight: bolder;">
+	 				<a href="" th:href="@{/moveRegisterChoice}">회원가입</a> 
+	 				|
+	 				<a href="" th:href="@{/moveFindIdForm}" >아이디 찾기</a> 
+	 				|
+	 				<a href="" th:href="@{/moveFindPasswordForm}">비밀번호 찾기</a>
+ 				</div>
 			</div>
 		</div>
-	</div>
+	  </div>
 	</div>
 </div>
 <!-- content end -->
