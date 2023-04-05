@@ -79,7 +79,7 @@
 			<div>
 				<form action="#" th:action="@{/writePostIntro}" method="post"
 					id="okWrite">
-					<select style="margin-left: 10px; border: none; height: 30px;">
+					<select id="category" style="margin-left: 10px; border: none; height: 30px;" required>
 						<option value="">category</option>
 						<option value="option2">회원사</option>
 						<option value="option3">협약사</option>
@@ -111,7 +111,13 @@
 			$("#save").click(function() {
 				let title = $("#title").val().trim();
 				let content = tinymce.activeEditor.getContent();
-
+				let category = $("#category").val();
+				
+				if (category == "") {
+					  alert("카테고리를 선택해주세요.");
+					  return;
+				}
+				
 				if (title == "") {
 					alert("제목을 입력해주세요.");
 					$("#title").focus();
@@ -131,6 +137,7 @@
 						$("#okWrite").submit();
 					}
 				}
+				
 			});
 		});//ready
 	</script>
