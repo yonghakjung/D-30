@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{main}">
+	  
+<head>
+<title>promotion</title>
+</head>
+
+<div layout:fragment="content">
+  <div class="wrapper row4">
+    <div id="container" class="clear"> 
+      <div style="text-align: center;">
+        <a class="a-set a-hover" th:href="@{/moveServiceCenter}">알림마당</a>
+		<a class="a-set a-hover a-side" th:href="@{/moveKostaSympathy}">KOSTA동정</a>
+		<a class="a-active" th:href="@{/moveMembershipAdvertise}">회원사&middot;협약사 홍보마당</a>
+      </div>
+      
+      <br><br><br>
+      
+		<table class="board">
+			 <colgroup>
+	          <col width="8%;"/>
+	          <col width="66%;"/>
+	          <col width="13%;"/>
+	          <col width="13%;"/>
+	         </colgroup>
+		 <tr class="board-th">
+		   <th>No</th>
+           <th>제목</th>
+           <th>작성시간</th>
+           <th>조회수</th>
+		 </tr>
+		<!--th:each문 작성-->
+		 <tr class="board-td">
+       	    <td>17</td>
+       	    <td style="text-align: left;"><a href="#" th:href="@{/membershipadvertiseDetail}">[한화테크윈] ‘한화비전’으로 사명 변경... 비전 솔루션 분야로 사업 확장(23.3.1.)</a></td>
+       	    <td>2023-03-24</td>
+       	    <td>3</td>
+		 </tr>
+		 
+		 <!--삭제부분 -->
+		 <tr class="board-td">
+       	    <td style="width: 8%;">16</td>
+       	    <td style="width: 56%; text-align: left;"><a href="#" th:href="@{/membershipadvertiseDetail}">	[메타넷티플랫폼] MS ‘2023 코리아 파트너 어워드’ 보안 부문 수상(데이터넷 2023.2.15)</a></td>
+       	    <td style="width: 13%;">2023-03-21</td>
+       	    <td style="width: 10%;">4</td>
+		 </tr>
+		 <!--삭제부분 -->
+		</table>
+		
+		<!--검색창-->
+		<div style="text-align: center;">
+			<form action="#" th:action="@{/membershipadvertiseSearch}" method="get">
+				<input type="text" id="keyword" name="검색어" placeholder="Search" style="text-align:left; width:170px; height: 20px;">
+				<button type="submit" style="height: 26px;">검색</button>
+			</form>
+			<a class="a-btn-set btn-set-hover" th:href="@{/membershipadvertiseWrite}" style="float: right; margin-top: -30px;">글쓰기</a>
+		</div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  
+</div>
