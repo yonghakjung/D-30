@@ -39,7 +39,7 @@ public class moveController {
 	@GetMapping("/moveTestAuthentication")
 	public String moveTest(Model model) {
 		model.addAttribute("activeTest",flag);
-		return "content/testauthentication/testAuthentication";
+		return "content/testauthentication/test_authentication";
 	}
 	//sw역량진단&개발컨설팅
 	@GetMapping("/moveSWAbilityTestAndConsulting")
@@ -80,18 +80,18 @@ public class moveController {
 	@GetMapping("/moveKostaSympathy")
 	public String moveKostaSympathy(Model model) {
 		model.addAttribute("activeKostaSympathy",flag);
-		return "content/servicecenter/kostasympathy";
+		return "content/servicecenter/kosta_sympathy";
 	}
 	// 회원사/협약사 홍보마당
 	@GetMapping("/moveMembershipAdvertise")
 	public String moveMembershipAdvertise(Model model) {
 		model.addAttribute("activeMembershipAdvertise",flag);
-		return "content/servicecenter/membershipadvertise";
+		return "content/servicecenter/membership_advertise";
 	}
 	//intro 회원사&협약사 글쓰기 폼
 	@GetMapping("/moveWritePostCompany")
 	public String moveWritePostCompany(Model model) {
 		model.addAttribute("activeIntroduceAndRegister",flag);
-		return "content/intro/writepostcompany";
+		return "content/intro/postcompany_write";
 	}
 }

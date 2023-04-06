@@ -70,11 +70,11 @@ $(function(){
 <div layout:fragment="content">
   <div class="wrapper row4">
     <div id="container" class="clear"> 
-		<div style="font-size: 23px; color: black;">알림마당</div>
+		<div style="font-size: 23px; color: black;">KOSTA 동정</div>
 		
 		<hr><br>
 		<div>
-   		  <form action="#" th:action="@{/moveWriteServiceCenter}" method="post" id="okWrite" style="float: right;">
+   		  <form action="#" th:action="@{/writePostKostaSympathy}" method="post" id="okWrite" style="float: right;">
    		    <input type="text" id="title" name="제목" placeholder="제목을 입력해주세요" required="required" style="border:none; width: 1296px; height: 30px; font-size: 15px; font-family: fantasy;"><br><br>
             <textarea id="editor" name="내용" placeholder="내용을 입력해주세요"></textarea><br>
             <button type="button" id="save" style="float: right;">작성</button>
@@ -84,35 +84,35 @@ $(function(){
       <div class="clear"></div>
     </div>
   </div>
-
+  
 <script type="text/javascript">
- $(document).ready(function(){
-	 $("#cancelWriteBtn").click(function(){
-	 let message = confirm("취소하시겠습니까?");
-	 if(message){
-		 location.href="moveServiceCenter";
-	 	} //if
-	 }); //click
-	$("#save").click(function(){
-		let title = $("#title").val().tirm()
-		let content = tinymce.activeEditor.getContent();
-		
-		if(title == ""){
-			alert("제목을 입력해주세요");
-			$("#title").focus();
-			return;
-		}
-		if(content == ""){
+  $(document).ready(function() {
+  	$("#cancelWriteBtn").click(function() {
+      let message = confirm("취소하시겠습니까?");
+      if(message){
+    	  location.href="moveMembershipAdvertise";
+      }//if
+  	});//click
+  	$("#save").click(function() {
+  		let title = $("#title").val().trim()
+  		let content = tinymce.activeEditor.getContent();
+  		
+  		if(title == ""){
+  			alert("제목을 입력해주세요.");
+  			$("#title").focus();
+  			return;
+  		}
+  		if(content == ""){
   			alert("내용을 입력해주세요.");
   			tinymce.get('editor').focus();
   			return;
-		}
-		let message = confirm("게시글을 등록하시겠습니까?");
+  		}
+  		let message = confirm("게시글을 등록하시겠습니까?");
   		if(message){
   			$("#okWrite").submit();
   		}
   		
-		});//click
-	});//ready
-</script>
+  	});//click
+  });//ready
+  </script>
 </div>

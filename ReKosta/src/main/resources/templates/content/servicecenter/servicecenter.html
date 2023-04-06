@@ -36,13 +36,17 @@
 					</thead>
 					<tbody>
 						<tr class="board-td">
+							<td>02</td>
+							<td style="text-align: left;"><a href="#" th:href="@{/serviceCenterDetail}"> [취업자과정] Java 기반 DevOps 개발자 양성 과정(4월 25일 개강)</a></td>
+							<td>2023-04-01</td>
+							<td>20</td>
+						</tr>				
+						<tr class="board-td">
 							<td>01</td>
-							<td style="text-align: left;"><a href="#"
-								th:href="@{/servicecenterDetail}"> KOSTA 2023년도 SW재직자 교육과정
-									목록</a></td>
+							<td style="text-align: left;"><a href="#" th:href="@{/serviceCenterDetail}"> KOSTA 2023년도 SW재직자 교육과정 목록</a></td>
 							<td>2023-03-29</td>
 							<td>6</td>
-						</tr>
+						</tr>					
 					</tbody>
 				</table>
 			</div>
@@ -51,7 +55,7 @@
 			<form action="#" th:action="@{/noticeboardSearch}" method="get">
 			<input type="text" id="keyword" name="검색"  placeholder="Search">
 			<button type="submit" style="height: 26px;">검색</button>
-			<span style="float: right;"><a th:href="@{/moveWriteServiceCenter}">글쓰기</a></span>	
+			<a class="a-btn-set btn-set-hover" th:href="@{/moveWriteServiceCenter}">글쓰기</a>	
 				</form>
 			</div>
 		</div>
