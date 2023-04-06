@@ -91,8 +91,9 @@ a.a-side{margin-left: -10px !important; margin-right: -10px !important;}
 .a-btn2 a{cursor: pointer !important; border-radius: 3px !important; color: black !important; background-color: white !important; padding-top: 11px !important; padding-bottom: 12px !important; padding-left: 162px !important; padding-right: 163px !important; border: 1px solid #cfcfcf !important; font-size: 15px !important; font-weight: bolder !important; font-family: sans-serif !important;}
 a:hover.a-btn-hover{border: 1px solid black !important;}
 
-a.a-btn-set{cursor: pointer !important; border-radius: 30px !important;color: #ffffff !important; background-color: #942d33 !important; padding-top: 7px !important; padding-bottom: 8px !important; padding-left: 20px !important; padding-right: 20px !important; border: none !important; font-size: 12px !important; font-weight: bolder !important; font-family: sans-serif !important; float: right; margin-top: -30px;}
+a.a-btn-set{cursor: pointer !important; border-radius: 30px !important;color: #ffffff !important; background-color: #942d33 !important; padding-top: 7px !important; padding-bottom: 8px !important; padding-left: 20px !important; padding-right: 20px !important; border: none !important; font-size: 12px !important; font-weight: bolder !important; font-family: sans-serif !important;}
 a:hover.btn-set-hover{background-color: #6d1016 !important;}
+
 /* ----------------------------------------------Wrapper------------------------------------- */
 
 div.wrapper{display:block; width:100%; text-align:left;}
