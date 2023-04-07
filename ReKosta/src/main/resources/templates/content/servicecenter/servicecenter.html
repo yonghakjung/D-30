@@ -50,15 +50,22 @@
 					</tbody>
 				</table>
 			</div>
-			<br> <br>
 			<div style="text-align: center;">
 			<form action="#" th:action="@{/noticeboardSearch}" method="get">
-			<input type="text" id="keyword" name="검색"  placeholder="Search">
-			<button type="submit" style="height: 26px;">검색</button>
-			<a class="a-btn-set btn-set-hover" th:href="@{/moveWriteServiceCenter}">글쓰기</a>	
-				</form>
-			</div>
+				<div class="search-mode">
+				    <input class="search-input" type="text" id="keyword" name="검색" placeholder="Search">
+				    <div class="icon">
+				      <div class="search">
+				        <a href="">
+				          <i class="fas fa-search"></i>
+				        </a>
+				      </div>
+					</div>
+				</div>
+				<a class="a-btn-set btn-set-hover" th:href="@{/moveWriteServiceCenter}" style="float: right; margin-top: -47px;">글쓰기</a>	
+			</form>
 		</div>
+	  </div>
 	</div>
 </div>
 <!-- content end -->

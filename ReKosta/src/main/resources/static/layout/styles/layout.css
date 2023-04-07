@@ -94,6 +94,13 @@ a:hover.a-btn-hover{border: 1px solid black !important;}
 a.a-btn-set{cursor: pointer !important; border-radius: 30px !important;color: #ffffff !important; background-color: #942d33 !important; padding-top: 7px !important; padding-bottom: 8px !important; padding-left: 20px !important; padding-right: 20px !important; border: none !important; font-size: 12px !important; font-weight: bolder !important; font-family: sans-serif !important;}
 a:hover.btn-set-hover{background-color: #6d1016 !important;}
 
+.img-a:hover{filter: brightness(0.7);}
+
+.search-mode {position: relative; width: 220px; height: 34px; margin: 10px auto;}
+input.search-input {border: 1px solid #F1F1F1; width: 100%; height: 100%; font-family: sans-serif; font-weight: bolder; outline-color: #942d33; text-indent: 10px;}
+.search-input:placeholder{padding-left: 10px;}
+.icon {display: flex; justify-content: flex-end; position: absolute; top: 9px; right: 3px; left: 3px;}
+.search {color: #808080;}
 /* ----------------------------------------------Wrapper------------------------------------- */
 
 div.wrapper{display:block; width:100%; text-align:left;}
