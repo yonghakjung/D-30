@@ -34,11 +34,11 @@ public class TestServiceKHJImpl implements TestServiceKHJ{
 	}
 	
 	@Override
-	public Optional<TestEntity> findMemberById(String email_id) {
-		return testRepository.findById(email_id);
+	public Optional<TestEntity> findMemberById(String id) {
+		return testRepository.findById(id);
 	}
 	@Override
-	public List<TestAuthorityEntity> findAuthorityById(String email_id) {
-		return testAuthenticRepository.findAuthorityById(email_id);
+	public List<TestAuthorityEntity> findAuthorityById(String id) {
+		return testAuthenticRepository.findAuthorityById(id);
 	}
 }

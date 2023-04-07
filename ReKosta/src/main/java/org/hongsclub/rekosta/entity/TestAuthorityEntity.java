@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TestAuthorityEntity {
+public class TestAuthorityEntity{
 	@Id
 	@Column(name="id")
     private String id;

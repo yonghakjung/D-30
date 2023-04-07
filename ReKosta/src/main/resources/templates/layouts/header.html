@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	  xmlns:th="http://www.thymeleaf.org"
 	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
 	  layout:decorate="~{main}">
 
 <head>
@@ -19,12 +20,23 @@
 	       -->
 	       <a th:href="@{/home}"><img id="kostaLogo" th:src="@{images/kostalogo.png}" style="width: 200px; height: 50px;"/></a>
 	    </div>
-	    <form id="login">
-	      <fieldset>
-	        <a href="" th:href="@{/moveLoginForm}">sign in</a>
-			<a href="" th:href="@{/moveRegisterChoice}">sign up</a>
-	      </fieldset>
-	    </form>
+	    
+	    
+	    <a href="" th:href="@{/moveLoginForm}" sec:authorize="isAuthenticated()==false">sign in</a>
+		<a href="" th:href="@{/moveRegisterChoice}" sec:authorize="isAuthenticated()==false">sign up</a>
+	      
+	    <th:block sec:authorize="isAuthenticated()">
+	   	<span sec:authentication="principal.name"></span>님
+	   	<a href="#" id="logout">로그아웃</a><br>
+	   	<form id="logoutForm" th:action="@{/logout}" method="post" style="display: none"></form>
+		<script type="text/javascript">
+			$(function() {
+				$("#logout").click(function() {
+					$("#logoutForm").submit();
+				});
+			});
+		</script>
+	   	</th:block>
 	  </div>
 	</div>
 	<div class="wrapper row2">

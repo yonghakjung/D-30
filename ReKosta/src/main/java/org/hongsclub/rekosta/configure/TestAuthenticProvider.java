@@ -40,10 +40,11 @@ public class TestAuthenticProvider implements AuthenticationProvider {
 		//2.사용자 정보 DB로부터 조회
 		String id = authentication.getName();//사용자가 로그인시 입력한 ID 반환 		
 		Optional<TestEntity> testEntityOptional = testServiceKHJ.findMemberById(id);
-		TestEntity testEntity=testEntityOptional.get();
-		if(testEntity == null){
+		System.out.println("결과값"+testEntityOptional);
+		if(testEntityOptional.isEmpty()){
 			throw new UsernameNotFoundException("회원 아이디가 존재하지 않습니다");
 		}
+		TestEntity testEntity=testEntityOptional.get();
 		String password=(String)authentication.getCredentials();//사용자가 입력한 패스워드 반환 
 		
 		/*
@@ -65,9 +66,9 @@ public class TestAuthenticProvider implements AuthenticationProvider {
 		for(TestAuthorityEntity au : list){ // ROLE_ 형식의 db 정보가 아니라면 이 시점에 ROLE_ 를 접두어로 추가한다
 			authorities.add(new SimpleGrantedAuthority(au.getRole()));
 		}
-				
-		Authentication auth = new UsernamePasswordAuthenticationToken(testEntity, password, authorities);
-		log.debug("MemberAuthenticationProvider 인증처리완료:{}",auth);
+		TestEntity resultEntity = new TestEntity(id, testEntity.getName());
+		Authentication auth = new UsernamePasswordAuthenticationToken(resultEntity, password, authorities);
+		log.debug("TestAuthenticationProvider 인증처리완료:{}",auth);
 		return auth;		
 	}
 
