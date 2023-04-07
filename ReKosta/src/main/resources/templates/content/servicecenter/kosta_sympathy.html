@@ -27,22 +27,38 @@
 				<a class="a-set a-hover" th:href="@{/moveMembershipAdvertise}">회원사&middot;협약사
 					홍보마당</a>
 			</div>
-			<br> <br>
-			<br>
+			<br> <br> <br>
 			<div class="wrap">
 				<div class="fixed_img_col">
 					<div style="padding: 10px;">
-						<a href="#" th:href="@{/kostasympathyDetail}"> 
-						<span class="thumb"> 
-						<img src="images/servicecenter/클라우드개발사진.jpg"
+						<a href="#" th:href="@{/kostasympathyDetail}"> <span
+							class="thumb"> <img
+								src="images/servicecenter/클라우드개발사진.jpg"
 								style="width: 300px; height: 240px; border: 1px solid" alt="">
 						</span><br> <strong>[KOSTA]클라우드 기반 개발 역량 성숙수준 진단 모델</strong>
 						</a>
 						<p>2023-04-04</p>
+						
+						<br>
+						
+						<div style="text-align: center;">
+							<form action="#" th:action="@{/kostaSympathySearch}" method="get">
+							  <div class="search-mode">
+								   <input class="search-input" type="text" id="keyword" name="검색" placeholder="Search">
+								    <div class="icon">
+								      <div class="search">
+								        <a href="">
+								          <i class="fas fa-search"></i>
+								        </a>
+								      </div>
+									</div>
+								</div>
+								<a class="a-btn-set btn-set-hover" th:href="@{/moveWriteKostaSympathy}" style="float: right; margin-top: -43px;">글쓰기</a>
+							</form>
+						</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		
 	</div>
-</div>

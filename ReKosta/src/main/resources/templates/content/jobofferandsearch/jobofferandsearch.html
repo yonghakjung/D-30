@@ -32,7 +32,6 @@
         <h3 class="icon">문의처 : 한국SW기술진흥협회 교육개발진흥팀 정용학 선임연구원 / <a href="">yhjung@kosta.or.kr</a> / 031-606-9317</h3>
       </div>
       <br>
-      <div>
         <table class="board">
           <colgroup>
             <col width="8%;"/>
@@ -60,8 +59,22 @@
           	</tr>
           </tbody>
         </table>
+        <div style="text-align: center;">
+			<form action="#" th:action="@{/noticeboardSearch}" method="get">
+				<div class="search-mode">
+				    <input class="search-input" type="text" id="keyword" name="검색" placeholder="Search">
+				    <div class="icon">
+				      <div class="search">
+				        <a href="">
+				          <i class="fas fa-search"></i>
+				        </a>
+				      </div>
+					</div>
+				</div>
+				<a class="a-btn-set btn-set-hover" th:href="@{/moveWriteServiceCenter}" style="float: right; margin-top: -47px;">글쓰기</a>	
+			</form>
+		</div>
       </div>
-    </div>
     </div>
   </div>
 </div>

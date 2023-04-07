@@ -36,25 +36,36 @@
 					</thead>
 					<tbody>
 						<tr class="board-td">
+							<td>02</td>
+							<td style="text-align: left;"><a href="#" th:href="@{/serviceCenterDetail}"> [취업자과정] Java 기반 DevOps 개발자 양성 과정(4월 25일 개강)</a></td>
+							<td>2023-04-01</td>
+							<td>20</td>
+						</tr>				
+						<tr class="board-td">
 							<td>01</td>
-							<td style="text-align: left;"><a href="#"
-								th:href="@{/servicecenterDetail}"> KOSTA 2023년도 SW재직자 교육과정
-									목록</a></td>
+							<td style="text-align: left;"><a href="#" th:href="@{/serviceCenterDetail}"> KOSTA 2023년도 SW재직자 교육과정 목록</a></td>
 							<td>2023-03-29</td>
 							<td>6</td>
-						</tr>
+						</tr>					
 					</tbody>
 				</table>
 			</div>
-			<br> <br>
 			<div style="text-align: center;">
 			<form action="#" th:action="@{/noticeboardSearch}" method="get">
-			<input type="text" id="keyword" name="검색"  placeholder="Search">
-			<button type="submit" style="height: 26px;">검색</button>
-				<i class="fas fa-search"></i>
-				</form>
-			</div>
+				<div class="search-mode">
+				    <input class="search-input" type="text" id="keyword" name="검색" placeholder="Search">
+				    <div class="icon">
+				      <div class="search">
+				        <a href="">
+				          <i class="fas fa-search"></i>
+				        </a>
+				      </div>
+					</div>
+				</div>
+				<a class="a-btn-set btn-set-hover" th:href="@{/moveWriteServiceCenter}" style="float: right; margin-top: -47px;">글쓰기</a>	
+			</form>
 		</div>
+	  </div>
 	</div>
 </div>
 <!-- content end -->

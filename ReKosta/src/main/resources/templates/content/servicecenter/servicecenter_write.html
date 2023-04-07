@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{main}">
+	  
+<head>
+<title>promotion</title>
+<script src="https://cdn.tiny.cloud/1/in3wj4fn70vlu69j8jn5n71ldnhe4vsazh0f8vs5ocjpvpjn/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+$(function(){
+    let plugins = [
+        "advlist", "autolink", "lists", "link", "image", "charmap", "print", "preview", "anchor",
+        "searchreplace", "visualblocks", "code", "fullscreen", "insertdatetime", "media", "table",
+        "paste", "code", "help", "wordcount", "save"
+    ];
+    let edit_toolbar = 'formatselect fontselect fontsizeselect |'
+               + ' forecolor backcolor |'
+               + ' bold italic underline strikethrough |'
+               + ' alignjustify alignleft aligncenter alignright |'
+               + ' bullist numlist |'
+               + ' table tabledelete |'
+               + ' link image';
+
+    tinymce.init({
+    	language: "ko_KR", //한글판으로 변경
+        selector: '#editor',
+        height: 500,
+        menubar: false,
+        plugins: plugins,
+        toolbar: edit_toolbar,
+        
+        /*** image upload ***/
+        image_title: true,
+        automatic_uploads: true,
+        file_picker_types: 'image',
+
+        file_picker_callback: function (cb, value, meta) {
+            let input = document.createElement('input');
+            input.setAttribute('type', 'file');
+            input.setAttribute('accept', 'image/*');
+
+            input.onchange = function () {
+                let file = this.files[0];
+
+                let reader = new FileReader();
+                reader.onload = function () {
+                    
+                    let id = 'blobid' + (new Date()).getTime();
+                    let blobCache =  tinymce.activeEditor.editorUpload.blobCache;
+                    let base64 = reader.result.split(',')[1];
+                    let blobInfo = blobCache.create(id, file, base64);
+                    blobCache.add(blobInfo);
+
+                    
+                    cb(blobInfo.blobUri(), { title: file.name });
+                };
+                reader.readAsDataURL(file);
+            };
+            input.click();
+        },
+
+        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+    });
+
+});
+</script>
+</head>
+
+<div layout:fragment="content">
+  <div class="wrapper row4">
+    <div id="container" class="clear"> 
+		<div style="font-size: 23px; color: black;">알림마당</div>
+		
+		<hr><br>
+		<div>
+   		  <form action="#" th:action="@{/writePostServiceCenter}" method="post" id="okWrite" style="float: right;">
+   		    <input type="text" id="title" name="제목" placeholder="제목을 입력해주세요" required="required" style="border:none; width: 1296px; height: 30px; font-size: 15px; font-family: fantasy;"><br><br>
+            <textarea id="editor" name="내용" placeholder="내용을 입력해주세요"></textarea><br>
+            <button type="button" id="save" style="float: right;">작성</button>
+            <button type="button" id="cancelWriteBtn" style="float: right; margin-right: 10px;">취소</button>
+    	  </form>
+    	</div>	
+      <div class="clear"></div>
+    </div>
+  </div>
+  
+<script type="text/javascript">
+  $(document).ready(function() {
+  	$("#cancelWriteBtn").click(function() {
+      let message = confirm("취소하시겠습니까?");
+      if(message) {
+    	  location.href="moveServiceCenter";
+      }//if
+  	});//click
+  	$("#save").click(function() {
+  		let title = $("#title").val().trim()
+  		let content = tinymce.activeEditor.getContent();
+  		
+  		if(title == ""){
+  			alert("제목을 입력해주세요.");
+  			$("#title").focus();
+  			return;
+  		}
+  		if(content == ""){
+  			alert("내용을 입력해주세요.");
+  			tinymce.get('editor').focus();
+  			return;
+  		}
+  		let message = confirm("게시글을 등록하시겠습니까?");
+  		if(message){
+  			$("#okWrite").submit();
+  		}
+  		
+  	});//click
+  });//ready
+  </script>
+</div>
