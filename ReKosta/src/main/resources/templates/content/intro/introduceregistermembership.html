@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
 	layout:decorate="~{main}">
 <head>
 <meta charset="UTF-8">
@@ -23,16 +24,13 @@
 				   <img class="img-set" src="images/육각형.png">
 		           <h1 class="icon-2" style="font-weight: bold;">회원사·협약사 현황</h1>
 		         	<form>
-		         		<table border="1">
-		         			<tr th:each="company:${companyList}">
-		         				<td>	
-		         					<p th:text="${company.name}">
-		         					<p th:text="${company.category}">		         					
-		         				</td>
-		         			</tr>
-		         		</table>
+		         		<div th:utext="${introEntity.getTitle()}">제목</div>
+						<div th:utext="${introEntity.getCategory()}">카테고리</div>
+						<!-- <div th:utext="${introEntity.getPost_date()}">작성일</div>
+						<div th:utext="${introEntity.getUpdate_date()}">수정일</div> -->
+						<div th:utext="${content}">내용</div>
 		         		<input style="text-align: center" type="text" placeholder="검색어 입력">
-		         		<a href="#" th:href="@{/moveWritePostCompany}">글쓰기</a>
+		         		<a href="#" th:href="@{/moveWritePostCompany}" sec:authorize="hasAuthority('master')">글쓰기</a>
 		         	</form>
 		         <br><br>
 		           <img class="img-set" src="images/육각형.png">

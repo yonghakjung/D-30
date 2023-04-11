@@ -36,7 +36,9 @@
 				});
 			});
 		</script>
+		
 	   	</th:block>
+	   	<a th:href="@{/moveAdminForm}" sec:authorize="hasAuthority('master')">관리자모드</a><br>
 	  </div>
 	</div>
 	<div class="wrapper row2">

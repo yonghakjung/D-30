@@ -1,5 +1,6 @@
 package org.hongsclub.rekosta.configure;
 
+import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -46,7 +47,7 @@ public class TestAuthenticProvider implements AuthenticationProvider {
 		}
 		TestEntity testEntity=testEntityOptional.get();
 		String password=(String)authentication.getCredentials();//사용자가 입력한 패스워드 반환 
-		
+		System.out.println(authentication);
 		/*
 		 * if (!passwordEncoder.matches(password, testEntity.getPassword()))//! 비밀번호가
 		 * 일치하지 않으면 throw new BadCredentialsException("비밀번호가 일치하지 않습니다");
@@ -67,7 +68,9 @@ public class TestAuthenticProvider implements AuthenticationProvider {
 			authorities.add(new SimpleGrantedAuthority(au.getRole()));
 		}
 		TestEntity resultEntity = new TestEntity(id, testEntity.getName());
+		System.out.println(authentication);
 		Authentication auth = new UsernamePasswordAuthenticationToken(resultEntity, password, authorities);
+		System.out.println(auth);
 		log.debug("TestAuthenticationProvider 인증처리완료:{}",auth);
 		return auth;		
 	}

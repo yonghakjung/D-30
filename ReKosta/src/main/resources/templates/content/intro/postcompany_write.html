@@ -49,8 +49,7 @@
 								let id = 'blobid' + (new Date()).getTime();
 								let blobCache = tinymce.activeEditor.editorUpload.blobCache;
 								let base64 = reader.result.split(',')[1];
-								let blobInfo = blobCache.create(id, file,
-										base64);
+								let blobInfo = blobCache.create(id, file,base64);
 								blobCache.add(blobInfo);
 
 								cb(blobInfo.blobUri(), {
@@ -79,18 +78,19 @@
 			<div>
 				<form action="#" th:action="@{/writePostIntro}" method="post"
 					id="okWrite">
-					<select id="category" style="margin-left: 10px; border: none; height: 30px;" required>
+					<select id="category" name="category" style="margin-left: 10px; border: none; height: 30px;" required>
 						<option value="">category</option>
-						<option value="option2">회원사</option>
-						<option value="option3">협약사</option>
+						<option value="#" th:value="회원사">회원사</option>
+						<option value="#" th:value="협약사">협약사</option>
 					</select> 
-					<input type="text" id="title" name="제목" placeholder="제목을 입력해주세요"
+					<input type="text" id="title" name="title" placeholder="제목을 입력해주세요"
 						required="required"
 						style="border: none; width: 1200px; height: 30px; font-size: 15px; font-family: fantasy;"><br>
 					<br>
 					<textarea id="editor" name="content" placeholder="내용을 입력해주세요"></textarea>
 					<br>
-					<button type="button" id="save" style="float: right;">작성</button>
+					<input type = "hidden" name = "id" th:value="${#authentication.principal.id}">
+					<button type="button" id="save" style="float: right;">글작성</button>
 					<button type="button" id="cancelWriteBtn"
 						style="float: right; margin-right: 10px;">취소</button>
 				</form>

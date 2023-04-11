@@ -1,11 +1,22 @@
 package org.hongsclub.rekosta.controller;
 
+import java.io.IOException;
+import java.sql.SQLException;
+
+import org.hongsclub.rekosta.model.service.IntroService;
+import org.hongsclub.rekosta.repository.IntroRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import lombok.RequiredArgsConstructor;
+
 @Controller
+@RequiredArgsConstructor
 public class moveController {
+	private final IntroService introService;
+	private final IntroRepository introRepository;
+	//private final IntroEntity introEntity;
 	private boolean flag = true;
 	//홈
 	@GetMapping(value={"/home","/","/index"})
@@ -19,10 +30,14 @@ public class moveController {
 		return "content/intro/introduceorganization";
 	}
 	@GetMapping("/moveIntroduceRegisterMembership")
-	public String moveRegisterMembership(Model model) {
-		model.addAttribute("activeIntroduceAndRegister",flag);
-		return "content/intro/introduceregistermembership";
+	public String moveRegisterMembership(Model model) throws SQLException, IOException {	
+		model.addAttribute("introEntity",introService.readIntroPostDetail(1));
+		model.addAttribute("content",introService.readIntroPostContentDetail(1).toString());
+		System.out.println(introService.readIntroPostDetail(1));
+		//System.out.println(blogService.readBlogPostContentDetail(7).toString());
+		return "content/intro/introduceregistermembership";	
 	}
+
 	//교육훈련
 	@GetMapping("/moveEducationAndTraining")
 	public String moveEmployed(Model model) {
@@ -94,4 +109,19 @@ public class moveController {
 		model.addAttribute("activeIntroduceAndRegister",flag);
 		return "content/intro/postcompany_write";
 	}
+	@GetMapping("/moveWritePostSuccess")
+	public String moveWritePostSuccess() {
+		return "content/intro/writepost-success";
+	}
+	@GetMapping("/moveWritePostFail")
+	public String moveWritePostFail() {
+		return "content/intro/writepost-fail";
+	}
+	
+	@GetMapping("/moveAdminForm")
+	public String moveAdminForm(Model model) {
+		model.addAttribute("activeAdminForm",flag);
+		return "content/admin/admin_form";
+	}
+	
 }
