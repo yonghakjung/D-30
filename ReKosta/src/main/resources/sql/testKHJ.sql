@@ -1,48 +1,46 @@
-CREATE TABLE khj_member_test (
+CREATE TABLE member (
   id VARCHAR(100) NOT NULL PRIMARY KEY,
   password VARCHAR(100) NOT NULL,
   name VARCHAR(100) NOT NULL
 );
 
-insert into khj_member_test(id, password, name)
+insert into member(id, password, name)
 values('seltise@naver.com','kosta250','김훈진');
 
-select * from khj_member_test;
+select * from member;
 
 commit
 
-drop table khj_member_test
+drop table member
 
-CREATE TABLE khj_authentication_test (
+CREATE TABLE authority (
   id varchar(100) primary key,
   role varchar(100) not null,
-  constraint role_fk foreign key(id) references khj_member_test(id),
+  constraint role_fk foreign key(id) references member(id),
   constraint role_check check(role='master' or role='general' or role='company')
 );
 
-insert into khj_authentication_test(id, role)
+insert into authority(id, role)
 values('seltise@naver.com','master')
 
-select * from khj_authentication_test;
-select * from khj_member_test;
+select * from authority;
+select * from member;
 
 commit
 
-drop table khj_authentication_test
+drop table authority
 
 CREATE TABLE intro (
     post_no INT AUTO_INCREMENT PRIMARY KEY,
     category VARCHAR(100) NOT NULL,
     title VARCHAR(100) NOT NULL,
-    content LONGTEXT NOT NULL,
+    content longtext,
     id VARCHAR(100) NOT NULL,
-    post_date DATE NOT NULL,
-    update_date DATE,
-    constraint intro_fk foreign key(id) references khj_member_test(id)
+    constraint intro_fk foreign key(id) references member(id)
 )
 
-INSERT INTO intro (category, title, content, id, post_date, update_date)
-VALUES ('회원사', '제목', '내용', 'seltise@naver.com', CURRENT_DATE(), NULL);
+INSERT INTO intro (category, title, content, id)
+VALUES ('회원사', 'Test', null, 'seltise@naver.com');
 
 DELETE FROM intro WHERE post_no = 2;
 
@@ -52,3 +50,7 @@ select * from intro;
 commit;
 
 drop table intro;
+
+
+SELECT i.title, i.post_date, i.category, m.name FROM (SELECT post_no, title, postDate, category, id, ROW_NUMBER() OVER(ORDER BY post_no DESC) AS rnum FROM intro) i INNER JOIN member m ON i.id = m.id WHERE rnum BETWEEN 1 AND 5
+

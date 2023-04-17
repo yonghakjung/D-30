@@ -31,9 +31,9 @@ public class IntroEntity {
 	@Column
 	private String id;
 	@Column
-	private Date post_date;
+	private Date postDate;
 	@Column
-	private Date update_date;
+	private Date updateDate;
 	 
 	
 }

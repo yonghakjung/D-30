@@ -10,7 +10,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name= "khj_authentication_test")
+@Table(name= "authority")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

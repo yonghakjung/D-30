@@ -1,9 +1,5 @@
 package org.hongsclub.rekosta.model.service;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.Reader;
-import java.sql.Clob;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
@@ -14,6 +10,10 @@ import javax.transaction.Transactional;
 
 import org.hongsclub.rekosta.entity.IntroEntity;
 import org.hongsclub.rekosta.repository.IntroRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
@@ -28,23 +28,25 @@ public class IntroServiceImpl implements IntroService{
 		introEntity.setId(id);
 		introEntity.setCategory(category);
 		introEntity.setTitle(title);
-		SerialClob clobContent;
-		try {
+		//SerialClob clobContent;
+		introRepository.save(introEntity);
+		/*try {
 			clobContent = new SerialClob(content.toString().toCharArray());
 			introEntity.setContent(clobContent);
-			LocalDateTime now = LocalDateTime.now();
-			introEntity.setPost_date(Date.valueOf(now.toLocalDate()));;
-			System.out.println(introEntity);
-			introRepository.save(introEntity);		
+			//LocalDateTime now = LocalDateTime.now();
+			//introEntity.setPostDate(Date.valueOf(now.toLocalDate()));
+			//introEntity.setPostDate(Date.valueOf(now.toLocalDate()));;
+			introRepository.save(introEntity);
 		} catch (SerialException e) {
 			e.printStackTrace();
 			return false;
 		} catch (SQLException e) {
 			e.printStackTrace();
 			return false;
-		}
+		}*/
 		return true;
 	}
+	/*
 	@Override
 	public IntroEntity readIntroPostDetail(int post_no) {
 		IntroEntity introEntity = introRepository.findById(post_no).get();
@@ -52,6 +54,8 @@ public class IntroServiceImpl implements IntroService{
 		System.out.println(introEntity);
 		return introEntity;
 	}
+	*/
+	/*
 	@Override
 	public StringBuilder readIntroPostContentDetail(int post_no) throws SQLException, IOException {
 		Clob clob = introRepository.findById(post_no).get().getContent();//Clob데이터형은 기본적으로 데이터베이스에서 사용되는 자료형으로써 java에서 사용하기에는 부적절	
@@ -67,9 +71,19 @@ public class IntroServiceImpl implements IntroService{
 		
 		return contentStringBuilder;
 	}
-	
+	*/
+	@Override
+	public int introListCnt() {
+		return introRepository.introListCnt();
+	}
+	@Override
+	public Page<IntroEntity> introList(Pageable pageable) {
+		int page=(pageable.getPageNumber() == 0) ? 0 : (pageable.getPageNumber() - 1);
+		pageable = PageRequest.of(page, 5, Sort.by(Sort.Direction.DESC, "title"));
+		return introRepository.findAll(pageable);
+	}
+
 	
 	
 
-	
 }

@@ -1,10 +1,10 @@
 package org.hongsclub.rekosta.controller;
 
-import java.io.IOException;
-import java.sql.SQLException;
-
+import org.hongsclub.rekosta.entity.IntroEntity;
 import org.hongsclub.rekosta.model.service.IntroService;
-import org.hongsclub.rekosta.repository.IntroRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +15,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class moveController {
 	private final IntroService introService;
-	private final IntroRepository introRepository;
+	//private final IntroRepository introRepository;
 	//private final IntroEntity introEntity;
 	private boolean flag = true;
 	//홈
@@ -30,12 +30,10 @@ public class moveController {
 		return "content/intro/introduceorganization";
 	}
 	@GetMapping("/moveIntroduceRegisterMembership")
-	public String moveRegisterMembership(Model model) throws SQLException, IOException {	
-		model.addAttribute("introEntity",introService.readIntroPostDetail(1));
-		model.addAttribute("content",introService.readIntroPostContentDetail(1).toString());
-		System.out.println(introService.readIntroPostDetail(1));
-		//System.out.println(blogService.readBlogPostContentDetail(7).toString());
-		return "content/intro/introduceregistermembership";	
+	public String moveIntroduceRegisterMembership(Model model, @PageableDefault Pageable pageable) {
+		Page<IntroEntity> introList=introService.introList(pageable);
+		model.addAttribute("introList", introList);		
+		return "content/intro/introduceregistermembership";
 	}
 
 	//교육훈련

@@ -124,14 +124,14 @@
 					return;
 				}
 
-				if (content == "") {
+				/* if (content == "") {
 					alert("내용을 입력해주세요.");
 					tinymce.get('editor').focus();
 					return;
-				}
+				} */
 
 				// 내용이 있을 때만 제출
-				if (content != "") {
+				if (title != "") {
 					let message = confirm("게시글을 등록하시겠습니까?");
 					if (message) {
 						$("#okWrite").submit();

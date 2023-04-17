@@ -3,7 +3,6 @@ package org.hongsclub.rekosta.controller;
 import org.hongsclub.rekosta.model.service.IntroService;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -25,10 +24,6 @@ public class introController {
 			resultPath = "redirect:/moveWritePostFail";
 		}
 		return resultPath;
-	}
-	@GetMapping("introduceregistermembership")
-	public String introduceregistermembership() {
-		return "content/intro/introduceregistermembership";
 	}
 
 }	
